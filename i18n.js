@@ -10,7 +10,7 @@
     "Stories": "Récits",
     "Gallery": "Galerie",
     "Partners": "Partenaires",
-    "Fuel the truck →": "Ravitailler le camion →",
+    "Fuel the truck →": "Faire un don →",
     "Africa · 2026": "Afrique · 2026",
     // Hero
     "Currently in motion · Nigeria → Ghana": "En route · Nigéria → Ghana",
