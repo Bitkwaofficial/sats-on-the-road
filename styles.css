@@ -859,6 +859,11 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 }
 @media (max-width: 900px){ .contact__inner { grid-template-columns: 1fr; gap: 48px; } }
 
+/* Mobile fit: let grid items shrink so long addresses / cards never overflow
+   the viewport (min-width:auto on grid items was forcing horizontal scroll). */
+.cta__inner, .cta__copy, .cta__qr, .cta__split, .cta__col, .cta__addr { min-width: 0; }
+.contact__inner, .contact__form, .contact__inner > * { min-width: 0; }
+
 .contact__title {
   font-size: clamp(38px, 5vw, 60px);
   line-height: .98; letter-spacing: -.02em;
