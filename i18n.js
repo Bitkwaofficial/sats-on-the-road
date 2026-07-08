@@ -78,6 +78,7 @@
     "Mobile-money accounts": "Comptes mobile money",
     "majority of adults": "la majorité des adultes",
     "Primary languages": "Langues principales",
+    "French · Mooré · Dioula": "Français · Mooré · Dioula",
     // Gallery
     "05 / From the road": "05 / Depuis la route",
     "Faces, markets & kilometres.": "Visages, marchés et kilomètres.",
