@@ -102,24 +102,29 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 .nav[data-nav="open"] .nav__toggle-box span:nth-child(3) { top: 6px; transform: rotate(-45deg); }
 
 @media (max-width: 880px){
-  .nav { flex-wrap: wrap; row-gap: 6px; }
-  .nav__toggle { display: inline-flex; order: 2; margin-left: auto; }
-  .nav__links, .nav__cta { display: none; }
-  .nav[data-nav="open"] .nav__links { display: flex; }
-  .nav[data-nav="open"] .nav__cta { display: inline-flex; }
+  .nav { flex-wrap: wrap; row-gap: 6px; gap: 10px; padding: 12px 16px; }
+  .nav__brand { gap: 9px; }
+  .nav__brand img { width: 34px; height: 34px; }
+  .nav__brand-line { font-size: 15px; }
+  /* Keep "Fuel the truck" visible in the top bar for donations */
+  .nav__cta { order: 2; margin-left: auto; padding: 8px 13px; font-size: 13px; }
+  .nav__toggle { display: inline-flex; order: 3; }
   .nav__links {
-    order: 3; flex-basis: 100%;
+    display: none;
+    order: 4; flex-basis: 100%;
     flex-direction: column; gap: 0;
-    margin-top: 6px;
+    margin-top: 4px;
   }
+  .nav[data-nav="open"] .nav__links { display: flex; }
   .nav__links a {
     padding: 13px 4px; font-size: 16px;
     border-top: 1px solid var(--rule-soft);
   }
-  .nav__cta {
-    order: 4; flex-basis: 100%;
-    justify-content: center; margin-top: 10px;
-  }
+}
+@media (max-width: 360px){
+  /* Very small phones: trim to guarantee brand + CTA + menu fit one line */
+  .nav__brand-sub { display: none; }
+  .nav__cta { padding: 7px 11px; font-size: 12px; }
 }
 
 /* ───────── Hero ───────── */
@@ -1070,3 +1075,33 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
   .pulse-in { animation: none !important; }
   [data-reveal] { opacity: 1 !important; transform: none !important; }
 }
+
+/* ───────── See-all fold (Gallery & Partners) ───────── */
+.see-all-wrap { text-align: center; margin-top: 30px; }
+.see-all {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 22px; border-radius: 999px;
+  background: transparent; border: 1px solid var(--ink);
+  color: var(--ink); font-weight: 600; font-size: 14px;
+  transition: background .2s, color .2s, transform .15s;
+}
+.see-all:hover { background: var(--ink); color: var(--paper); transform: translateY(-1px); }
+.partners .see-all-wrap { margin-bottom: 8px; }
+/* Collapsed: show only the first 6 items until "See all" is pressed */
+.gallery:not(.is-open) .g-item:nth-child(n+7) { display: none; }
+.partners:not(.is-open) .partner:nth-child(n+7) { display: none; }
+
+/* ───────── Back-to-top arrow ───────── */
+.to-top {
+  display: flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; margin: 0 auto 40px; padding: 0;
+  border-radius: 999px; background: transparent;
+  border: 1px solid var(--rule); color: var(--ink);
+  font-size: 20px; line-height: 1;
+  transition: background .2s, color .2s, border-color .2s, transform .15s;
+}
+.to-top:hover { background: var(--orange); border-color: var(--orange); color: var(--ink); transform: translateY(-2px); }
+
+/* Volunteer footer link */
+.foot__volunteer { font-weight: 600; color: var(--orange-deep); }
+.foot__volunteer:hover { color: var(--ink); }

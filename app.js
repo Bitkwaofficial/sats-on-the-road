@@ -268,3 +268,49 @@ document.querySelectorAll(".copy").forEach((btn) => {
     a.addEventListener("click", () => setOpen(false))
   );
 })();
+
+/* Home icon → refresh / return to a fresh top of the page */
+(function homeReload() {
+  const brand = document.getElementById("navBrand");
+  if (!brand) return;
+  brand.addEventListener("click", (e) => {
+    e.preventDefault();
+    const clean = location.origin + location.pathname;
+    if (location.href === clean) location.reload();
+    else location.href = clean;
+  });
+})();
+
+/* Back-to-top arrow in the footer */
+(function backToTop() {
+  const btn = document.getElementById("toTop");
+  if (!btn) return;
+  btn.addEventListener("click", () =>
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  );
+})();
+
+/* "See all" fold for Gallery & Partners */
+(function seeAll() {
+  document.querySelectorAll(".see-all").forEach((btn) => {
+    const section = document.getElementById(btn.dataset.fold);
+    if (!section) return;
+    btn.addEventListener("click", () => {
+      const open = section.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.textContent = open ? btn.dataset.less : btn.dataset.more;
+      if (!open) section.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+})();
+
+/* Pre-select the "Volunteer" topic when the footer link is used */
+(function volunteerTopic() {
+  const link = document.querySelector(".foot__volunteer");
+  const sel = document.getElementById("cf-topic");
+  if (!link || !sel) return;
+  link.addEventListener("click", () => {
+    const topic = link.dataset.topic;
+    if (topic) setTimeout(() => { sel.value = topic; }, 50);
+  });
+})();
