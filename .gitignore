@@ -1,0 +1,13 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+
+# Working folders — never commit these
+uploads/
+scrap/
+dist/
+node_modules/
+
+# Vercel local
+.vercel
