@@ -147,7 +147,7 @@ document.querySelectorAll(".copy").forEach((btn) => {
 
   function show(i) {
     idx = (i + imgs.length) % imgs.length;
-    lbImg.src = imgs[idx].src;
+    lbImg.src = imgs[idx].dataset.full || imgs[idx].src;
     lbImg.alt = imgs[idx].alt || "";
   }
   function open(i) {
