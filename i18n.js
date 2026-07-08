@@ -37,7 +37,7 @@
     "In every town we leave behind a local educator with the materials, wallet, and merchant network to keep onboarding long after the truck has driven on.":
       "Dans chaque ville, nous laissons un formateur local avec le matériel, le portefeuille et le réseau de commerçants pour continuer à intégrer les gens bien après le départ du camion.",
     // Journey
-    "The route": "Le trajet",
+    "02 / The route": "02 / Le trajet",
     "14,820 km of orange road.": "14 820 km de route orange.",
     "From Lagos to Dakar, tracing the West African coast with an inland leg through Ouagadougou. Nine languages, one rolling classroom.":
       "De Lagos à Dakar, en longeant la côte ouest-africaine avec une étape intérieure par Ouagadougou. Neuf langues, une salle de classe roulante.",
@@ -47,7 +47,7 @@
     "Up next": "Prochaine étape",
     "Planned": "Prévue",
     // Impact
-    "Impact, so far": "Impact, à ce jour",
+    "03 / Impact, so far": "03 / Impact, à ce jour",
     "Numbers from the dashboard.": "Les chiffres du tableau de bord.",
     "people onboarded to a self-custodial wallet": "personnes équipées d'un portefeuille auto-hébergé",
     "merchants now accepting Lightning": "commerçants acceptent désormais le Lightning",
@@ -56,7 +56,7 @@
     "circulated through merchant rails to date": "en circulation via les commerçants à ce jour",
     "countries reached on the planned route": "pays atteints sur le trajet prévu",
     // Stories
-    "On the ground": "Sur le terrain",
+    "04 / On the ground": "04 / Sur le terrain",
     "Stories from the truck.": "Récits depuis le camion.",
     "Cotonou, Benin · Day 19": "Cotonou, Bénin · Jour 19",
     "\"It's the first money I own without a bank's permission.\"":
@@ -79,12 +79,12 @@
     "majority of adults": "la majorité des adultes",
     "Primary languages": "Langues principales",
     // Gallery
-    "From the road": "Depuis la route",
+    "05 / From the road": "05 / Depuis la route",
     "Faces, markets & kilometres.": "Visages, marchés et kilomètres.",
     "Snapshots from the movement: the crew, the wrapped car, the merchants and the Bitcoin Afrique stage. Tap any photo to enlarge.":
       "Instantanés du mouvement : l'équipe, la voiture floquée, les commerçants et la scène de Bitcoin Afrique. Touchez une photo pour l'agrandir.",
     // Partners
-    "The coalition": "La coalition",
+    "06 / The coalition": "06 / La coalition",
     "Powered by an": "Portés par un",
     "open-source village.": "village open-source.",
     "No single sponsor, no single chain-of-command. A web of local builders, grant programs and orange-pilled humans keeping the wheels turning.":
@@ -105,14 +105,15 @@
     "…and 240+ local merchants, mechanics, hostel owners and fellow travellers we've shared chai, fuel and a sats invoice with along the way.":
       "…et plus de 240 commerçants, mécaniciens, gérants d'auberge et compagnons de route avec qui nous avons partagé du thé, du carburant et une facture en sats en chemin.",
     // CTA
-    "Keep us moving": "Aidez-nous à avancer",
+    "07 / Keep us moving": "07 / Aidez-nous à avancer",
     "Three more countries.": "Trois pays de plus.",
     "5,200 km to go.": "5 200 km à parcourir.",
     "Diesel, ferries, border papers, and a lot of wallet stickers. Every sat you send pays for the next merchant we orange-pill.":
       "Du diesel, des ferries, des papiers de douane et beaucoup d'autocollants de portefeuille. Chaque sat que vous envoyez finance le prochain commerçant que nous convertissons au Bitcoin.",
     "Scan to send sats · bitkwa@blink.sv": "Scannez pour envoyer des sats · bitkwa@blink.sv",
+    "Copy": "Copier",
     // Contact
-    "Say hello": "Dites bonjour",
+    "08 / Say hello": "08 / Dites bonjour",
     "Get in touch.": "Contactez-nous.",
     "Partnerships, press, volunteering, or an invite to bring the truck to your city. Reach us on any channel below, or send a note straight from here.":
       "Partenariats, presse, bénévolat, ou une invitation à amener le camion dans votre ville. Joignez-nous par n'importe quel canal ci-dessous, ou écrivez-nous directement ici.",
