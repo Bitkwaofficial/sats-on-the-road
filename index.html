@@ -8,6 +8,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png" />
+<link rel="icon" href="assets/favicon-512.png" sizes="512x512" type="image/png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#0D0D0D" />
 </head>
 <body>
 
@@ -22,7 +27,7 @@
       <span class="nav__brand-sub">Africa · 2026</span>
     </span>
   </a>
-  <nav class="nav__links">
+  <nav class="nav__links" id="navLinks">
     <a href="#mission">Mission</a>
     <a href="#journey">Journey</a>
     <a href="#numbers">Impact</a>
@@ -32,6 +37,9 @@
     <a href="#contact">Contact</a>
   </nav>
   <a href="#support" class="nav__cta">Fuel the truck →</a>
+  <button class="nav__toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+    <span class="nav__toggle-box" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
 </header>
 
 
@@ -653,14 +661,14 @@
   </button>
   <div class="soundbar__card">
     <div class="soundbar__head">
-      <span class="soundbar__label">♪ Soundtrack — <em>Sats On The Road Vol&nbsp;1</em></span>
+      <span class="soundbar__label">♪ Soundtrack — <em>Owo Satoshi · Remix</em></span>
       <button class="soundbar__min" id="soundbarMin" type="button" aria-label="Minimise player">–</button>
     </div>
     <div class="soundbar__body" id="soundbarBody">
       <iframe class="soundbar__frame"
-        title="Sats On The Road Vol 1 — Bitkwa Music on Audiomack"
-        src="https://audiomack.com/embed/bitkwamusic/album/sats-on-the-road-vol-1"
-        height="252" frameborder="0" scrolling="no" loading="lazy"
+        title="OWO SATOSHI (SATOSHI MONEY) Remix — Bitkwa Music on Audiomack"
+        src="https://audiomack.com/embed/bitkwamusic/song/owo-satoshi-satoshi-money-remix"
+        height="240" frameborder="0" scrolling="no" loading="lazy"
         allow="autoplay; encrypted-media; clipboard-write"></iframe>
     </div>
   </div>

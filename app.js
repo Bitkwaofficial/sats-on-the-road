@@ -248,3 +248,23 @@ document.querySelectorAll(".copy").forEach((btn) => {
   pill.addEventListener("click", () => setState("open"));
   min.addEventListener("click", () => setState("min"));
 })();
+
+/* Mobile navigation — hamburger toggle for the section links */
+(function mobileNav() {
+  const nav = document.querySelector(".nav");
+  const toggle = document.getElementById("navToggle");
+  if (!nav || !toggle) return;
+
+  function setOpen(open) {
+    nav.dataset.nav = open ? "open" : "";
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+
+  toggle.addEventListener("click", () => setOpen(nav.dataset.nav !== "open"));
+
+  // Close the menu after tapping a link or the CTA
+  nav.querySelectorAll(".nav__links a, .nav__cta").forEach((a) =>
+    a.addEventListener("click", () => setOpen(false))
+  );
+})();

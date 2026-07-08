@@ -80,8 +80,46 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 }
 .nav__cta:hover { background: var(--orange); color: var(--ink); transform: translateY(-1px); }
 
+/* Hamburger toggle — only shown on mobile */
+.nav__toggle {
+  display: none;
+  align-items: center; justify-content: center;
+  width: 44px; height: 44px; padding: 0;
+  background: transparent; color: var(--ink);
+  border: 1px solid var(--rule); border-radius: 12px;
+}
+.nav__toggle-box { position: relative; display: block; width: 20px; height: 14px; }
+.nav__toggle-box span {
+  position: absolute; left: 0; width: 100%; height: 2px;
+  background: currentColor; border-radius: 2px;
+  transition: transform .25s ease, opacity .2s ease, top .25s ease;
+}
+.nav__toggle-box span:nth-child(1) { top: 0; }
+.nav__toggle-box span:nth-child(2) { top: 6px; }
+.nav__toggle-box span:nth-child(3) { top: 12px; }
+.nav[data-nav="open"] .nav__toggle-box span:nth-child(1) { top: 6px; transform: rotate(45deg); }
+.nav[data-nav="open"] .nav__toggle-box span:nth-child(2) { opacity: 0; }
+.nav[data-nav="open"] .nav__toggle-box span:nth-child(3) { top: 6px; transform: rotate(-45deg); }
+
 @media (max-width: 880px){
-  .nav__links { display: none; }
+  .nav { flex-wrap: wrap; row-gap: 6px; }
+  .nav__toggle { display: inline-flex; order: 2; margin-left: auto; }
+  .nav__links, .nav__cta { display: none; }
+  .nav[data-nav="open"] .nav__links { display: flex; }
+  .nav[data-nav="open"] .nav__cta { display: inline-flex; }
+  .nav__links {
+    order: 3; flex-basis: 100%;
+    flex-direction: column; gap: 0;
+    margin-top: 6px;
+  }
+  .nav__links a {
+    padding: 13px 4px; font-size: 16px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .nav__cta {
+    order: 4; flex-basis: 100%;
+    justify-content: center; margin-top: 10px;
+  }
 }
 
 /* ───────── Hero ───────── */
