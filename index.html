@@ -643,6 +643,29 @@
   </div>
 </footer>
 
+<!-- ╔══════════════════════════════════════════════════════════╗
+     ║  SOUNDTRACK — floating Audiomack player                    ║
+     ╚══════════════════════════════════════════════════════════╝ -->
+<aside class="soundbar" id="soundbar" data-state="open" aria-label="Sats On The Road soundtrack">
+  <button class="soundbar__pill" id="soundbarPill" type="button" aria-expanded="false" aria-controls="soundbarBody">
+    <span class="soundbar__eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="soundbar__pill-text">Play the soundtrack</span>
+  </button>
+  <div class="soundbar__card">
+    <div class="soundbar__head">
+      <span class="soundbar__label">♪ Soundtrack — <em>Sats On The Road Vol&nbsp;1</em></span>
+      <button class="soundbar__min" id="soundbarMin" type="button" aria-label="Minimise player">–</button>
+    </div>
+    <div class="soundbar__body" id="soundbarBody">
+      <iframe class="soundbar__frame"
+        title="Sats On The Road Vol 1 — Bitkwa Music on Audiomack"
+        src="https://audiomack.com/embed/bitkwamusic/album/sats-on-the-road-vol-1"
+        height="252" frameborder="0" scrolling="no" loading="lazy"
+        allow="autoplay; encrypted-media; clipboard-write"></iframe>
+    </div>
+  </div>
+</aside>
+
 <script src="app.js"></script>
 </body>
 </html>

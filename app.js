@@ -219,3 +219,32 @@ document.querySelectorAll(".copy").forEach((btn) => {
     }
   });
 })();
+
+/* Floating soundtrack player — expand / minimise, remembers the visitor's choice.
+   Note: browsers block audio autoplay, and Audiomack's embed is cross-origin,
+   so the visitor starts playback with the play button inside the player. */
+(function soundbar() {
+  const bar = document.getElementById("soundbar");
+  if (!bar) return;
+  const pill = document.getElementById("soundbarPill");
+  const min = document.getElementById("soundbarMin");
+  const KEY = "sotr-soundbar";
+
+  try {
+    const saved = localStorage.getItem(KEY);
+    if (saved === "min" || saved === "open") {
+      bar.dataset.state = saved;
+    } else if (window.matchMedia("(max-width: 560px)").matches) {
+      bar.dataset.state = "min"; // start collapsed on phones, expanded on desktop
+    }
+  } catch (e) {}
+
+  function setState(state) {
+    bar.dataset.state = state;
+    pill.setAttribute("aria-expanded", state === "open" ? "true" : "false");
+    try { localStorage.setItem(KEY, state); } catch (e) {}
+  }
+
+  pill.addEventListener("click", () => setState("open"));
+  min.addEventListener("click", () => setState("min"));
+})();
