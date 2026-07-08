@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Sats On The Road — Africa</title>
+<title>Sats On The Road | Bitcoin Adoption Road Trip Across Africa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,17 +13,21 @@
 <link rel="icon" href="assets/favicon-512.png" sizes="512x512" type="image/png" />
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 <meta name="theme-color" content="#0D0D0D" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content="Sats On The Road" />
 
 <!-- SEO -->
-<meta name="description" content="Sats On The Road is a grassroots Bitcoin road trip across Africa — onboarding people to non-custodial wallets and real merchant payments, one village and market at a time." />
+<meta name="description" content="Sats On The Road is a grassroots Bitcoin road trip across Africa, onboarding people to non-custodial wallets and real merchant payments, village by village." />
+<meta name="keywords" content="Bitcoin Africa, Bitcoin adoption, Lightning Network, non-custodial wallet, financial inclusion, Sats On The Road, BitKwa" />
 <link rel="canonical" href="https://satsontheroad.africa/" />
 
 <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
 <meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
 <meta property="og:site_name" content="Sats On The Road" />
 <meta property="og:url" content="https://satsontheroad.africa/" />
-<meta property="og:title" content="Sats On The Road — Africa" />
-<meta property="og:description" content="Driving Bitcoin across the African continent — grassroots education, self-custody and real merchant adoption, village by village." />
+<meta property="og:title" content="Sats On The Road: Driving Bitcoin Across Africa" />
+<meta property="og:description" content="A grassroots Bitcoin road trip across the African continent, onboarding people to self-custody and real merchant payments, one village and market at a time." />
 <meta property="og:image" content="https://satsontheroad.africa/assets/og-image.jpg" />
 <meta property="og:image:secure_url" content="https://satsontheroad.africa/assets/og-image.jpg" />
 <meta property="og:image:type" content="image/jpeg" />
@@ -33,9 +37,36 @@
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Sats On The Road — Africa" />
-<meta name="twitter:description" content="Driving Bitcoin across the African continent — grassroots education, self-custody and real merchant adoption, village by village." />
+<meta name="twitter:title" content="Sats On The Road: Driving Bitcoin Across Africa" />
+<meta name="twitter:description" content="A grassroots Bitcoin road trip across the African continent, onboarding people to self-custody and real merchant payments, village by village." />
 <meta name="twitter:image" content="https://satsontheroad.africa/assets/og-image.jpg" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://satsontheroad.africa/#org",
+      "name": "Sats On The Road",
+      "url": "https://satsontheroad.africa/",
+      "logo": "https://satsontheroad.africa/assets/favicon-512.png",
+      "image": "https://satsontheroad.africa/assets/og-image.jpg",
+      "description": "A grassroots Bitcoin education and financial-inclusion road trip across Africa.",
+      "sameAs": ["https://audiomack.com/bitkwamusic"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://satsontheroad.africa/#website",
+      "url": "https://satsontheroad.africa/",
+      "name": "Sats On The Road",
+      "publisher": { "@id": "https://satsontheroad.africa/#org" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -43,7 +74,7 @@
      ║  NAV                                                       ║
      ╚══════════════════════════════════════════════════════════╝ -->
 <header class="nav" data-screen-label="Nav">
-  <a href="/" class="nav__brand" id="navBrand" aria-label="Sats On The Road — reload home">
+  <a href="/" class="nav__brand" id="navBrand" aria-label="Sats On The Road home">
     <img src="assets/sotr-logo.png" alt="" />
     <span class="nav__brand-text">
       <span class="nav__brand-line">Sats On The Road</span>
@@ -174,7 +205,7 @@
       </div>
       <h3>Self‑custody, by default.</h3>
       <p>Every wallet we install is non‑custodial. Every seed phrase is written by
-      its owner. Sovereignty isn't a slide — it's a thing you do with your hands.</p>
+      its owner. Sovereignty isn't a slide; it's a thing you do with your hands.</p>
     </article>
     <article class="card">
       <div class="card__icon" aria-hidden="true">
@@ -182,7 +213,7 @@
       </div>
       <h3>Build for low‑bandwidth life.</h3>
       <p>Spotty 2G, dead batteries, USSD phones, intermittent power. We test every
-      flow against the worst conditions on the route — because that's where it
+      flow against the worst conditions on the route, because that's where it
       has to work.</p>
     </article>
     <article class="card">
@@ -229,13 +260,13 @@
               fill="rgba(255,255,255,0.045)"
               stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
 
-        <!-- Route path (dashed animated) — remaining planned journey from Ouagadougou -->
+        <!-- Route path (dashed animated): remaining planned journey from Ouagadougou -->
         <path id="route"
               d="M526.9,162.1 L565.2,359.6 L454.4,366.5 L257.8,338.1 L187.3,274.9 L173.4,245 L118.6,176.9 L90.2,130.8 L64.4,93.9"
               fill="none" stroke="url(#routeGrad)" stroke-width="3"
               stroke-linecap="round" stroke-dasharray="6 8" filter="url(#glow)"/>
 
-        <!-- Travelled portion (solid) — Lagos → Cotonou → Lomé → Ouagadougou -->
+        <!-- Travelled portion (solid): Lagos → Cotonou → Lomé → Ouagadougou -->
         <path id="route-done"
               d="M669.6,333.8 L641.5,336.1 L606.4,343 L526.9,162.1"
               fill="none" stroke="#F7931A" stroke-width="3" stroke-linecap="round"/>
@@ -375,7 +406,7 @@
       <div class="story__body story__body--quote">
         <div class="story__loc story__loc--light">Ouagadougou, Burkina Faso · Current stop</div>
         <h3 class="story__title">Why Ouaga is the right place to be right now.</h3>
-        <p>Burkina Faso's capital is young, dense and mobile‑first — exactly the
+        <p>Burkina Faso's capital is young, dense and mobile‑first, exactly the
         conditions where a neutral, permissionless money network takes root fastest.
         This is where we've parked the truck for the West African inland leg.</p>
         <dl class="demo">
@@ -397,7 +428,7 @@
   <div class="section-head">
     <div class="section-head__num">05 / From the road</div>
     <h2 class="section-head__title">Faces, markets &amp; kilometres.</h2>
-    <p class="section-head__lede">Snapshots from the movement — the crew, the wrapped car,
+    <p class="section-head__lede">Snapshots from the movement: the crew, the wrapped car,
     the merchants and the Bitcoin Afrique stage. Tap any photo to enlarge.</p>
   </div>
 
@@ -418,10 +449,6 @@
     <figure class="g-item"><img src="assets/gallery/p05.jpg" alt="The crew at an art gallery" loading="lazy" /></figure>
     <figure class="g-item"><img src="assets/gallery/p16.jpg" alt="Panel at Conférence Bitcoin Afrique 2026" loading="lazy" /></figure>
     <figure class="g-item"><img src="assets/gallery/p10.jpg" alt="Behind the wheel at night" loading="lazy" /></figure>
-  </div>
-  <div class="see-all-wrap">
-    <button class="see-all" type="button" data-fold="gallery" aria-expanded="false"
-            data-more="See all 16 photos" data-less="Show fewer">See all 16 photos</button>
   </div>
 </section>
 
@@ -561,7 +588,7 @@
 
     <div class="cta__qr" aria-hidden="true">
       <div class="qr">
-        <img src="assets/sotr-qr.jpg" alt="Bitcoin QR code — scan to send sats to BitKwa over Lightning or on-chain." />
+        <img src="assets/sotr-qr.jpg" alt="Bitcoin QR code: scan to send sats to BitKwa over Lightning or on-chain." />
       </div>
       <div class="qr__cap">Scan to send sats · bitkwa@blink.sv</div>
     </div>
@@ -578,7 +605,7 @@
       <div class="section-head__num">08 / Say hello</div>
       <h2 class="contact__title">Get in touch.</h2>
       <p class="contact__lede">Partnerships, press, volunteering, or an invite to bring
-      the truck to your city — reach us on any channel below, or send a note straight
+      the truck to your city. Reach us on any channel below, or send a note straight
       from here.</p>
 
       <ul class="channels">
@@ -686,7 +713,7 @@
 </footer>
 
 <!-- ╔══════════════════════════════════════════════════════════╗
-     ║  SOUNDTRACK — floating Audiomack player                    ║
+     ║  SOUNDTRACK: floating Audiomack player                    ║
      ╚══════════════════════════════════════════════════════════╝ -->
 <aside class="soundbar" id="soundbar" data-state="open" aria-label="Sats On The Road soundtrack">
   <button class="soundbar__pill" id="soundbarPill" type="button" aria-expanded="false" aria-controls="soundbarBody">
@@ -695,12 +722,12 @@
   </button>
   <div class="soundbar__card">
     <div class="soundbar__head">
-      <span class="soundbar__label">♪ Soundtrack — <em>Owo Satoshi · Remix</em></span>
+      <span class="soundbar__label">♪ Soundtrack: <em>Owo Satoshi · Remix</em></span>
       <button class="soundbar__min" id="soundbarMin" type="button" aria-label="Minimise player">–</button>
     </div>
     <div class="soundbar__body" id="soundbarBody">
       <iframe class="soundbar__frame"
-        title="OWO SATOSHI (SATOSHI MONEY) Remix — Bitkwa Music on Audiomack"
+        title="OWO SATOSHI (SATOSHI MONEY) Remix, Bitkwa Music on Audiomack"
         src="https://audiomack.com/embed/bitkwamusic/song/owo-satoshi-satoshi-money-remix"
         height="240" frameborder="0" scrolling="no" loading="lazy"
         allow="autoplay; encrypted-media; clipboard-write"></iframe>

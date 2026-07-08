@@ -1,4 +1,4 @@
-/* Sats On The Road — interactive bits */
+/* Sats On The Road: interactive bits */
 
 // 1) Reveal on scroll
 const revealEls = document.querySelectorAll(
@@ -72,7 +72,7 @@ if ("IntersectionObserver" in window && numEls.length) {
   numEls.forEach((el) => io2.observe(el));
 }
 
-// 3) Decorative QR noise — scatter little squares so the QR feels alive
+// 3) Decorative QR noise: scatter little squares so the QR feels alive
 (function decorQR() {
   const g = document.getElementById("qrnoise");
   if (!g) return;
@@ -200,7 +200,7 @@ document.querySelectorAll(".copy").forEach((btn) => {
       if (res.ok) {
         form.reset();
         btn.textContent = "Message sent ✓";
-        note.textContent = "Thanks — we'll be in touch soon.";
+        note.textContent = "Thanks, we'll be in touch soon.";
         note.classList.add("contact__note--ok");
         setTimeout(() => {
           btn.textContent = btnText;
@@ -214,13 +214,13 @@ document.querySelectorAll(".copy").forEach((btn) => {
     } catch (err) {
       btn.textContent = btnText;
       btn.disabled = false;
-      note.textContent = "Something went wrong — email us at bitkwaofficial@gmail.com.";
+      note.textContent = "Something went wrong. Email us at bitkwaofficial@gmail.com.";
       note.classList.add("contact__note--err");
     }
   });
 })();
 
-/* Floating soundtrack player — expand / minimise, remembers the visitor's choice.
+/* Floating soundtrack player: expand / minimise, remembers the visitor's choice.
    Note: browsers block audio autoplay, and Audiomack's embed is cross-origin,
    so the visitor starts playback with the play button inside the player. */
 (function soundbar() {
@@ -249,7 +249,7 @@ document.querySelectorAll(".copy").forEach((btn) => {
   min.addEventListener("click", () => setState("min"));
 })();
 
-/* Mobile navigation — hamburger toggle for the section links */
+/* Mobile navigation: hamburger toggle for the section links */
 (function mobileNav() {
   const nav = document.querySelector(".nav");
   const toggle = document.getElementById("navToggle");

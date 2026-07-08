@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────────────────────────
-   SATS ON THE ROAD — landing styles
+   SATS ON THE ROAD landing styles
    Palette: orange #F7931A, deep ink #0D0D0D, paper #F6EFE3, dust #1B1815
    Typography: Bricolage Grotesque (display/body), Instrument Serif (italic accents),
                JetBrains Mono (data)
@@ -80,7 +80,7 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 }
 .nav__cta:hover { background: var(--orange); color: var(--ink); transform: translateY(-1px); }
 
-/* Hamburger toggle — only shown on mobile */
+/* Hamburger toggle: only shown on mobile */
 .nav__toggle {
   display: none;
   align-items: center; justify-content: center;
@@ -641,17 +641,19 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
   max-width: var(--measure);
   margin: 0 auto;
   padding: 0 32px;
-  column-count: 3;
-  column-gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
 }
-@media (max-width: 860px){ .gallery__wall { column-count: 2; } }
-@media (max-width: 520px){ .gallery__wall { column-count: 1; } }
+@media (max-width: 640px){
+  .gallery__wall { padding: 0 16px; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+}
 
 .g-item {
-  break-inside: avoid;
-  margin: 0 0 18px;
+  aspect-ratio: 1;
+  margin: 0;
   display: block;
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.1);
   background: rgba(255,255,255,.03);
@@ -660,7 +662,8 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 .g-item img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   transition: transform .5s ease, filter .3s ease;
 }
 .g-item:hover img { transform: scale(1.04); filter: brightness(1.05); }
@@ -1034,7 +1037,7 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 }
 .soundbar__frame { display: block; width: 100%; border: 0; background: var(--ink); }
 
-/* Minimised state — keep the iframe mounted (clipped) so playback continues */
+/* Minimised state: keep the iframe mounted (clipped) so playback continues */
 .soundbar[data-state="min"] .soundbar__card { display: none; }
 .soundbar[data-state="min"] .soundbar__pill { display: inline-flex; }
 
@@ -1060,7 +1063,7 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
   .soundbar { right: 12px; left: 12px; bottom: 12px; width: auto; }
 }
 
-/* Reveal on scroll — gated so content is never permanently hidden */
+/* Reveal on scroll: gated so content is never permanently hidden */
 @media (prefers-reduced-motion: no-preference) {
   [data-reveal] {
     opacity: 0;
@@ -1093,8 +1096,8 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 }
 .see-all:hover { background: var(--ink); color: var(--paper); transform: translateY(-1px); }
 .partners .see-all-wrap { margin-bottom: 8px; }
-/* Collapsed: show only the first 6 items until "See all" is pressed */
-.gallery:not(.is-open) .g-item:nth-child(n+7) { display: none; }
+/* Partners collapse to the first 6 until "See all" is pressed (gallery shows all,
+   compactly, so no fold there). */
 .partners:not(.is-open) .partner:nth-child(n+7) { display: none; }
 
 /* ───────── Back-to-top arrow ───────── */
