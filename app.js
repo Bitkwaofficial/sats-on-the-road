@@ -181,13 +181,15 @@ document.querySelectorAll(".copy").forEach((btn) => {
   if (!form) return;
   const btn = form.querySelector(".contact__submit");
   const note = form.querySelector(".contact__note");
-  const btnText = btn.textContent;
-  const noteText = note.textContent;
+  const S = (en, fr) => (document.documentElement.lang === "fr" ? fr : en);
+  const defBtn = () => S("Send message →", "Envoyer le message →");
+  const defNote = () =>
+    S("Sends straight to the Sats On The Road inbox.", "Envoyé directement à la boîte de réception de Sats On The Road.");
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     btn.disabled = true;
-    btn.textContent = "Sending…";
+    btn.textContent = S("Sending…", "Envoi…");
     note.textContent = "";
     note.classList.remove("contact__note--ok", "contact__note--err");
 
@@ -199,22 +201,25 @@ document.querySelectorAll(".copy").forEach((btn) => {
       });
       if (res.ok) {
         form.reset();
-        btn.textContent = "Message sent ✓";
-        note.textContent = "Thanks, we'll be in touch soon.";
+        btn.textContent = S("Message sent ✓", "Message envoyé ✓");
+        note.textContent = S("Thanks, we'll be in touch soon.", "Merci, nous vous répondrons bientôt.");
         note.classList.add("contact__note--ok");
         setTimeout(() => {
-          btn.textContent = btnText;
+          btn.textContent = defBtn();
           btn.disabled = false;
-          note.textContent = noteText;
+          note.textContent = defNote();
           note.classList.remove("contact__note--ok");
         }, 5000);
       } else {
         throw new Error("bad response");
       }
     } catch (err) {
-      btn.textContent = btnText;
+      btn.textContent = defBtn();
       btn.disabled = false;
-      note.textContent = "Something went wrong. Email us at bitkwaofficial@gmail.com.";
+      note.textContent = S(
+        "Something went wrong. Email us at bitkwaofficial@gmail.com.",
+        "Une erreur est survenue. Écrivez-nous à bitkwaofficial@gmail.com."
+      );
       note.classList.add("contact__note--err");
     }
   });

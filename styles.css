@@ -80,6 +80,19 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 }
 .nav__cta:hover { background: var(--orange); color: var(--ink); transform: translateY(-1px); }
 
+/* Language toggle */
+.nav__lang {
+  font: inherit; font-size: 13px; font-weight: 600; letter-spacing: .01em;
+  padding: 5px 12px; border-radius: 999px;
+  background: transparent; color: var(--ink);
+  border: 1px solid var(--rule); cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+.nav__lang:hover { background: var(--ink); color: var(--paper); }
+@media (max-width: 880px){
+  .nav__lang { align-self: flex-start; margin: 10px 0 2px; font-size: 15px; }
+}
+
 /* Hamburger toggle: only shown on mobile */
 .nav__toggle {
   display: none;
