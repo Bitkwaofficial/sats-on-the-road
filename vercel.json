@@ -1,0 +1,14 @@
+{
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/mission", "destination": "/" },
+    { "source": "/journey", "destination": "/" },
+    { "source": "/impact", "destination": "/" },
+    { "source": "/stories", "destination": "/" },
+    { "source": "/gallery", "destination": "/" },
+    { "source": "/partners", "destination": "/" },
+    { "source": "/contact", "destination": "/" },
+    { "source": "/fuelthetruck", "destination": "/" },
+    { "source": "/volunteer", "destination": "/" }
+  ]
+}

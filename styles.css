@@ -984,6 +984,15 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 }
 .foot__motto { color: var(--orange-deep); font-weight: 600; }
 
+/* Clean-route anchoring: keep section tops clear of the sticky nav */
+section[id] { scroll-margin-top: 72px; }
+
+/* Footer: centre the brand + Volunteer link on mobile */
+@media (max-width: 640px){
+  .foot__top { flex-direction: column; align-items: center; text-align: center; gap: 18px; }
+  .foot__links { justify-content: center; width: 100%; }
+}
+
 /* ───────── Floating soundtrack player ───────── */
 .soundbar {
   position: fixed; z-index: 60;
