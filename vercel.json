@@ -1,5 +1,11 @@
 {
   "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
+    }
+  ],
   "rewrites": [
     { "source": "/mission", "destination": "/" },
     { "source": "/journey", "destination": "/" },
