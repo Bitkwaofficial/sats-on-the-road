@@ -116,6 +116,11 @@
     "⚡ Sats converter": "⚡ Convertisseur de sats",
     "Your money": "Votre argent",
     "Download image ↓": "Télécharger l'image ↓",
+    "🎉 Fueled the truck?": "🎉 Vous avez ravitaillé le camion ?",
+    "Make a card, bring a friend along": "Créez une carte, invitez un ami",
+    "Download card ↓": "Télécharger la carte ↓",
+    "Post on X": "Publier sur X",
+    "Share ⚡": "Partager ⚡",
     // Contact
     "08 / Say hello": "08 / Dites bonjour",
     "Get in touch.": "Contactez-nous.",
@@ -155,6 +160,7 @@
   const ATTR = [
     { sel: "#cf-name", attr: "placeholder", en: "Your name", fr: "Votre nom" },
     { sel: "#cf-message", attr: "placeholder", en: "Tell us a little about it…", fr: "Dites-nous en un peu plus…" },
+    { sel: "#fuelName", attr: "placeholder", en: "Your name (optional)", fr: "Votre nom (facultatif)" },
     { sel: '.copy[data-copy="bitkwa@blink.sv"]', attr: "aria-label", en: "Copy Lightning address", fr: "Copier l'adresse Lightning" },
     { sel: '.copy[data-copy^="bc1"]', attr: "aria-label", en: "Copy on-chain address", fr: "Copier l'adresse on-chain" },
     { sel: ".lightbox__close", attr: "aria-label", en: "Close", fr: "Fermer" },

@@ -647,6 +647,23 @@
     <button class="converter__dl" id="convDownload" type="button">Download image ↓</button>
     <canvas id="convCanvas" width="1200" height="630" aria-hidden="true" style="display:none"></canvas>
   </div>
+
+  <div class="fueled" id="fueled">
+    <div class="fueled__top">
+      <span class="fueled__eyebrow">🎉 Fueled the truck?</span>
+      <span class="fueled__hint">Make a card, bring a friend along</span>
+    </div>
+    <div class="fueled__row">
+      <input id="fuelName" type="text" maxlength="28" placeholder="Your name (optional)" autocomplete="off" spellcheck="false" />
+      <button class="fueled__dl" id="fuelDownload" type="button">Download card ↓</button>
+    </div>
+    <div class="fueled__share">
+      <button class="fueled__chip" id="fuelShare" type="button" hidden>Share ⚡</button>
+      <a class="fueled__chip" id="fuelX" target="_blank" rel="noopener">Post on X</a>
+      <a class="fueled__chip" id="fuelWa" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <canvas id="fuelCanvas" width="1200" height="630" aria-hidden="true" style="display:none"></canvas>
+  </div>
 </section>
 
 
@@ -793,5 +810,6 @@
 <script src="app.js"></script>
 <script src="price-ticker.js"></script>
 <script src="converter.js"></script>
+<script src="share.js"></script>
 </body>
 </html>
