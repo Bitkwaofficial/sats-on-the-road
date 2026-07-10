@@ -52,8 +52,47 @@ a { color: inherit; text-decoration: none; }
 em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; }
 
 /* ───────── Nav ───────── */
+/* ───────── Live Bitcoin price ticker ───────── */
+.pxticker {
+  position: sticky; top: 0; z-index: 60;
+  display: flex; align-items: center; gap: 12px;
+  height: 36px; padding: 0 14px;
+  background: var(--ink); color: var(--paper);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  font-family: "JetBrains Mono", monospace; font-size: 12.5px;
+  overflow: hidden;
+}
+.pxticker__label {
+  flex: none; display: inline-flex; align-items: center; gap: 5px;
+  font-weight: 700; letter-spacing: .02em; white-space: nowrap;
+  padding-right: 12px; border-right: 1px solid rgba(255,255,255,.14);
+}
+.pxticker__btc { color: var(--orange); font-size: 14px; font-weight: 800; }
+.pxticker__viewport {
+  position: relative; flex: 1 1 auto; min-width: 0; height: 100%;
+  overflow: hidden; display: flex; align-items: center;
+}
+.pxticker__viewport::before, .pxticker__viewport::after {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 30px; z-index: 2; pointer-events: none;
+}
+.pxticker__viewport::before { left: 0; background: linear-gradient(90deg, var(--ink), transparent); }
+.pxticker__viewport::after  { right: 0; background: linear-gradient(-90deg, var(--ink), transparent); }
+.pxticker__track {
+  display: inline-flex; gap: 30px; white-space: nowrap; will-change: transform;
+  animation: marquee 55s linear infinite;
+}
+.pxticker__viewport:hover .pxticker__track { animation-play-state: paused; }
+.pxticker__item { display: inline-flex; align-items: center; gap: 6px; color: rgba(246,239,227,.72); }
+.pxticker__item b { color: var(--paper); font-weight: 600; }
+.pxticker__flag { font-size: 13px; }
+.pxticker__loading { color: rgba(246,239,227,.6); font-weight: 400; }
+@media (max-width: 560px){
+  .pxticker { font-size: 11.5px; gap: 9px; padding: 0 10px; }
+  .pxticker__track { gap: 22px; }
+}
+
 .nav {
-  position: sticky; top: 0; z-index: 50;
+  position: sticky; top: 36px; z-index: 50;
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px;
   padding: 14px 32px;
@@ -999,7 +1038,7 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 .foot__motto { color: var(--orange-deep); font-weight: 600; }
 
 /* Clean-route anchoring: keep section tops clear of the sticky nav */
-section[id] { scroll-margin-top: 72px; }
+section[id] { scroll-margin-top: 108px; }
 
 /* Footer: centre the brand + Volunteer link on mobile */
 @media (max-width: 640px){
@@ -1102,6 +1141,7 @@ section[id] { scroll-margin-top: 72px; }
 /* Reduced motion: kill decorative loops + reveals, show everything */
 @media (prefers-reduced-motion: reduce) {
   .hero__ticker-track,
+  .pxticker__track,
   #route,
   .pulse-out,
   .pulse-in { animation: none !important; }
