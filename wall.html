@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-i18n-meta="off">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Wall of Support | Sats On The Road</title>
+<meta name="description" content="Messages of support from the Sats On The Road movement across Africa. Sign the wall and add your voice." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#0D0D0D" />
+<link rel="canonical" href="https://satsontheroad.africa/wall" />
+</head>
+<body>
+
+<header class="nav" style="top:0" data-screen-label="Nav">
+  <a href="/" class="nav__brand" aria-label="Sats On The Road home">
+    <img src="assets/sotr-logo.png" alt="" />
+    <span class="nav__brand-text">
+      <span class="nav__brand-line">Sats On The Road</span>
+      <span class="nav__brand-sub">Africa · 2026</span>
+    </span>
+  </a>
+  <a href="/" class="wall__back">← Back to site</a>
+  <button class="nav__lang" id="langToggle" type="button" aria-label="Switch to French">Français</button>
+  <a href="/fuelthetruck" class="nav__cta">Fuel the truck →</a>
+</header>
+
+<section class="wall" data-screen-label="Wall of Support">
+  <div class="section-head">
+    <div class="section-head__num">✍️ Wall of support</div>
+    <h2 class="section-head__title">Messages from the movement.</h2>
+    <p class="section-head__lede">Notes from merchants, learners and supporters we've met along the road. Add yours.</p>
+  </div>
+
+  <form class="wall-form" id="wallForm" action="https://formspree.io/f/xjgqdokd" method="POST">
+    <input type="hidden" name="_subject" value="New Wall of Support signature" />
+    <input type="hidden" name="type" value="wall-signature" />
+    <div class="wall-form__row">
+      <input type="text" name="name" placeholder="Your name" maxlength="40" autocomplete="name" required />
+      <input type="text" name="place" placeholder="City, country (optional)" maxlength="60" autocomplete="off" />
+    </div>
+    <textarea name="message" placeholder="Leave a message of support…" maxlength="240" rows="3" required></textarea>
+    <div class="wall-form__foot">
+      <button type="submit" class="btn btn--primary">Sign the wall →</button>
+      <span class="wall-form__status" id="wallStatus" aria-live="polite"></span>
+    </div>
+  </form>
+
+  <div class="wall-grid" id="wallGrid" aria-live="polite"></div>
+</section>
+
+<footer class="foot">
+  <div class="foot__bottom">
+    <div>© 2026 Sats On The Road.</div>
+    <div class="foot__motto">Keep your seed. Drive Africa. Stack sats.</div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="wall.js"></script>
+</body>
+</html>

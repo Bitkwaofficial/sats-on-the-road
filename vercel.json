@@ -9,6 +9,7 @@
     { "source": "/partners", "destination": "/" },
     { "source": "/contact", "destination": "/" },
     { "source": "/fuelthetruck", "destination": "/" },
-    { "source": "/volunteer", "destination": "/" }
+    { "source": "/volunteer", "destination": "/" },
+    { "source": "/wall", "destination": "/wall.html" }
   ]
 }

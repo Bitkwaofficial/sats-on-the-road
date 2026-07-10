@@ -977,6 +977,60 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 }
 .fueled__chip:hover { background: rgba(255,255,255,.08); border-color: var(--orange); }
 
+/* ───────── Wall of Support (wall.html) ───────── */
+.wall__back {
+  font-weight: 600; font-size: 14px; color: var(--ink-3); margin-left: auto;
+}
+.wall__back:hover { color: var(--orange-deep); }
+.wall { padding: 64px 32px 96px; background: var(--paper); }
+.wall .section-head { margin-bottom: 0; }
+.wall-form {
+  max-width: 640px; margin: 36px auto 0;
+  background: #fff; border: 1px solid var(--rule); border-radius: 16px;
+  padding: 22px; display: flex; flex-direction: column; gap: 12px;
+}
+.wall-form__row { display: flex; gap: 12px; }
+.wall-form input, .wall-form textarea {
+  width: 100%; min-width: 0; box-sizing: border-box;
+  background: var(--paper); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 12px 14px; font: inherit; color: var(--ink); outline: none;
+  transition: border-color .2s;
+}
+.wall-form input:focus, .wall-form textarea:focus { border-color: var(--orange); }
+.wall-form textarea { resize: vertical; min-height: 84px; }
+.wall-form__foot { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.wall-form__status { font-family: "JetBrains Mono", monospace; font-size: 12.5px; }
+.wall-form__status--ok { color: #2f9e57; }
+.wall-form__status--err { color: #d1495b; }
+.wall-grid {
+  max-width: var(--measure); margin: 44px auto 0; padding: 0 32px;
+  column-count: 3; column-gap: 18px;
+}
+@media (max-width: 860px){ .wall-grid { column-count: 2; } }
+@media (max-width: 560px){ .wall-grid { column-count: 1; } .wall-form__row { flex-direction: column; } }
+.wall-card {
+  break-inside: avoid; margin: 0 0 18px; position: relative;
+  background: #fff; border: 1px solid var(--rule); border-radius: 16px;
+  padding: 20px 20px 18px 26px;
+}
+.wall-card::before {
+  content: ""; position: absolute; left: 12px; top: 20px; bottom: 20px;
+  width: 3px; border-radius: 3px; background: var(--orange);
+}
+.wall-card--t1::before { background: #2BA6A4; }
+.wall-card--t2::before { background: #E8578A; }
+.wall-card--t3::before { background: #4A9E5C; }
+.wall-card blockquote {
+  margin: 0 0 14px; font-family: "Instrument Serif", serif; font-style: italic;
+  font-size: 21px; line-height: 1.35; color: var(--ink);
+}
+.wall-card figcaption { display: flex; flex-direction: column; gap: 2px; }
+.wall-card__name { font-weight: 700; font-size: 14px; color: var(--ink); }
+.wall-card__place {
+  font-family: "JetBrains Mono", monospace; font-size: 11px;
+  text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3);
+}
+
 .cta__row { display: flex; gap: 12px; flex-wrap: wrap; }
 
 .cta__qr {

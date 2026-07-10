@@ -121,6 +121,13 @@
     "Download card ↓": "Télécharger la carte ↓",
     "Post on X": "Publier sur X",
     "Share ⚡": "Partager ⚡",
+    "✍️ Wall of support": "✍️ Mur des soutiens",
+    "Messages from the movement.": "Messages du mouvement.",
+    "Notes from merchants, learners and supporters we've met along the road. Add yours.":
+      "Des mots de commerçants, d'élèves et de soutiens rencontrés sur la route. Ajoutez le vôtre.",
+    "Sign the wall →": "Signer le mur →",
+    "← Back to site": "← Retour au site",
+    "Wall of support": "Mur des soutiens",
     // Contact
     "08 / Say hello": "08 / Dites bonjour",
     "Get in touch.": "Contactez-nous.",
@@ -161,6 +168,9 @@
     { sel: "#cf-name", attr: "placeholder", en: "Your name", fr: "Votre nom" },
     { sel: "#cf-message", attr: "placeholder", en: "Tell us a little about it…", fr: "Dites-nous en un peu plus…" },
     { sel: "#fuelName", attr: "placeholder", en: "Your name (optional)", fr: "Votre nom (facultatif)" },
+    { sel: '.wall-form input[name="name"]', attr: "placeholder", en: "Your name", fr: "Votre nom" },
+    { sel: '.wall-form input[name="place"]', attr: "placeholder", en: "City, country (optional)", fr: "Ville, pays (facultatif)" },
+    { sel: ".wall-form textarea", attr: "placeholder", en: "Leave a message of support…", fr: "Laissez un message de soutien…" },
     { sel: '.copy[data-copy="bitkwa@blink.sv"]', attr: "aria-label", en: "Copy Lightning address", fr: "Copier l'adresse Lightning" },
     { sel: '.copy[data-copy^="bc1"]', attr: "aria-label", en: "Copy on-chain address", fr: "Copier l'adresse on-chain" },
     { sel: ".lightbox__close", attr: "aria-label", en: "Close", fr: "Fermer" },
@@ -238,6 +248,7 @@
   }
   function applyMeta(toFr) {
     document.documentElement.lang = toFr ? "fr" : "en";
+    if (document.documentElement.getAttribute("data-i18n-meta") === "off") return;
     document.title = toFr ? META.title.fr : META.title.en;
     const d = document.querySelector('meta[name="description"]');
     if (d) d.setAttribute("content", toFr ? META.desc.fr : META.desc.en);
