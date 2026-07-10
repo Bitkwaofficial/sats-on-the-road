@@ -54,10 +54,45 @@
 
   fiatIn.addEventListener("input", () => { last = "fiat"; fromFiat(); });
   satsIn.addEventListener("input", () => { last = "sats"; fromSats(); });
-  curSel.addEventListener("change", recompute);
+  const MANUAL = "sotr-cur-manual";
+  const supported = (c) => CUR.some((x) => x.c === String(c || "").toLowerCase());
+  curSel.addEventListener("change", () => {
+    try { localStorage.setItem(MANUAL, curSel.value); } catch (e) {} // remember explicit choice
+    recompute();
+  });
   document.addEventListener("sotr:rates", recompute);
 
-  recompute(); // initial (uses cache if present; updates when rates arrive)
+  // Default the currency to the visitor's country (IP geolocation), unless
+  // they've manually chosen one. Re-detects per browser session (so it follows
+  // you if you travel), and manual selection always wins.
+  async function detectGeo() {
+    const tries = [
+      () => fetch("https://ipapi.co/json/").then((r) => r.json()).then((j) => j.currency),
+      () => fetch("https://ipwho.is/").then((r) => r.json()).then((j) => j.currency && j.currency.code),
+    ];
+    for (const t of tries) {
+      try { const c = await t(); if (c) return String(c).toLowerCase(); } catch (e) {}
+    }
+    return null;
+  }
+  (function initCurrency() {
+    let manual = null;
+    try { manual = localStorage.getItem(MANUAL); } catch (e) {}
+    if (manual && supported(manual)) { curSel.value = manual; recompute(); return; }
+    let geo = null;
+    try { geo = sessionStorage.getItem("sotr-cur-geo"); } catch (e) {}
+    if (geo && supported(geo)) { curSel.value = geo; recompute(); return; }
+    recompute(); // NGN default while detecting
+    detectGeo().then((cur) => {
+      let m = null;
+      try { m = localStorage.getItem(MANUAL); } catch (e) {}
+      if (cur && supported(cur) && !m) {
+        curSel.value = cur;
+        try { sessionStorage.setItem("sotr-cur-geo", cur); } catch (e) {}
+        recompute();
+      }
+    });
+  })();
 
   /* ---- Branded, watermarked PNG export ---- */
   function fitFont(ctx, text, weight, family, startPx, maxWidth) {

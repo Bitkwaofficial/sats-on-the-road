@@ -7,7 +7,7 @@
 <meta name="description" content="Messages of support from the Sats On The Road movement across Africa. Sign the wall and add your voice." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Permanent+Marker&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
 <link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png" />
@@ -31,27 +31,38 @@
 </header>
 
 <section class="wall" data-screen-label="Wall of Support">
-  <div class="section-head">
-    <div class="section-head__num">✍️ Wall of support</div>
-    <h2 class="section-head__title">Messages from the movement.</h2>
-    <p class="section-head__lede">Notes from merchants, learners and supporters we've met along the road. Add yours.</p>
+  <div class="wall__bg" aria-hidden="true">
+    <div class="wall__logo"></div>
+    <span class="splash s1"></span>
+    <span class="splash s2"></span>
+    <span class="splash s3"></span>
+    <span class="splash s4"></span>
+    <span class="splash s5"></span>
   </div>
 
-  <form class="wall-form" id="wallForm" action="https://formspree.io/f/xjgqdokd" method="POST">
-    <input type="hidden" name="_subject" value="New Wall of Support signature" />
-    <input type="hidden" name="type" value="wall-signature" />
-    <div class="wall-form__row">
-      <input type="text" name="name" placeholder="Your name" maxlength="40" autocomplete="name" required />
-      <input type="text" name="place" placeholder="City, country (optional)" maxlength="60" autocomplete="off" />
+  <div class="wall__inner">
+    <div class="section-head">
+      <div class="section-head__num">✍️ Wall of support</div>
+      <h2 class="section-head__title">Messages from the movement.</h2>
+      <p class="section-head__lede">Notes from merchants, learners and supporters we've met along the road. Add yours.</p>
     </div>
-    <textarea name="message" placeholder="Leave a message of support…" maxlength="240" rows="3" required></textarea>
-    <div class="wall-form__foot">
-      <button type="submit" class="btn btn--primary">Sign the wall →</button>
-      <span class="wall-form__status" id="wallStatus" aria-live="polite"></span>
-    </div>
-  </form>
 
-  <div class="wall-grid" id="wallGrid" aria-live="polite"></div>
+    <form class="wall-form" id="wallForm" action="https://formspree.io/f/xjgqdokd" method="POST">
+      <input type="hidden" name="_subject" value="New Wall of Support signature" />
+      <input type="hidden" name="type" value="wall-signature" />
+      <div class="wall-form__row">
+        <input type="text" name="name" placeholder="Your name" maxlength="40" autocomplete="name" required />
+        <input type="text" name="place" placeholder="City, country (optional)" maxlength="60" autocomplete="off" />
+      </div>
+      <textarea name="message" placeholder="Leave a message of support…" maxlength="240" rows="3" required></textarea>
+      <div class="wall-form__foot">
+        <button type="submit" class="btn btn--primary">Sign the wall →</button>
+        <span class="wall-form__status" id="wallStatus" aria-live="polite"></span>
+      </div>
+    </form>
+
+    <div class="wall-grid" id="wallGrid" aria-live="polite"></div>
+  </div>
 </section>
 
 <footer class="foot">
