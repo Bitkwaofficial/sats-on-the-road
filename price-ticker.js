@@ -58,6 +58,9 @@
   }
 
   function build(prices) {
+    // Share live rates with the sats converter (no extra fetches).
+    window.SOTR_RATES = prices;
+    document.dispatchEvent(new Event("sotr:rates"));
     const items = CUR.filter((x) => prices[x.c] != null)
       .map(
         (x) =>

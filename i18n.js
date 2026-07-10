@@ -113,6 +113,9 @@
       "Du diesel, des ferries, des papiers de douane et beaucoup d'autocollants de portefeuille. Chaque sat que vous envoyez finance le prochain commerçant que nous convertissons au Bitcoin.",
     "Scan to send sats · bitkwa@blink.sv": "Scannez pour envoyer des sats · bitkwa@blink.sv",
     "Copy": "Copier",
+    "⚡ Sats converter": "⚡ Convertisseur de sats",
+    "Your money": "Votre argent",
+    "Download image ↓": "Télécharger l'image ↓",
     // Contact
     "08 / Say hello": "08 / Dites bonjour",
     "Get in touch.": "Contactez-nous.",
