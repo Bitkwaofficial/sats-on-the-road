@@ -55,7 +55,10 @@
   fiatIn.addEventListener("input", () => { last = "fiat"; fromFiat(); });
   satsIn.addEventListener("input", () => { last = "sats"; fromSats(); });
   const MANUAL = "sotr-cur-manual";
-  const supported = (c) => CUR.some((x) => x.c === String(c || "").toLowerCase());
+  const supported = (c) => {
+    const v = String(c || "").toLowerCase();
+    return Array.prototype.some.call(curSel.options, (o) => o.value === v);
+  };
   curSel.addEventListener("change", () => {
     try { localStorage.setItem(MANUAL, curSel.value); } catch (e) {} // remember explicit choice
     recompute();
