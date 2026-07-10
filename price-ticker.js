@@ -61,7 +61,7 @@
     const items = CUR.filter((x) => prices[x.c] != null)
       .map(
         (x) =>
-          `<span class="pxticker__item"><span class="pxticker__flag" aria-hidden="true">${x.f}</span> <b>${x.s}${fmt.format(prices[x.c])}</b></span>`
+          `<span class="pxticker__item"><span class="pxticker__ccy">${x.c.toUpperCase()}</span> <b>${fmt.format(prices[x.c])}</b></span>`
       )
       .join("");
     if (!items) return;

@@ -84,7 +84,7 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 .pxticker__viewport:hover .pxticker__track { animation-play-state: paused; }
 .pxticker__item { display: inline-flex; align-items: center; gap: 6px; color: rgba(246,239,227,.72); }
 .pxticker__item b { color: var(--paper); font-weight: 600; }
-.pxticker__flag { font-size: 13px; }
+.pxticker__ccy { color: var(--orange); font-weight: 700; letter-spacing: .04em; }
 .pxticker__loading { color: rgba(246,239,227,.6); font-weight: 400; }
 @media (max-width: 560px){
   .pxticker { font-size: 11.5px; gap: 9px; padding: 0 10px; }
