@@ -993,13 +993,6 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
   color: var(--paper);
 }
 .wall__bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
-.wall__logo-front {
-  display: block; height: auto;
-  width: clamp(260px, 40vw, 440px); max-width: 88%;
-  margin: 0 0 22px; border-radius: 16px;
-  border: 1px solid rgba(255,255,255,.08);
-  box-shadow: 0 24px 54px -26px rgba(0,0,0,.75);
-}
 .wall .splash {
   position: absolute; border-radius: 50%;
   filter: blur(58px); mix-blend-mode: screen; opacity: .55;
