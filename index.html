@@ -582,6 +582,16 @@
         sat you send pays for the next merchant we orange‑pill.
       </p>
 
+      <!-- Live fundraiser total from Geyser. Hidden until geyser.js confirms the
+           project is approved and public (see /api/raised). -->
+      <div class="geyser" id="geyserRaised" hidden>
+        <div class="geyser__big"><span id="grSats">—</span> <span class="geyser__unit">sats raised</span></div>
+        <div class="geyser__sub"><span id="grUsd">—</span> · <span id="grFunders">—</span></div>
+      </div>
+      <a class="btn btn--primary geyser__cta" id="geyserCta" data-geyser-cta
+         href="https://geyser.fund/project/satsontheroadafrica"
+         target="_blank" rel="noopener" hidden>⚡ Fuel the truck on Geyser →</a>
+
       <div class="cta__split">
         <div class="cta__col">
           <div class="cta__col-eyebrow">⚡ Lightning</div>
@@ -812,5 +822,6 @@
 <script src="price-ticker.js"></script>
 <script src="converter.js"></script>
 <script src="share.js"></script>
+<script src="geyser.js"></script>
 </body>
 </html>

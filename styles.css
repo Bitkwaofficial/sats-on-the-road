@@ -1107,6 +1107,27 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
   text-align: center;
 }
 
+/* Live Geyser fundraiser total + verified donate button (#support) */
+.geyser {
+  margin: 4px 0 20px; padding: 18px 20px;
+  border: 1px solid rgba(247,147,26,.35); border-radius: 16px;
+  background: rgba(247,147,26,.08);
+}
+.geyser__big {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 800; letter-spacing: -.02em;
+  font-size: clamp(30px, 5vw, 46px); line-height: 1; color: var(--paper);
+}
+.geyser__unit {
+  font-size: .4em; font-weight: 700; letter-spacing: .04em;
+  color: var(--orange); text-transform: uppercase;
+}
+.geyser__sub {
+  margin-top: 8px; font-family: "JetBrains Mono", monospace;
+  font-size: 13px; color: rgba(246,239,227,.7);
+}
+.geyser__cta { display: inline-flex; margin: 0 0 22px; }
+
 /* ───────── Contact ───────── */
 .contact {
   padding: 110px 32px;
