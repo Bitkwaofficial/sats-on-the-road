@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /wall-admin
+Disallow: /api/
 
 Sitemap: https://satsontheroad.africa/sitemap.xml
