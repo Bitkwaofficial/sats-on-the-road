@@ -43,9 +43,17 @@ module.exports = async function handler(req, res) {
   const body = (await readBody(req)) || {};
   const id = String(body.id || "");
   const action = String(body.action || "");
-  // approve/reject act on the pending queue; unpublish takes down a published one.
-  if (!id || ["approve", "reject", "unpublish"].indexOf(action) === -1)
-    return res.status(400).send(JSON.stringify({ error: "id and valid action required" }));
+  if (["approve", "reject", "unpublish"].indexOf(action) === -1)
+    return res.status(400).send(JSON.stringify({ error: "valid action required" }));
+  // approve/reject need an id (pending items always have one). unpublish can also
+  // match by content, so notes published before ids existed can still be removed.
+  if (action !== "unpublish" && !id)
+    return res.status(400).send(JSON.stringify({ error: "id required" }));
+
+  const bName = String(body.name || ""), bPlace = String(body.place || "");
+  const bMsg = String(body.msg || ""), bDate = String(body.date || "");
+  if (action === "unpublish" && !id && !(bName && bMsg))
+    return res.status(400).send(JSON.stringify({ error: "id or message required" }));
 
   const listKey = action === "unpublish" ? "wall:approved" : "wall:pending";
   try {
@@ -55,7 +63,13 @@ module.exports = async function handler(req, res) {
     for (const s of raw) {
       let o;
       try { o = JSON.parse(s); } catch (e) { continue; }
-      if (o && o.id === id) { match = s; obj = o; break; }
+      if (!o) continue;
+      const byId = id && o.id === id;
+      const byContent =
+        action === "unpublish" &&
+        o.msg === bMsg && (o.name || "") === bName &&
+        (o.place || "") === bPlace && (o.date || "") === bDate;
+      if (byId || byContent) { match = s; obj = o; break; }
     }
     if (!match) return res.status(404).send(JSON.stringify({ error: "not found" }));
 

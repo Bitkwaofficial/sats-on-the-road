@@ -70,6 +70,9 @@
   if (hash.get("t")) $("token").value = hash.get("t");
   const token = () => $("token").value.trim();
 
+  let pending = [];
+  let published = [];
+
   async function api(path, opts) {
     opts = opts || {};
     opts.headers = Object.assign({ "x-admin-token": token() }, opts.headers || {});
@@ -77,11 +80,11 @@
     return { status: r.status, body: await r.json().catch(() => ({})) };
   }
 
-  function cardHtml(m, kind) {
+  function cardHtml(m, kind, i) {
     const buttons = kind === "pending"
       ? '<button class="primary" data-act="approve">Approve</button><button class="reject" data-act="reject">Reject</button>'
       : '<button class="remove" data-act="unpublish">Remove</button>';
-    return `<div class="card" data-id="${esc(m.id)}">
+    return `<div class="card" data-kind="${kind}" data-idx="${i}">
         <p class="msg">${esc(m.msg)}</p>
         <div class="meta"><b>${esc(m.name || "Anonymous")}</b>${m.place ? " · " + esc(m.place) : ""}${m.date ? " · " + esc(m.date) : ""}</div>
         <div class="actions">${buttons}</div>
@@ -93,9 +96,10 @@
     if (r.status === 401) { $("status").innerHTML = '<span class="err">Invalid token.</span>'; return false; }
     if (r.status !== 200) { countEl.innerHTML = '<span class="err">error</span>'; return true; }
     const items = (r.body && r.body.items) || [];
+    if (kind === "pending") pending = items; else published = items;
     countEl.textContent = "(" + items.length + ")";
     emptyEl.hidden = items.length > 0;
-    listEl.innerHTML = items.map((m) => cardHtml(m, kind)).join("");
+    listEl.innerHTML = items.map((m, i) => cardHtml(m, kind, i)).join("");
     return true;
   }
 
@@ -106,12 +110,12 @@
     if ($("status").textContent === "Loading…") $("status").textContent = "";
   }
 
-  async function moderate(id, action, card) {
+  async function moderate(payload, card) {
     card.querySelectorAll("button").forEach((b) => (b.disabled = true));
     const r = await api("/api/wall/moderate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id: id, action: action }),
+      body: JSON.stringify(payload),
     });
     if (r.status === 200 && r.body && r.body.ok) {
       const list = card.parentElement;
@@ -125,16 +129,25 @@
     }
   }
 
-  function wire(listId) {
-    $(listId).addEventListener("click", (e) => {
-      const btn = e.target.closest("button[data-act]");
-      if (!btn) return;
-      const card = btn.closest(".card");
-      moderate(card.getAttribute("data-id"), btn.getAttribute("data-act"), card);
-    });
-  }
-  wire("pendingList");
-  wire("pubList");
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-act]");
+    if (!btn) return;
+    const card = btn.closest(".card");
+    if (!card) return;
+    const kind = card.getAttribute("data-kind");
+    const item = (kind === "pending" ? pending : published)[+card.getAttribute("data-idx")] || {};
+    const action = btn.getAttribute("data-act");
+    // Send id when present plus content, so unpublish works even for older
+    // published notes that predate ids (matched by content server-side).
+    moderate({
+      action: action,
+      id: item.id || "",
+      name: item.name || "",
+      place: item.place || "",
+      msg: item.msg || "",
+      date: item.date || "",
+    }, card);
+  });
 
   $("load").addEventListener("click", loadAll);
   if (token()) loadAll();
