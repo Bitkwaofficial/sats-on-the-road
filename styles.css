@@ -106,7 +106,7 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 .nav__brand-text { display: flex; flex-direction: column; line-height: 1.05; }
 .nav__brand-line { font-weight: 700; letter-spacing: -0.01em; }
 .nav__brand-sub { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--ink-3); }
-.nav__links { display: flex; gap: 28px; }
+.nav__links { display: flex; gap: 28px; align-items: center; }
 .nav__links a { font-weight: 500; font-size: 15px; }
 .nav__links a:hover { color: var(--orange-deep); }
 .nav__cta {
@@ -120,16 +120,22 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
 .nav__cta:hover { background: var(--orange); color: var(--ink); transform: translateY(-1px); }
 
 /* Language toggle */
+/* Styled to match the nav tabs (plain text link), not a pill. */
 .nav__lang {
-  font: inherit; font-size: 13px; font-weight: 600; letter-spacing: .01em;
-  padding: 5px 12px; border-radius: 999px;
+  font: inherit; font-size: 15px; font-weight: 500; letter-spacing: 0;
+  padding: 0; margin: 0; border-radius: 0;
   background: transparent; color: var(--ink);
-  border: 1px solid var(--rule); cursor: pointer;
-  transition: background .15s ease, color .15s ease;
+  border: 0; cursor: pointer; line-height: inherit;
+  transition: color .15s ease;
 }
-.nav__lang:hover { background: var(--ink); color: var(--paper); }
+.nav__lang:hover { background: transparent; color: var(--orange-deep); }
 @media (max-width: 880px){
-  .nav__lang { align-self: flex-start; margin: 10px 0 2px; font-size: 15px; }
+  /* Full-width row like the other stacked tabs in the mobile menu. */
+  .nav__lang {
+    align-self: stretch; width: 100%; text-align: left;
+    padding: 13px 4px; margin: 0; font-size: 16px;
+    border-top: 1px solid var(--rule-soft); border-radius: 0;
+  }
 }
 
 /* Hamburger toggle: only shown on mobile */
@@ -166,7 +172,7 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
   .nav__links {
     display: none;
     order: 4; flex-basis: 100%;
-    flex-direction: column; gap: 0;
+    flex-direction: column; gap: 0; align-items: stretch;
     margin-top: 4px;
   }
   .nav[data-nav="open"] .nav__links { display: flex; }
