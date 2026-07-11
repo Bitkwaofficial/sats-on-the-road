@@ -16,13 +16,11 @@ module.exports = async function handler(req, res) {
   res.setHeader("Cache-Control", "s-maxage=60, stale-while-revalidate=300");
   res.setHeader("Content-Type", "application/json");
 
-  const slug =
-    req.query && typeof req.query.project === "string" ? req.query.project : PROJECT;
   try {
     const r = await fetch(ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ query: QUERY, variables: { where: { name: slug } } }),
+      body: JSON.stringify({ query: QUERY, variables: { where: { name: PROJECT } } }),
     });
     const j = await r.json();
     const p = j && j.data && j.data.projectGet;
