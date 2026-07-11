@@ -12,6 +12,8 @@ button { font: inherit; cursor: pointer; }
 /* Ensure the [hidden] attribute always wins over element display rules
    (e.g. .btn / .geyser__cta set display:inline-flex, which otherwise leaks). */
 [hidden] { display: none !important; }
+/* Honeypot field: hidden from people, visible to bots. */
+.hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 
 :root {
   --orange: #F7931A;

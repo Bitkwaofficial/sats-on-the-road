@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Wall moderation</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: #0b0d12; color: #f6efe3; padding: 24px; line-height: 1.5;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: rgba(246,239,227,.6); font-size: 13px; margin: 0 0 20px; }
+  .bar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 18px; }
+  input[type=password], input[type=text] {
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.18);
+    color: #f6efe3; border-radius: 8px; padding: 9px 12px; font: inherit; min-width: 260px;
+  }
+  button {
+    font: inherit; cursor: pointer; border-radius: 8px; padding: 8px 14px;
+    border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.06); color: #f6efe3;
+  }
+  button.primary { background: #F7931A; border-color: #F7931A; color: #0b0d12; font-weight: 700; }
+  button.reject { border-color: rgba(232,87,138,.5); color: #ff9aa8; }
+  button:disabled { opacity: .5; cursor: default; }
+  .card {
+    border: 1px solid rgba(255,255,255,.14); border-radius: 12px;
+    padding: 16px 16px 14px; margin: 0 0 14px; background: rgba(255,255,255,.03);
+  }
+  .msg { font-size: 17px; margin: 0 0 10px; }
+  .meta { font-size: 12px; color: rgba(246,239,227,.6); margin-bottom: 12px; }
+  .meta b { color: #f6efe3; }
+  .actions { display: flex; gap: 8px; }
+  .note { color: rgba(246,239,227,.6); font-size: 14px; }
+  .err { color: #ff9aa8; }
+  a { color: #F7931A; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Wall of Support — moderation</h1>
+  <p class="sub">Approve to publish instantly. Reject to discard. <a href="/wall" target="_blank">View the live wall →</a></p>
+
+  <div class="bar">
+    <input id="token" type="password" placeholder="Admin token" autocomplete="off" />
+    <button class="primary" id="load">Load pending</button>
+    <span id="count" class="note"></span>
+  </div>
+
+  <div id="list"></div>
+  <p id="empty" class="note" hidden>Nothing waiting. 🎉</p>
+</div>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  // Token can be prefilled via #t=... in the URL (kept out of query/logs).
+  const hash = new URLSearchParams(location.hash.slice(1));
+  if (hash.get("t")) $("token").value = hash.get("t");
+
+  function token() { return $("token").value.trim(); }
+
+  async function api(path, opts) {
+    opts = opts || {};
+    opts.headers = Object.assign({ "x-admin-token": token() }, opts.headers || {});
+    const r = await fetch(path, opts);
+    return { status: r.status, body: await r.json().catch(() => ({})) };
+  }
+
+  async function loadPending() {
+    $("count").textContent = "Loading…";
+    $("list").innerHTML = "";
+    $("empty").hidden = true;
+    const r = await api("/api/wall/pending");
+    if (r.status === 401) { $("count").innerHTML = '<span class="err">Invalid token.</span>'; return; }
+    if (r.status !== 200) { $("count").innerHTML = '<span class="err">Error loading.</span>'; return; }
+    const items = (r.body && r.body.items) || [];
+    $("count").textContent = items.length + " pending";
+    if (!items.length) { $("empty").hidden = false; return; }
+    $("list").innerHTML = items.map((m) =>
+      `<div class="card" data-id="${esc(m.id)}">
+         <p class="msg">${esc(m.msg)}</p>
+         <div class="meta"><b>${esc(m.name || "Anonymous")}</b>${m.place ? " · " + esc(m.place) : ""}</div>
+         <div class="actions">
+           <button class="primary" data-act="approve">Approve</button>
+           <button class="reject" data-act="reject">Reject</button>
+         </div>
+       </div>`
+    ).join("");
+  }
+
+  async function moderate(id, action, card) {
+    card.querySelectorAll("button").forEach((b) => (b.disabled = true));
+    const r = await api("/api/wall/moderate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: id, action: action }),
+    });
+    if (r.status === 200 && r.body && r.body.ok) {
+      card.remove();
+      const left = document.querySelectorAll(".card").length;
+      $("count").textContent = left + " pending";
+      if (!left) $("empty").hidden = false;
+    } else {
+      card.querySelectorAll("button").forEach((b) => (b.disabled = false));
+      alert("Failed: " + (r.body && r.body.error ? r.body.error : r.status));
+    }
+  }
+
+  $("load").addEventListener("click", loadPending);
+  $("list").addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-act]");
+    if (!btn) return;
+    const card = btn.closest(".card");
+    moderate(card.getAttribute("data-id"), btn.getAttribute("data-act"), card);
+  });
+
+  if (token()) loadPending();
+})();
+</script>
+</body>
+</html>
