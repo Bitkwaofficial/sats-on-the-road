@@ -43,11 +43,13 @@ module.exports = async function handler(req, res) {
   const body = (await readBody(req)) || {};
   const id = String(body.id || "");
   const action = String(body.action || "");
-  if (!id || (action !== "approve" && action !== "reject"))
+  // approve/reject act on the pending queue; unpublish takes down a published one.
+  if (!id || ["approve", "reject", "unpublish"].indexOf(action) === -1)
     return res.status(400).send(JSON.stringify({ error: "id and valid action required" }));
 
+  const listKey = action === "unpublish" ? "wall:approved" : "wall:pending";
   try {
-    const raw = (await kv(["LRANGE", "wall:pending", "0", "-1"])) || [];
+    const raw = (await kv(["LRANGE", listKey, "0", "-1"])) || [];
     let match = null;
     let obj = null;
     for (const s of raw) {
@@ -57,9 +59,10 @@ module.exports = async function handler(req, res) {
     }
     if (!match) return res.status(404).send(JSON.stringify({ error: "not found" }));
 
-    await kv(["LREM", "wall:pending", "1", match]);
+    await kv(["LREM", listKey, "1", match]);
     if (action === "approve") {
-      const clean = { name: obj.name, place: obj.place, msg: obj.msg, date: ymd(obj.ts) };
+      // Keep the id so the message can be unpublished later.
+      const clean = { id: obj.id, name: obj.name, place: obj.place, msg: obj.msg, date: ymd(obj.ts) };
       await kv(["LPUSH", "wall:approved", JSON.stringify(clean)]);
       await kv(["LTRIM", "wall:approved", "0", "499"]);
     }

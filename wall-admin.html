@@ -14,9 +14,10 @@
   }
   .wrap { max-width: 720px; margin: 0 auto; }
   h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 15px; text-transform: uppercase; letter-spacing: .08em; color: rgba(246,239,227,.6); margin: 32px 0 12px; }
   .sub { color: rgba(246,239,227,.6); font-size: 13px; margin: 0 0 20px; }
-  .bar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 18px; }
-  input[type=password], input[type=text] {
+  .bar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
+  input[type=password] {
     background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.18);
     color: #f6efe3; border-radius: 8px; padding: 9px 12px; font: inherit; min-width: 260px;
   }
@@ -25,10 +26,10 @@
     border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.06); color: #f6efe3;
   }
   button.primary { background: #F7931A; border-color: #F7931A; color: #0b0d12; font-weight: 700; }
-  button.reject { border-color: rgba(232,87,138,.5); color: #ff9aa8; }
+  button.reject, button.remove { border-color: rgba(232,87,138,.5); color: #ff9aa8; }
   button:disabled { opacity: .5; cursor: default; }
   .card {
-    border: 1px solid rgba(255,255,255,.14); border-radius: 12px;
+    break-inside: avoid; border: 1px solid rgba(255,255,255,.14); border-radius: 12px;
     padding: 16px 16px 14px; margin: 0 0 14px; background: rgba(255,255,255,.03);
   }
   .msg { font-size: 17px; margin: 0 0 10px; }
@@ -43,16 +44,21 @@
 <body>
 <div class="wrap">
   <h1>Wall of Support — moderation</h1>
-  <p class="sub">Approve to publish instantly. Reject to discard. <a href="/wall" target="_blank">View the live wall →</a></p>
+  <p class="sub">Approve to publish instantly, reject to discard, or remove an already-published note. <a href="/wall" target="_blank">View the live wall →</a></p>
 
   <div class="bar">
     <input id="token" type="password" placeholder="Admin token" autocomplete="off" />
-    <button class="primary" id="load">Load pending</button>
-    <span id="count" class="note"></span>
+    <button class="primary" id="load">Load</button>
+    <span id="status" class="note"></span>
   </div>
 
-  <div id="list"></div>
-  <p id="empty" class="note" hidden>Nothing waiting. 🎉</p>
+  <h2>Pending review <span id="pendingCount" class="note"></span></h2>
+  <div id="pendingList"></div>
+  <p id="pendingEmpty" class="note" hidden>Nothing waiting. 🎉</p>
+
+  <h2>Published <span id="pubCount" class="note"></span></h2>
+  <div id="pubList"></div>
+  <p id="pubEmpty" class="note" hidden>No published messages yet (the wall is showing the seed samples).</p>
 </div>
 
 <script>
@@ -60,11 +66,9 @@
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  // Token can be prefilled via #t=... in the URL (kept out of query/logs).
   const hash = new URLSearchParams(location.hash.slice(1));
   if (hash.get("t")) $("token").value = hash.get("t");
-
-  function token() { return $("token").value.trim(); }
+  const token = () => $("token").value.trim();
 
   async function api(path, opts) {
     opts = opts || {};
@@ -73,26 +77,33 @@
     return { status: r.status, body: await r.json().catch(() => ({})) };
   }
 
-  async function loadPending() {
-    $("count").textContent = "Loading…";
-    $("list").innerHTML = "";
-    $("empty").hidden = true;
-    const r = await api("/api/wall/pending");
-    if (r.status === 401) { $("count").innerHTML = '<span class="err">Invalid token.</span>'; return; }
-    if (r.status !== 200) { $("count").innerHTML = '<span class="err">Error loading.</span>'; return; }
+  function cardHtml(m, kind) {
+    const buttons = kind === "pending"
+      ? '<button class="primary" data-act="approve">Approve</button><button class="reject" data-act="reject">Reject</button>'
+      : '<button class="remove" data-act="unpublish">Remove</button>';
+    return `<div class="card" data-id="${esc(m.id)}">
+        <p class="msg">${esc(m.msg)}</p>
+        <div class="meta"><b>${esc(m.name || "Anonymous")}</b>${m.place ? " · " + esc(m.place) : ""}${m.date ? " · " + esc(m.date) : ""}</div>
+        <div class="actions">${buttons}</div>
+      </div>`;
+  }
+
+  async function loadList(endpoint, listEl, countEl, emptyEl, kind) {
+    const r = await api(endpoint);
+    if (r.status === 401) { $("status").innerHTML = '<span class="err">Invalid token.</span>'; return false; }
+    if (r.status !== 200) { countEl.innerHTML = '<span class="err">error</span>'; return true; }
     const items = (r.body && r.body.items) || [];
-    $("count").textContent = items.length + " pending";
-    if (!items.length) { $("empty").hidden = false; return; }
-    $("list").innerHTML = items.map((m) =>
-      `<div class="card" data-id="${esc(m.id)}">
-         <p class="msg">${esc(m.msg)}</p>
-         <div class="meta"><b>${esc(m.name || "Anonymous")}</b>${m.place ? " · " + esc(m.place) : ""}</div>
-         <div class="actions">
-           <button class="primary" data-act="approve">Approve</button>
-           <button class="reject" data-act="reject">Reject</button>
-         </div>
-       </div>`
-    ).join("");
+    countEl.textContent = "(" + items.length + ")";
+    emptyEl.hidden = items.length > 0;
+    listEl.innerHTML = items.map((m) => cardHtml(m, kind)).join("");
+    return true;
+  }
+
+  async function loadAll() {
+    $("status").textContent = "Loading…";
+    const ok = await loadList("/api/wall/pending", $("pendingList"), $("pendingCount"), $("pendingEmpty"), "pending");
+    if (ok) await loadList("/api/wall/approved", $("pubList"), $("pubCount"), $("pubEmpty"), "published");
+    if ($("status").textContent === "Loading…") $("status").textContent = "";
   }
 
   async function moderate(id, action, card) {
@@ -103,25 +114,30 @@
       body: JSON.stringify({ id: id, action: action }),
     });
     if (r.status === 200 && r.body && r.body.ok) {
+      const list = card.parentElement;
       card.remove();
-      const left = document.querySelectorAll(".card").length;
-      $("count").textContent = left + " pending";
-      if (!left) $("empty").hidden = false;
+      const count = list.querySelectorAll(".card").length;
+      if (list === $("pendingList")) { $("pendingCount").textContent = "(" + count + ")"; $("pendingEmpty").hidden = count > 0; }
+      else { $("pubCount").textContent = "(" + count + ")"; $("pubEmpty").hidden = count > 0; }
     } else {
       card.querySelectorAll("button").forEach((b) => (b.disabled = false));
       alert("Failed: " + (r.body && r.body.error ? r.body.error : r.status));
     }
   }
 
-  $("load").addEventListener("click", loadPending);
-  $("list").addEventListener("click", (e) => {
-    const btn = e.target.closest("button[data-act]");
-    if (!btn) return;
-    const card = btn.closest(".card");
-    moderate(card.getAttribute("data-id"), btn.getAttribute("data-act"), card);
-  });
+  function wire(listId) {
+    $(listId).addEventListener("click", (e) => {
+      const btn = e.target.closest("button[data-act]");
+      if (!btn) return;
+      const card = btn.closest(".card");
+      moderate(card.getAttribute("data-id"), btn.getAttribute("data-act"), card);
+    });
+  }
+  wire("pendingList");
+  wire("pubList");
 
-  if (token()) loadPending();
+  $("load").addEventListener("click", loadAll);
+  if (token()) loadAll();
 })();
 </script>
 </body>
