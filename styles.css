@@ -9,6 +9,9 @@
 html, body { margin: 0; padding: 0; }
 img { max-width: 100%; display: block; }
 button { font: inherit; cursor: pointer; }
+/* Ensure the [hidden] attribute always wins over element display rules
+   (e.g. .btn / .geyser__cta set display:inline-flex, which otherwise leaks). */
+[hidden] { display: none !important; }
 
 :root {
   --orange: #F7931A;
