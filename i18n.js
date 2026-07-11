@@ -263,7 +263,7 @@
     window.__sotrLang = lang;
     const btn = document.getElementById("langToggle");
     if (btn) {
-      btn.textContent = toFr ? "English" : "Français";
+      btn.textContent = toFr ? "EN" : "FR";
       btn.setAttribute("aria-label", toFr ? "Passer en anglais" : "Switch to French");
     }
   }
