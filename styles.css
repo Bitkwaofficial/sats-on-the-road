@@ -1125,6 +1125,7 @@ em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 40
   font-size: 13px; color: rgba(246,239,227,.7);
 }
 .geyser__cta { display: inline-flex; margin: 0 0 22px; }
+.geyser__zero { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 700; font-size: clamp(19px, 2.6vw, 24px); color: var(--paper); }
 
 /* ───────── Contact ───────── */
 .contact {

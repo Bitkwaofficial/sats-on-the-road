@@ -16,16 +16,24 @@
   function render(d) {
     const block = document.getElementById("geyserRaised");
     if (block) {
-      const sats = document.getElementById("grSats");
-      const usd = document.getElementById("grUsd");
-      const funders = document.getElementById("grFunders");
-      const unit = block.querySelector(".geyser__unit");
-      if (sats) sats.textContent = fmt(d.sats);
-      if (unit) unit.textContent = label("unit");
-      if (usd) usd.textContent = "≈ $" + fmt(d.usdCent / 100);
-      if (funders)
-        funders.textContent =
-          fmt(d.funders) + " " + label(d.funders === 1 ? "supporter" : "supporters");
+      if (!d.sats) {
+        // Fresh campaign, no donations yet: encourage rather than show zeros.
+        block.innerHTML =
+          '<div class="geyser__zero">' +
+          (isFr() ? "Soyez le premier à ravitailler le camion ⚡" : "Be the first to fuel the truck ⚡") +
+          "</div>";
+      } else {
+        const sats = document.getElementById("grSats");
+        const usd = document.getElementById("grUsd");
+        const funders = document.getElementById("grFunders");
+        const unit = block.querySelector(".geyser__unit");
+        if (sats) sats.textContent = fmt(d.sats);
+        if (unit) unit.textContent = label("unit");
+        if (usd) usd.textContent = "≈ $" + fmt(d.usdCent / 100);
+        if (funders)
+          funders.textContent =
+            fmt(d.funders) + " " + label(d.funders === 1 ? "supporter" : "supporters");
+      }
       block.hidden = false;
     }
     document.querySelectorAll("[data-geyser-cta]").forEach((a) => {
