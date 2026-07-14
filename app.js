@@ -233,20 +233,27 @@ document.querySelectorAll(".copy").forEach((btn) => {
   if (!bar) return;
   const pill = document.getElementById("soundbarPill");
   const min = document.getElementById("soundbarMin");
+  const frame = bar.querySelector(".soundbar__frame");
   const KEY = "sotr-soundbar";
+
+  // Facade: the Audiomack iframe (heavy third-party embed) only loads the first
+  // time the player is opened, so it never costs anything on initial page load.
+  function loadFrame() {
+    if (frame && !frame.getAttribute("src") && frame.dataset.src) {
+      frame.setAttribute("src", frame.dataset.src);
+    }
+  }
 
   try {
     const saved = localStorage.getItem(KEY);
-    if (saved === "min" || saved === "open") {
-      bar.dataset.state = saved;
-    } else if (window.matchMedia("(max-width: 560px)").matches) {
-      bar.dataset.state = "min"; // start collapsed on phones, expanded on desktop
-    }
-  } catch (e) {}
+    bar.dataset.state = saved === "open" ? "open" : "min"; // default collapsed
+  } catch (e) { bar.dataset.state = "min"; }
+  if (bar.dataset.state === "open") loadFrame(); // returning user who left it open
 
   function setState(state) {
     bar.dataset.state = state;
     pill.setAttribute("aria-expanded", state === "open" ? "true" : "false");
+    if (state === "open") loadFrame();
     try { localStorage.setItem(KEY, state); } catch (e) {}
   }
 

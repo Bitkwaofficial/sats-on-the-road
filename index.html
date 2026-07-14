@@ -6,6 +6,8 @@
 <title>Sats On The Road | Bitcoin Adoption Road Trip Across Africa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://api.coingecko.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
@@ -627,7 +629,7 @@
       <label class="converter__field">
         <span class="converter__lbl">Your money</span>
         <span class="converter__control">
-          <input id="convFiat" type="text" inputmode="decimal" value="1000" autocomplete="off" spellcheck="false" />
+          <input id="convFiat" type="text" inputmode="decimal" value="1000" autocomplete="off" spellcheck="false" aria-label="Amount in your currency" />
           <select id="convCur" aria-label="Currency">
             <option value="ngn">NGN</option>
             <option value="ghs">GHS</option>
@@ -649,7 +651,7 @@
       <label class="converter__field">
         <span class="converter__lbl">Sats</span>
         <span class="converter__control">
-          <input id="convSats" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" />
+          <input id="convSats" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" aria-label="Amount in sats" />
           <span class="converter__unit">sats</span>
         </span>
       </label>
@@ -664,7 +666,7 @@
       <span class="fueled__hint">Make a card, bring a friend along</span>
     </div>
     <div class="fueled__row">
-      <input id="fuelName" type="text" maxlength="28" placeholder="Your name (optional)" autocomplete="off" spellcheck="false" />
+      <input id="fuelName" type="text" maxlength="28" placeholder="Your name (optional)" autocomplete="off" spellcheck="false" aria-label="Your name for the share card" />
       <button class="fueled__dl" id="fuelDownload" type="button">Download card ↓</button>
     </div>
     <div class="fueled__share">
@@ -797,7 +799,7 @@
 <!-- ╔══════════════════════════════════════════════════════════╗
      ║  SOUNDTRACK: floating Audiomack player                    ║
      ╚══════════════════════════════════════════════════════════╝ -->
-<aside class="soundbar" id="soundbar" data-state="open" aria-label="Sats On The Road soundtrack">
+<aside class="soundbar" id="soundbar" data-state="min" aria-label="Sats On The Road soundtrack">
   <button class="soundbar__pill" id="soundbarPill" type="button" aria-expanded="false" aria-controls="soundbarBody">
     <span class="soundbar__eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
     <span class="soundbar__pill-text">Play the soundtrack</span>
@@ -810,7 +812,7 @@
     <div class="soundbar__body" id="soundbarBody">
       <iframe class="soundbar__frame"
         title="OWO SATOSHI (SATOSHI MONEY) Remix, Bitkwa Music on Audiomack"
-        src="https://audiomack.com/embed/bitkwamusic/song/owo-satoshi-satoshi-money-remix"
+        data-src="https://audiomack.com/embed/bitkwamusic/song/owo-satoshi-satoshi-money-remix"
         height="240" frameborder="0" scrolling="no" loading="lazy"
         allow="autoplay; encrypted-media; clipboard-write"></iframe>
     </div>

@@ -64,10 +64,10 @@
       <input type="hidden" name="type" value="wall-signature" />
       <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
       <div class="wall-form__row">
-        <input type="text" name="name" placeholder="Your name" maxlength="40" autocomplete="name" required />
-        <input type="text" name="place" placeholder="City, country (optional)" maxlength="60" autocomplete="off" />
+        <input type="text" name="name" placeholder="Your name" maxlength="40" autocomplete="name" aria-label="Your name" required />
+        <input type="text" name="place" placeholder="City, country (optional)" maxlength="60" autocomplete="off" aria-label="City, country (optional)" />
       </div>
-      <textarea name="message" placeholder="Leave a message of support…" maxlength="240" rows="3" required></textarea>
+      <textarea name="message" placeholder="Leave a message of support…" maxlength="240" rows="3" aria-label="Your message of support" required></textarea>
       <div class="wall-form__foot">
         <button type="submit" class="btn btn--primary">Sign the wall →</button>
         <span class="wall-form__status" id="wallStatus" aria-live="polite"></span>
