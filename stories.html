@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Stories — Sats On The Road</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://api.coingecko.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png" />
+<link rel="icon" href="assets/favicon-512.png" sizes="512x512" type="image/png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#0D0D0D" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content="Sats On The Road" />
+
+<!-- SEO -->
+<meta name="description" content="Stories from the truck: the people, merchants and moments from the Bitcoin road trip across Africa." />
+<meta name="keywords" content="Bitcoin Africa, Bitcoin adoption, Lightning Network, non-custodial wallet, financial inclusion, Sats On The Road, BitKwa" />
+<link rel="canonical" href="https://satsontheroad.africa/stories" />
+<link rel="alternate" hreflang="en" href="https://satsontheroad.africa/stories" />
+<link rel="alternate" hreflang="fr" href="https://satsontheroad.africa/stories?lang=fr" />
+<link rel="alternate" hreflang="x-default" href="https://satsontheroad.africa/stories" />
+
+<!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Sats On The Road" />
+<meta property="og:url" content="https://satsontheroad.africa/stories" />
+<meta property="og:title" content="Stories — Sats On The Road" />
+<meta property="og:description" content="Stories from the truck: the people, merchants and moments from the Bitcoin road trip across Africa." />
+<meta property="og:image" content="https://satsontheroad.africa/assets/og-image.jpg" />
+<meta property="og:image:secure_url" content="https://satsontheroad.africa/assets/og-image.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="The Sats On The Road wrapped car" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Stories — Sats On The Road" />
+<meta name="twitter:description" content="Stories from the truck: the people, merchants and moments from the Bitcoin road trip across Africa." />
+<meta name="twitter:image" content="https://satsontheroad.africa/assets/og-image.jpg" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://satsontheroad.africa/#org",
+      "name": "Sats On The Road",
+      "url": "https://satsontheroad.africa/",
+      "logo": "https://satsontheroad.africa/assets/favicon-512.png",
+      "image": "https://satsontheroad.africa/assets/og-image.jpg",
+      "description": "A grassroots Bitcoin education and financial-inclusion road trip across Africa.",
+      "slogan": "Driving Bitcoin across the African continent.",
+      "foundingLocation": "Africa",
+      "sameAs": [
+        "https://x.com/bitkwaofficial",
+        "https://instagram.com/bitkwaofficial",
+        "https://audiomack.com/bitkwamusic"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://satsontheroad.africa/#website",
+      "url": "https://satsontheroad.africa/",
+      "name": "Sats On The Road",
+      "publisher": {
+        "@id": "https://satsontheroad.africa/#org"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://satsontheroad.africa/stories#webpage",
+      "url": "https://satsontheroad.africa/stories",
+      "name": "Stories — Sats On The Road",
+      "description": "Stories from the truck: the people, merchants and moments from the Bitcoin road trip across Africa.",
+      "isPartOf": {
+        "@id": "https://satsontheroad.africa/#website"
+      },
+      "inLanguage": "en",
+      "primaryImageOfPage": "https://satsontheroad.africa/assets/og-image.jpg",
+      "breadcrumb": {
+        "@id": "https://satsontheroad.africa/stories#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://satsontheroad.africa/stories#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://satsontheroad.africa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Stories",
+          "item": "https://satsontheroad.africa/stories"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script>window.SOTR_META = {"title":{"en":"Stories — Sats On The Road","fr":"Histoires — Sats On The Road"},"desc":{"en":"Stories from the truck: the people, merchants and moments from the Bitcoin road trip across Africa.","fr":"Histoires du camion : les gens, les commerçants et les moments du périple Bitcoin à travers l'Afrique."}};</script>
+</head>
+<body data-page="stories">
+
+<div class="pxticker" id="pxTicker" role="marquee" aria-label="Live Bitcoin price in African currencies">
+  <span class="pxticker__label"><span class="pxticker__btc" aria-hidden="true">₿</span>1&nbsp;BTC&nbsp;=</span>
+  <div class="pxticker__viewport">
+    <div class="pxticker__track" id="pxTrack"><span class="pxticker__item pxticker__loading">Fetching live rates…</span></div>
+  </div>
+</div>
+
+<header class="nav" data-screen-label="Nav">
+  <a href="/" class="nav__brand" id="navBrand" aria-label="Sats On The Road home">
+    <img src="assets/sotr-logo.png" alt="" />
+    <span class="nav__brand-text">
+      <span class="nav__brand-line">Sats On The Road</span>
+      <span class="nav__brand-sub">Africa · 2026</span>
+    </span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="/mission" data-nav="mission">Mission</a>
+    <a href="/journey" data-nav="journey">Journey</a>
+    <a href="/stories" data-nav="stories" aria-current="page" class="is-active">Stories</a>
+    <a href="/gallery" data-nav="gallery">Gallery</a>
+    <a href="/partners" data-nav="partners">Partners</a>
+    <a href="/contact" data-nav="contact">Contact</a>
+    <button class="nav__lang" id="langToggle" type="button" aria-label="Switch to French">FR</button>
+  </nav>
+  <a href="/fuel" class="nav__cta" data-nav="fuel">Fuel the truck →</a>
+  <button class="nav__toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+    <span class="nav__toggle-box" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+</header>
+
+<section class="page-hero" data-screen-label="Header">
+  <div class="page-hero__inner">
+    <nav class="page-hero__crumb" aria-label="Breadcrumb"><a href="/">Sats On The Road</a> <span aria-hidden="true">/</span> <span>Stories</span></nav>
+    <h1 class="page-hero__title">Stories from the road</h1>
+    <p class="page-hero__sub">The people behind the sats.</p>
+  </div>
+</section>
+
+<section id="stories" class="stories" data-screen-label="05 Stories">
+  <div class="section-head">
+    <div class="section-head__num">04 / On the ground</div>
+    <h2 class="section-head__title">Stories from the truck.</h2>
+  </div>
+
+  <div class="stories__grid">
+    <article class="story story--wide">
+      <div class="story__photo">
+        <img src="assets/sotr-benin.jpg" alt="Volunteers gathered around the Sats On The Road truck in Benin." loading="lazy" decoding="async" />
+      </div>
+      <div class="story__body">
+        <div class="story__loc">Cotonou, Benin · Day 19</div>
+        <h3 class="story__title">"It's the first money I own without a bank's permission."</h3>
+        <p>Aïcha runs a roadside fabric stall in Cotonou. We set her up with a Lightning
+        wallet on a five‑year‑old Android, paid for two metres of wax print in sats,
+        and watched her show three of her neighbours how to do the same before
+        we'd finished our coffee.</p>
+        <div class="story__meta">
+          <span>📍 11 merchants onboarded</span>
+          <span>·</span>
+          <span>🛞 312 km from previous stop</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story__photo story__photo--tall">
+        <img src="assets/sotr-togo.jpg" alt="Sats On The Road volunteers in Togo." loading="lazy" decoding="async" />
+      </div>
+      <div class="story__body">
+        <div class="story__loc">Lomé, Togo · Day 24</div>
+        <h3 class="story__title">A classroom on the back of a flatbed.</h3>
+        <p>Forty‑three students. Two laptops. One projector strapped to the side
+        of the truck. By sunset every student had a wallet, a backup, and their
+        first 1,000 sats.</p>
+      </div>
+    </article>
+
+    <article class="story story--feature">
+      <div class="story__body story__body--quote">
+        <div class="story__loc story__loc--light">Ouagadougou, Burkina Faso · Current stop</div>
+        <h3 class="story__title">Why Ouaga is the right place to be right now.</h3>
+        <p>Burkina Faso's capital is young, dense and mobile‑first, exactly the
+        conditions where a neutral, permissionless money network takes root fastest.
+        This is where we've parked the truck for the West African inland leg.</p>
+        <dl class="demo">
+          <div><dt>Metro population</dt><dd>~2.9M</dd></div>
+          <div><dt>Under age 25</dt><dd>~60%</dd></div>
+          <div><dt>Mobile‑money accounts</dt><dd>majority of adults</dd></div>
+          <div><dt>Primary languages</dt><dd>French · Mooré · Dioula</dd></div>
+        </dl>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer class="foot" data-screen-label="Footer">
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+  <div class="foot__top">
+    <div class="foot__brand">
+      <img src="assets/sotr-logo.png" alt="" loading="lazy" decoding="async" />
+      <div>
+        <div class="foot__brand-name">Sats On The Road</div>
+        <div class="foot__brand-sub">Driving Bitcoin across the African continent.</div>
+      </div>
+    </div>
+    <ul class="foot__links">
+      <li><a href="/wall">Wall of support</a></li>
+      <li><a href="/contact" class="foot__volunteer" data-topic="Volunteer / join the crew">Volunteer with us →</a></li>
+    </ul>
+  </div>
+  <div class="foot__bottom">
+    <div>© 2026 Sats On The Road.</div>
+    <div class="foot__motto">Keep your seed. Drive Africa. Stack sats.</div>
+  </div>
+</footer>
+
+<aside class="soundbar" id="soundbar" data-state="min" aria-label="Sats On The Road soundtrack">
+  <button class="soundbar__pill" id="soundbarPill" type="button" aria-expanded="false" aria-controls="soundbarBody">
+    <span class="soundbar__eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="soundbar__pill-text">Play the soundtrack</span>
+  </button>
+  <div class="soundbar__card">
+    <div class="soundbar__head">
+      <span class="soundbar__label">♪ Soundtrack: <em>Sats On The Road Vol 1</em></span>
+      <button class="soundbar__min" id="soundbarMin" type="button" aria-label="Minimise player">–</button>
+    </div>
+    <div class="soundbar__body" id="soundbarBody">
+      <iframe class="soundbar__frame"
+        title="Sats On The Road Vol 1, Bitkwa Music on Audiomack — full album, tap any track"
+        data-src="https://audiomack.com/embed/bitkwamusic/album/sats-on-the-road-vol-1"
+        height="420" frameborder="0" scrolling="no" loading="lazy"
+        allow="autoplay; encrypted-media; clipboard-write"></iframe>
+    </div>
+  </div>
+</aside>
+
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+<script src="price-ticker.js"></script>
+<script src="converter.js"></script>
+<script src="share.js"></script>
+<script src="geyser.js"></script>
+</body>
+</html>

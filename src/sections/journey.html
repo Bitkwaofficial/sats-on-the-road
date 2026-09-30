@@ -1,0 +1,89 @@
+<section id="journey" class="journey" data-screen-label="03 Journey">
+  <div class="section-head section-head--inverted">
+    <div class="section-head__num">02 / The route</div>
+    <h2 class="section-head__title">14,820 km of orange road.</h2>
+    <p class="section-head__lede">From Lagos to Dakar, tracing the West African coast
+    with an inland leg through Ouagadougou. Nine languages, one rolling classroom.</p>
+  </div>
+
+  <div class="journey__panel">
+    <!-- SVG Map of West Africa with route -->
+    <div class="journey__map" aria-hidden="true">
+      <svg viewBox="0 0 900 420" preserveAspectRatio="xMidYMid meet" width="100%" height="100%">
+        <defs>
+          <linearGradient id="routeGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#F7931A"/>
+            <stop offset="100%" stop-color="#FFD9A8"/>
+          </linearGradient>
+          <pattern id="dots" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+            <circle cx="1.4" cy="1.4" r="1.1" fill="rgba(255,255,255,.06)"/>
+          </pattern>
+          <filter id="glow"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <rect width="900" height="420" fill="url(#dots)"/>
+
+        <!-- West Africa landmass (equirectangular projection of real coastline) -->
+        <path d="M791.4,390.3 L745,394.6 L692.8,349.7 L658,336.6 L605.8,343.9 L565.2,361.3 L486.9,377.3 L437.6,372.9 L382.5,388.8 L352,394.6 L310,383 L257.8,341 L234.6,319.3 L211.4,300.4 L188.2,277.2 L183.9,248.2 L162.1,222.1 L133.1,201.8 L114.3,177.1 L98.3,155.4 L82.3,124.9 L96.8,104.6 L62,91.6 L89.6,68.4 L101.2,45.2 L107,24.9 L252,22 L426,39.4 L585.5,56.8 L716,97.4 L817.5,126.4 L872.6,149.6 L878.4,216.3 L890,288.8 L861,346.8 L832,378.7 L791.4,390.3 Z"
+              fill="rgba(255,255,255,0.045)"
+              stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+
+        <!-- Route path (dashed animated): remaining planned journey from Ouagadougou -->
+        <path id="route"
+              d="M526.9,162.1 L565.2,359.6 L454.4,366.5 L257.8,338.1 L187.3,274.9 L173.4,245 L118.6,176.9 L90.2,130.8 L64.4,93.9"
+              fill="none" stroke="url(#routeGrad)" stroke-width="3"
+              stroke-linecap="round" stroke-dasharray="6 8" filter="url(#glow)"/>
+
+        <!-- Travelled portion (solid): Lagos → Cotonou → Lomé → Ouagadougou -->
+        <path id="route-done"
+              d="M669.6,333.8 L641.5,336.1 L606.4,343 L526.9,162.1"
+              fill="none" stroke="#F7931A" stroke-width="3" stroke-linecap="round"/>
+
+        <!-- Stops -->
+        <g class="stop"><circle cx="669.6" cy="333.8" r="4.5" fill="#F7931A"/><text x="678" y="331">Lagos</text></g>
+        <g class="stop"><circle cx="641.5" cy="336.1" r="4.5" fill="#F7931A"/><text x="641" y="324" text-anchor="middle">Cotonou</text></g>
+        <g class="stop"><circle cx="606.4" cy="343" r="4.5" fill="#F7931A"/><text x="600" y="359" text-anchor="middle">Lomé</text></g>
+        <g class="stop stop--next"><circle cx="565.2" cy="359.6" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="565" y="378" text-anchor="middle">Accra</text><text x="565" y="391" text-anchor="middle" class="maptag">Up next</text></g>
+        <g class="stop stop--future"><circle cx="454.4" cy="366.5" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="454" y="384" text-anchor="middle">Abidjan</text></g>
+        <g class="stop stop--future"><circle cx="257.8" cy="338.1" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="258" y="356" text-anchor="middle">Monrovia</text></g>
+        <g class="stop stop--future"><circle cx="187.3" cy="274.9" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="179" y="273" text-anchor="end">Freetown</text></g>
+        <g class="stop stop--future"><circle cx="173.4" cy="245" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="165" y="243" text-anchor="end">Conakry</text></g>
+        <g class="stop stop--future"><circle cx="118.6" cy="176.9" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="110" y="175" text-anchor="end">Bissau</text></g>
+        <g class="stop stop--future"><circle cx="90.2" cy="130.8" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="82" y="129" text-anchor="end">Banjul</text></g>
+        <g class="stop stop--future"><circle cx="64.4" cy="93.9" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="73" y="92">Dakar</text></g>
+
+        <!-- Current pulse: Ouagadougou -->
+        <g class="current" transform="translate(526.9,162.1)">
+          <circle r="13" fill="rgba(247,147,26,.18)" class="pulse-out"/>
+          <circle r="8" fill="rgba(247,147,26,.32)" class="pulse-in"/>
+          <circle r="4.5" fill="#FFE0B8"/>
+          <text x="13" y="-6">Ouagadougou</text>
+        </g>
+
+        <!-- Compass -->
+        <g transform="translate(848,372)" opacity=".7">
+          <circle r="20" fill="none" stroke="rgba(255,255,255,.4)"/>
+          <path d="M0,-14 L4,0 L0,14 L-4,0 Z" fill="rgba(255,255,255,.65)"/>
+          <text y="-25" text-anchor="middle">N</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Leg ledger -->
+    <div class="journey__legs">
+      <div class="legs__cap"><span>Route legs</span><span>Lagos → Dakar · 11 legs</span></div>
+      <ul class="legs">
+        <li class="leg leg--done"><span>01</span><span>Lagos → Cotonou</span><span>Complete</span></li>
+        <li class="leg leg--done"><span>02</span><span>Cotonou → Lomé</span><span>Complete</span></li>
+        <li class="leg leg--done"><span>03</span><span>Lomé → Ouagadougou</span><span>Complete</span></li>
+        <li class="leg leg--live"><span>04</span><span>Ouagadougou → Accra</span><span><span class="live-dot"></span>Up next</span></li>
+        <li class="leg"><span>05</span><span>Accra → Abidjan</span><span>Planned</span></li>
+        <li class="leg"><span>06</span><span>Abidjan → Monrovia</span><span>Planned</span></li>
+        <li class="leg"><span>07</span><span>Monrovia → Freetown</span><span>Planned</span></li>
+        <li class="leg"><span>08</span><span>Freetown → Conakry</span><span>Planned</span></li>
+        <li class="leg"><span>09</span><span>Conakry → Bissau</span><span>Planned</span></li>
+        <li class="leg"><span>10</span><span>Bissau → Banjul</span><span>Planned</span></li>
+        <li class="leg"><span>11</span><span>Banjul → Dakar</span><span>Planned</span></li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -149,6 +149,44 @@
       "Le Bitcoin à travers le continent africain.",
     "Volunteer with us →": "Devenez bénévole →",
     "Keep your seed. Drive Africa. Stack sats.": "Gardez votre seed. Roulez l'Afrique. Empilez des sats.",
+    // Multi-page (v2): home hub, CTA bands, page headers
+    "Explore": "Explorer",
+    "Follow the whole movement.": "Suivez tout le mouvement.",
+    "Every part of Sats On The Road, one tap away — the mission behind the wheel, the route so far, the people we meet and the photos from the road.":
+      "Chaque facette de Sats On The Road, à portée de clic — la mission derrière le volant, l'itinéraire parcouru, les gens rencontrés et les photos de la route.",
+    "The Journey": "Le périple",
+    "Why we drive — a bitcoin standard for everyday Africa, delivered by road.":
+      "Pourquoi nous roulons — un standard bitcoin pour l'Afrique du quotidien, livré par la route.",
+    "14,820 km of orange road, country by country, port to market to border.":
+      "14 820 km de route orange, pays par pays, du port au marché à la frontière.",
+    "The people and merchants we meet, in their own words, from the truck.":
+      "Les gens et les commerçants que nous rencontrons, dans leurs propres mots, depuis le camion.",
+    "Faces, markets and kilometres — the road trip in photographs.":
+      "Visages, marchés et kilomètres — le périple en photos.",
+    "The people powering the trip — and how to sponsor the next leg.":
+      "Ceux qui soutiennent le périple — et comment parrainer la prochaine étape.",
+    "Fuel the truck": "Financez le camion",
+    "Power the next leg over Lightning or on-chain, or turn your money into sats.":
+      "Financez la prochaine étape en Lightning ou on-chain, ou convertissez votre argent en sats.",
+    "Keep it moving": "Gardons le cap",
+    "Every sat is a kilometre closer.": "Chaque sat, c'est un kilomètre de plus.",
+    "Fuel, data, wallets and merchant kits for the next town on the route.":
+      "Carburant, données, portefeuilles et kits marchands pour la prochaine ville.",
+    "Bring the truck to you": "Faites venir le camion",
+    "Want Sats On The Road in your city?": "Vous voulez Sats On The Road dans votre ville ?",
+    "Invite the truck, partner with us, or join the crew on the road.":
+      "Invitez le camion, devenez partenaire ou rejoignez l'équipage sur la route.",
+    "Get in touch": "Contactez-nous",
+    // Page headers
+    "The Mission": "La mission",
+    "Why we drive.": "Pourquoi nous roulons.",
+    "Every kilometre of the route.": "Chaque kilomètre de l'itinéraire.",
+    "Stories from the road": "Histoires de la route",
+    "The people behind the sats.": "Les gens derrière les sats.",
+    "Faces, markets and kilometres.": "Visages, marchés et kilomètres.",
+    "The people powering the trip.": "Ceux qui soutiennent le périple.",
+    "Power the next leg.": "Financez la prochaine étape.",
+    "Bring the truck to your city.": "Faites venir le camion dans votre ville.",
     // Soundbar
     "Play the soundtrack": "Écouter la bande-son",
     "♪ Soundtrack:": "♪ Bande-son :",
@@ -249,9 +287,11 @@
   function applyMeta(toFr) {
     document.documentElement.lang = toFr ? "fr" : "en";
     if (document.documentElement.getAttribute("data-i18n-meta") === "off") return;
-    document.title = toFr ? META.title.fr : META.title.en;
+    // Per-page meta is injected as window.SOTR_META by the build; fall back to META.
+    const M = (typeof window !== "undefined" && window.SOTR_META) || META;
+    document.title = toFr ? M.title.fr : M.title.en;
     const d = document.querySelector('meta[name="description"]');
-    if (d) d.setAttribute("content", toFr ? META.desc.fr : META.desc.en);
+    if (d) d.setAttribute("content", toFr ? M.desc.fr : M.desc.en);
   }
 
   function apply(lang) {

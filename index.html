@@ -32,7 +32,7 @@
 <meta property="og:site_name" content="Sats On The Road" />
 <meta property="og:url" content="https://satsontheroad.africa/" />
 <meta property="og:title" content="Sats On The Road: Driving Bitcoin across the African continent" />
-<meta property="og:description" content="A grassroots Bitcoin road trip across the African continent, onboarding people to self-custody and real merchant payments, one village and market at a time." />
+<meta property="og:description" content="Sats On The Road is a grassroots Bitcoin road trip across Africa, onboarding people to non-custodial wallets and real merchant payments, village by village." />
 <meta property="og:image" content="https://satsontheroad.africa/assets/og-image.jpg" />
 <meta property="og:image:secure_url" content="https://satsontheroad.africa/assets/og-image.jpg" />
 <meta property="og:image:type" content="image/jpeg" />
@@ -43,7 +43,7 @@
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Sats On The Road: Driving Bitcoin across the African continent" />
-<meta name="twitter:description" content="A grassroots Bitcoin road trip across the African continent, onboarding people to self-custody and real merchant payments, village by village." />
+<meta name="twitter:description" content="Sats On The Road is a grassroots Bitcoin road trip across Africa, onboarding people to non-custodial wallets and real merchant payments, village by village." />
 <meta name="twitter:image" content="https://satsontheroad.africa/assets/og-image.jpg" />
 
 <!-- Structured data -->
@@ -60,25 +60,42 @@
       "image": "https://satsontheroad.africa/assets/og-image.jpg",
       "description": "A grassroots Bitcoin education and financial-inclusion road trip across Africa.",
       "slogan": "Driving Bitcoin across the African continent.",
-      "foundingLocation": "Africa", "sameAs": ["https://x.com/bitkwaofficial", "https://instagram.com/bitkwaofficial", "https://audiomack.com/bitkwamusic"]
+      "foundingLocation": "Africa",
+      "sameAs": [
+        "https://x.com/bitkwaofficial",
+        "https://instagram.com/bitkwaofficial",
+        "https://audiomack.com/bitkwamusic"
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://satsontheroad.africa/#website",
       "url": "https://satsontheroad.africa/",
       "name": "Sats On The Road",
-      "publisher": { "@id": "https://satsontheroad.africa/#org" },
+      "publisher": {
+        "@id": "https://satsontheroad.africa/#org"
+      },
       "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://satsontheroad.africa/#webpage",
+      "url": "https://satsontheroad.africa/",
+      "name": "Sats On The Road | Driving Bitcoin across the African continent",
+      "description": "Sats On The Road is a grassroots Bitcoin road trip across Africa, onboarding people to non-custodial wallets and real merchant payments, village by village.",
+      "isPartOf": {
+        "@id": "https://satsontheroad.africa/#website"
+      },
+      "inLanguage": "en",
+      "primaryImageOfPage": "https://satsontheroad.africa/assets/og-image.jpg"
     }
   ]
 }
 </script>
+<script>window.SOTR_META = {"title":{"en":"Sats On The Road | Driving Bitcoin across the African continent","fr":"Sats On The Road | Le Bitcoin à travers le continent africain"},"desc":{"en":"Sats On The Road is a grassroots Bitcoin road trip across Africa, onboarding people to non-custodial wallets and real merchant payments, village by village.","fr":"Sats On The Road est un périple Bitcoin de terrain à travers l'Afrique de l'Ouest : portefeuilles auto-hébergés et vrais paiements chez les commerçants, village par village."}};</script>
 </head>
-<body>
+<body data-page="home">
 
-<!-- ╔══════════════════════════════════════════════════════════╗
-     ║  LIVE BITCOIN PRICE TICKER                                 ║
-     ╚══════════════════════════════════════════════════════════╝ -->
 <div class="pxticker" id="pxTicker" role="marquee" aria-label="Live Bitcoin price in African currencies">
   <span class="pxticker__label"><span class="pxticker__btc" aria-hidden="true">₿</span>1&nbsp;BTC&nbsp;=</span>
   <div class="pxticker__viewport">
@@ -86,9 +103,6 @@
   </div>
 </div>
 
-<!-- ╔══════════════════════════════════════════════════════════╗
-     ║  NAV                                                       ║
-     ╚══════════════════════════════════════════════════════════╝ -->
 <header class="nav" data-screen-label="Nav">
   <a href="/" class="nav__brand" id="navBrand" aria-label="Sats On The Road home">
     <img src="assets/sotr-logo.png" alt="" />
@@ -98,25 +112,20 @@
     </span>
   </a>
   <nav class="nav__links" id="navLinks">
-    <a href="/mission">Mission</a>
-    <a href="/journey">Journey</a>
-    <a href="/impact">Impact</a>
-    <a href="/stories">Stories</a>
-    <a href="/gallery">Gallery</a>
-    <a href="/partners">Partners</a>
-    <a href="/contact">Contact</a>
+    <a href="/mission" data-nav="mission">Mission</a>
+    <a href="/journey" data-nav="journey">Journey</a>
+    <a href="/stories" data-nav="stories">Stories</a>
+    <a href="/gallery" data-nav="gallery">Gallery</a>
+    <a href="/partners" data-nav="partners">Partners</a>
+    <a href="/contact" data-nav="contact">Contact</a>
     <button class="nav__lang" id="langToggle" type="button" aria-label="Switch to French">FR</button>
   </nav>
-  <a href="/fuelthetruck" class="nav__cta">Fuel the truck →</a>
+  <a href="/fuel" class="nav__cta" data-nav="fuel">Fuel the truck →</a>
   <button class="nav__toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
     <span class="nav__toggle-box" aria-hidden="true"><span></span><span></span><span></span></span>
   </button>
 </header>
 
-
-<!-- ╔══════════════════════════════════════════════════════════╗
-     ║  HERO                                                      ║
-     ╚══════════════════════════════════════════════════════════╝ -->
 <section id="top" class="hero" data-screen-label="01 Hero">
   <div class="hero__grid">
     <div class="hero__copy">
@@ -128,7 +137,7 @@
       </h1>
       <p class="hero__lede">Putting non‑custodial wallets, offline payment rails and orange‑pilled merchants on the map, village by village, market by market, kilometre by kilometre.</p>
       <div class="hero__ctas">
-        <a href="/fuelthetruck" class="btn btn--primary">
+        <a href="/fuel" class="btn btn--primary">
           <span>Fuel the next leg</span>
           <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -196,584 +205,78 @@
   </dl>
 </section>
 
-
-<!-- ╔══════════════════════════════════════════════════════════╗
-     ║  MISSION / MOVEMENT                                       ║
-     ╚══════════════════════════════════════════════════════════╝ -->
-<section id="mission" class="mission" data-screen-label="02 Mission">
+<!-- Explore: hub linking to every page -->
+<section id="explore" class="explore" data-screen-label="Explore">
   <div class="section-head">
-    <div class="section-head__num">01 / Mission</div>
-    <h2 class="section-head__title">A bitcoin standard,<br/>delivered by road.</h2>
+    <div class="section-head__num">Explore</div>
+    <h2 class="section-head__title">Follow the whole movement.</h2>
+    <p class="section-head__lede">Every part of Sats On The Road, one tap away — the mission behind the wheel, the route so far, the people we meet and the photos from the road.</p>
   </div>
-
-  <div class="mission__grid">
-    <article class="card">
-      <div class="card__icon" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="28" height="28"><path d="M6 16h20M16 6v20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-      </div>
-      <h3>Meet people where they are.</h3>
-      <p>No conferences. No livestreams. We pull up at marketplaces, fishing ports
-      and roadside stalls and sit down with the people who'd most benefit from a
-      neutral, open monetary network.</p>
-    </article>
-    <article class="card">
-      <div class="card__icon" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="28" height="28"><path d="M16 4 L26 10 L26 22 L16 28 L6 22 L6 10 Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M16 12v8M12 16h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      </div>
-      <h3>Self‑custody, by default.</h3>
-      <p>Every wallet we install is non‑custodial. Every seed phrase is written by
-      its owner. Sovereignty isn't a slide; it's a thing you do with your hands.</p>
-    </article>
-    <article class="card">
-      <div class="card__icon" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="28" height="28"><path d="M4 22c4-4 8-4 12 0s8 4 12 0" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 14c4-4 8-4 12 0s8 4 12 0" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-      </div>
-      <h3>Build for low‑bandwidth life.</h3>
-      <p>Spotty 2G, dead batteries, USSD phones, intermittent power. We test every
-      flow against the worst conditions on the route, because that's where it
-      has to work.</p>
-    </article>
-    <article class="card">
-      <div class="card__icon" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="28" height="28"><circle cx="11" cy="13" r="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="21" cy="13" r="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 26c1.5-4 4.5-6 7-6s5.5 2 7 6M14 26c1.5-4 4.5-6 7-6s5.5 2 7 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-      </div>
-      <h3>Train the trainers.</h3>
-      <p>In every town we leave behind a local educator with the materials, wallet,
-      and merchant network to keep onboarding long after the truck has driven on.</p>
-    </article>
-  </div>
-</section>
-
-
-<!-- ╔══════════════════════════════════════════════════════════╗
-     ║  JOURNEY MAP                                              ║
-     ╚══════════════════════════════════════════════════════════╝ -->
-<section id="journey" class="journey" data-screen-label="03 Journey">
-  <div class="section-head section-head--inverted">
-    <div class="section-head__num">02 / The route</div>
-    <h2 class="section-head__title">14,820 km of orange road.</h2>
-    <p class="section-head__lede">From Lagos to Dakar, tracing the West African coast
-    with an inland leg through Ouagadougou. Nine languages, one rolling classroom.</p>
-  </div>
-
-  <div class="journey__panel">
-    <!-- SVG Map of West Africa with route -->
-    <div class="journey__map" aria-hidden="true">
-      <svg viewBox="0 0 900 420" preserveAspectRatio="xMidYMid meet" width="100%" height="100%">
-        <defs>
-          <linearGradient id="routeGrad" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#F7931A"/>
-            <stop offset="100%" stop-color="#FFD9A8"/>
-          </linearGradient>
-          <pattern id="dots" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
-            <circle cx="1.4" cy="1.4" r="1.1" fill="rgba(255,255,255,.06)"/>
-          </pattern>
-          <filter id="glow"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        </defs>
-        <rect width="900" height="420" fill="url(#dots)"/>
-
-        <!-- West Africa landmass (equirectangular projection of real coastline) -->
-        <path d="M791.4,390.3 L745,394.6 L692.8,349.7 L658,336.6 L605.8,343.9 L565.2,361.3 L486.9,377.3 L437.6,372.9 L382.5,388.8 L352,394.6 L310,383 L257.8,341 L234.6,319.3 L211.4,300.4 L188.2,277.2 L183.9,248.2 L162.1,222.1 L133.1,201.8 L114.3,177.1 L98.3,155.4 L82.3,124.9 L96.8,104.6 L62,91.6 L89.6,68.4 L101.2,45.2 L107,24.9 L252,22 L426,39.4 L585.5,56.8 L716,97.4 L817.5,126.4 L872.6,149.6 L878.4,216.3 L890,288.8 L861,346.8 L832,378.7 L791.4,390.3 Z"
-              fill="rgba(255,255,255,0.045)"
-              stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
-
-        <!-- Route path (dashed animated): remaining planned journey from Ouagadougou -->
-        <path id="route"
-              d="M526.9,162.1 L565.2,359.6 L454.4,366.5 L257.8,338.1 L187.3,274.9 L173.4,245 L118.6,176.9 L90.2,130.8 L64.4,93.9"
-              fill="none" stroke="url(#routeGrad)" stroke-width="3"
-              stroke-linecap="round" stroke-dasharray="6 8" filter="url(#glow)"/>
-
-        <!-- Travelled portion (solid): Lagos → Cotonou → Lomé → Ouagadougou -->
-        <path id="route-done"
-              d="M669.6,333.8 L641.5,336.1 L606.4,343 L526.9,162.1"
-              fill="none" stroke="#F7931A" stroke-width="3" stroke-linecap="round"/>
-
-        <!-- Stops -->
-        <g class="stop"><circle cx="669.6" cy="333.8" r="4.5" fill="#F7931A"/><text x="678" y="331">Lagos</text></g>
-        <g class="stop"><circle cx="641.5" cy="336.1" r="4.5" fill="#F7931A"/><text x="641" y="324" text-anchor="middle">Cotonou</text></g>
-        <g class="stop"><circle cx="606.4" cy="343" r="4.5" fill="#F7931A"/><text x="600" y="359" text-anchor="middle">Lomé</text></g>
-        <g class="stop stop--next"><circle cx="565.2" cy="359.6" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="565" y="378" text-anchor="middle">Accra</text><text x="565" y="391" text-anchor="middle" class="maptag">Up next</text></g>
-        <g class="stop stop--future"><circle cx="454.4" cy="366.5" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="454" y="384" text-anchor="middle">Abidjan</text></g>
-        <g class="stop stop--future"><circle cx="257.8" cy="338.1" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="258" y="356" text-anchor="middle">Monrovia</text></g>
-        <g class="stop stop--future"><circle cx="187.3" cy="274.9" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="179" y="273" text-anchor="end">Freetown</text></g>
-        <g class="stop stop--future"><circle cx="173.4" cy="245" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="165" y="243" text-anchor="end">Conakry</text></g>
-        <g class="stop stop--future"><circle cx="118.6" cy="176.9" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="110" y="175" text-anchor="end">Bissau</text></g>
-        <g class="stop stop--future"><circle cx="90.2" cy="130.8" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="82" y="129" text-anchor="end">Banjul</text></g>
-        <g class="stop stop--future"><circle cx="64.4" cy="93.9" r="4.5" fill="none" stroke="#F7931A" stroke-width="1.5"/><text x="73" y="92">Dakar</text></g>
-
-        <!-- Current pulse: Ouagadougou -->
-        <g class="current" transform="translate(526.9,162.1)">
-          <circle r="13" fill="rgba(247,147,26,.18)" class="pulse-out"/>
-          <circle r="8" fill="rgba(247,147,26,.32)" class="pulse-in"/>
-          <circle r="4.5" fill="#FFE0B8"/>
-          <text x="13" y="-6">Ouagadougou</text>
-        </g>
-
-        <!-- Compass -->
-        <g transform="translate(848,372)" opacity=".7">
-          <circle r="20" fill="none" stroke="rgba(255,255,255,.4)"/>
-          <path d="M0,-14 L4,0 L0,14 L-4,0 Z" fill="rgba(255,255,255,.65)"/>
-          <text y="-25" text-anchor="middle">N</text>
-        </g>
-      </svg>
-    </div>
-
-    <!-- Leg ledger -->
-    <div class="journey__legs">
-      <div class="legs__cap"><span>Route legs</span><span>Lagos → Dakar · 11 legs</span></div>
-      <ul class="legs">
-        <li class="leg leg--done"><span>01</span><span>Lagos → Cotonou</span><span>Complete</span></li>
-        <li class="leg leg--done"><span>02</span><span>Cotonou → Lomé</span><span>Complete</span></li>
-        <li class="leg leg--done"><span>03</span><span>Lomé → Ouagadougou</span><span>Complete</span></li>
-        <li class="leg leg--live"><span>04</span><span>Ouagadougou → Accra</span><span><span class="live-dot"></span>Up next</span></li>
-        <li class="leg"><span>05</span><span>Accra → Abidjan</span><span>Planned</span></li>
-        <li class="leg"><span>06</span><span>Abidjan → Monrovia</span><span>Planned</span></li>
-        <li class="leg"><span>07</span><span>Monrovia → Freetown</span><span>Planned</span></li>
-        <li class="leg"><span>08</span><span>Freetown → Conakry</span><span>Planned</span></li>
-        <li class="leg"><span>09</span><span>Conakry → Bissau</span><span>Planned</span></li>
-        <li class="leg"><span>10</span><span>Bissau → Banjul</span><span>Planned</span></li>
-        <li class="leg"><span>11</span><span>Banjul → Dakar</span><span>Planned</span></li>
-      </ul>
-    </div>
+  <div class="explore__grid">
+    <a class="explore__card" href="/mission">
+      <span class="explore__num">01</span>
+      <h3>Mission</h3>
+      <p>Why we drive — a bitcoin standard for everyday Africa, delivered by road.</p>
+      <span class="explore__go" aria-hidden="true">→</span>
+    </a>
+    <a class="explore__card" href="/journey">
+      <span class="explore__num">02</span>
+      <h3>The Journey</h3>
+      <p>14,820 km of orange road, country by country, port to market to border.</p>
+      <span class="explore__go" aria-hidden="true">→</span>
+    </a>
+    <a class="explore__card" href="/stories">
+      <span class="explore__num">03</span>
+      <h3>Stories</h3>
+      <p>The people and merchants we meet, in their own words, from the truck.</p>
+      <span class="explore__go" aria-hidden="true">→</span>
+    </a>
+    <a class="explore__card" href="/gallery">
+      <span class="explore__num">04</span>
+      <h3>Gallery</h3>
+      <p>Faces, markets and kilometres — the road trip in photographs.</p>
+      <span class="explore__go" aria-hidden="true">→</span>
+    </a>
+    <a class="explore__card" href="/partners">
+      <span class="explore__num">05</span>
+      <h3>Partners</h3>
+      <p>The people powering the trip — and how to sponsor the next leg.</p>
+      <span class="explore__go" aria-hidden="true">→</span>
+    </a>
+    <a class="explore__card explore__card--accent" href="/fuel">
+      <span class="explore__num">06</span>
+      <h3>Fuel the truck</h3>
+      <p>Power the next leg over Lightning or on-chain, or turn your money into sats.</p>
+      <span class="explore__go" aria-hidden="true">→</span>
+    </a>
   </div>
 </section>
 
-
-<!-- ╔══════════════════════════════════════════════════════════╗
-     ║  IMPACT NUMBERS                                           ║
-     ╚══════════════════════════════════════════════════════════╝ -->
-<section id="numbers" class="numbers" data-screen-label="04 Numbers">
-  <div class="section-head">
-    <div class="section-head__num">03 / Impact, so far</div>
-    <h2 class="section-head__title">Numbers from the dashboard.</h2>
-  </div>
-
-  <div class="numbers__grid">
-    <div class="bignum">
-      <div class="bignum__val">1,000<span class="unit">+</span></div>
-      <div class="bignum__lbl">people onboarded to a self‑custodial wallet</div>
+<!-- Fuel CTA band -->
+<section class="homeband" data-screen-label="Fuel band">
+  <div class="homeband__inner">
+    <div>
+      <div class="homeband__eyebrow">Keep it moving</div>
+      <h2 class="homeband__title">Every sat is a kilometre closer.</h2>
+      <p class="homeband__lede">Fuel, data, wallets and merchant kits for the next town on the route.</p>
     </div>
-    <div class="bignum">
-      <div class="bignum__val">20<span class="unit">+</span></div>
-      <div class="bignum__lbl">merchants now accepting Lightning</div>
-    </div>
-    <div class="bignum">
-      <div class="bignum__val">22</div>
-      <div class="bignum__lbl">local educators trained &amp; equipped</div>
-    </div>
-    <div class="bignum">
-      <div class="bignum__val">3,000 <span class="unit">km+</span></div>
-      <div class="bignum__lbl">driven across nine countries</div>
-    </div>
-    <div class="bignum">
-      <div class="bignum__val">₿ 0.02</div>
-      <div class="bignum__lbl">circulated through merchant rails to date</div>
-    </div>
-    <div class="bignum">
-      <div class="bignum__val">3 <span class="unit">/ 11</span></div>
-      <div class="bignum__lbl">countries reached on the planned route</div>
-    </div>
+    <a href="/fuel" class="btn btn--primary homeband__btn">
+      <span>Fuel the next leg</span>
+      <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
   </div>
 </section>
 
-
-<!-- ╔══════════════════════════════════════════════════════════╗
-     ║  STORIES                                                  ║
-     ╚══════════════════════════════════════════════════════════╝ -->
-<section id="stories" class="stories" data-screen-label="05 Stories">
-  <div class="section-head">
-    <div class="section-head__num">04 / On the ground</div>
-    <h2 class="section-head__title">Stories from the truck.</h2>
-  </div>
-
-  <div class="stories__grid">
-    <article class="story story--wide">
-      <div class="story__photo">
-        <img src="assets/sotr-benin.jpg" alt="Volunteers gathered around the Sats On The Road truck in Benin." loading="lazy" decoding="async" />
-      </div>
-      <div class="story__body">
-        <div class="story__loc">Cotonou, Benin · Day 19</div>
-        <h3 class="story__title">"It's the first money I own without a bank's permission."</h3>
-        <p>Aïcha runs a roadside fabric stall in Cotonou. We set her up with a Lightning
-        wallet on a five‑year‑old Android, paid for two metres of wax print in sats,
-        and watched her show three of her neighbours how to do the same before
-        we'd finished our coffee.</p>
-        <div class="story__meta">
-          <span>📍 11 merchants onboarded</span>
-          <span>·</span>
-          <span>🛞 312 km from previous stop</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="story">
-      <div class="story__photo story__photo--tall">
-        <img src="assets/sotr-togo.jpg" alt="Sats On The Road volunteers in Togo." loading="lazy" decoding="async" />
-      </div>
-      <div class="story__body">
-        <div class="story__loc">Lomé, Togo · Day 24</div>
-        <h3 class="story__title">A classroom on the back of a flatbed.</h3>
-        <p>Forty‑three students. Two laptops. One projector strapped to the side
-        of the truck. By sunset every student had a wallet, a backup, and their
-        first 1,000 sats.</p>
-      </div>
-    </article>
-
-    <article class="story story--feature">
-      <div class="story__body story__body--quote">
-        <div class="story__loc story__loc--light">Ouagadougou, Burkina Faso · Current stop</div>
-        <h3 class="story__title">Why Ouaga is the right place to be right now.</h3>
-        <p>Burkina Faso's capital is young, dense and mobile‑first, exactly the
-        conditions where a neutral, permissionless money network takes root fastest.
-        This is where we've parked the truck for the West African inland leg.</p>
-        <dl class="demo">
-          <div><dt>Metro population</dt><dd>~2.9M</dd></div>
-          <div><dt>Under age 25</dt><dd>~60%</dd></div>
-          <div><dt>Mobile‑money accounts</dt><dd>majority of adults</dd></div>
-          <div><dt>Primary languages</dt><dd>French · Mooré · Dioula</dd></div>
-        </dl>
-      </div>
-    </article>
+<!-- Contact teaser -->
+<section class="hometease" data-screen-label="Contact teaser">
+  <div class="hometease__inner">
+    <div class="hometease__eyebrow">Bring the truck to you</div>
+    <h2 class="hometease__title">Want Sats On The Road in your city?</h2>
+    <p class="hometease__lede">Invite the truck, partner with us, or join the crew on the road.</p>
+    <a href="/contact" class="btn btn--ghost">Get in touch</a>
   </div>
 </section>
 
-
-<!-- ╔══════════════════════════════════════════════════════════╗
-     ║  GALLERY                                                   ║
-     ╚══════════════════════════════════════════════════════════╝ -->
-<section id="gallery" class="gallery" data-screen-label="06 Gallery">
-  <div class="section-head">
-    <div class="section-head__num">05 / From the road</div>
-    <h2 class="section-head__title">Faces, markets &amp; kilometres.</h2>
-    <p class="section-head__lede">Snapshots from the movement: the crew, the wrapped car,
-    the merchants and the Bitcoin Afrique stage. Tap any photo to enlarge.</p>
-  </div>
-
-  <div class="gallery__wall">
-    <figure class="g-item"><img src="assets/gallery/p01-thumb.jpg" data-full="assets/gallery/p01.jpg" alt="The crew by the wrapped car at the market" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p04-thumb.jpg" data-full="assets/gallery/p04.jpg" alt="The team beneath a monument at night" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p03-thumb.jpg" data-full="assets/gallery/p03.jpg" alt="A meal on the road in Sats On The Road colours" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p09-thumb.jpg" data-full="assets/gallery/p09.jpg" alt="On stage at Conférence Bitcoin Afrique 2026" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p02-thumb.jpg" data-full="assets/gallery/p02.jpg" alt="Night selfie with the crew and the car" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p11-thumb.jpg" data-full="assets/gallery/p11.jpg" alt="With a supporter at the conference" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p06-thumb.jpg" data-full="assets/gallery/p06.jpg" alt="The crew under a mango tree" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p14-thumb.jpg" data-full="assets/gallery/p14.jpg" alt="Conférence Bitcoin Afrique 2026 audience" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p07-thumb.jpg" data-full="assets/gallery/p07.jpg" alt="A volunteer beside the wrapped Lexus" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p12-thumb.jpg" data-full="assets/gallery/p12.jpg" alt="Two of the team in Sats On The Road tees" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p08-thumb.jpg" data-full="assets/gallery/p08.jpg" alt="Lightning developer bootcamp" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p15-thumb.jpg" data-full="assets/gallery/p15.jpg" alt="Speaking at Bitcoin Afrique" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p13-thumb.jpg" data-full="assets/gallery/p13.jpg" alt="Onboarding a merchant at The New African Taste" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p05-thumb.jpg" data-full="assets/gallery/p05.jpg" alt="The crew at an art gallery" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p16-thumb.jpg" data-full="assets/gallery/p16.jpg" alt="Panel at Conférence Bitcoin Afrique 2026" loading="lazy" /></figure>
-    <figure class="g-item"><img src="assets/gallery/p10-thumb.jpg" data-full="assets/gallery/p10.jpg" alt="Behind the wheel at night" loading="lazy" /></figure>
-  </div>
-</section>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lightbox__close" aria-label="Close">&times;</button>
-  <button class="lightbox__nav lightbox__nav--prev" aria-label="Previous">&#8249;</button>
-  <img class="lightbox__img" alt="" />
-  <button class="lightbox__nav lightbox__nav--next" aria-label="Next">&#8250;</button>
-</div>
-
-
-<!-- ╔══════════════════════════════════════════════════════════╗
-     ║  PARTNERS                                                  ║
-     ╚══════════════════════════════════════════════════════════╝ -->
-<section id="partners" class="partners" data-screen-label="07 Partners">
-  <div class="section-head">
-    <div class="section-head__num">06 / The coalition</div>
-    <h2 class="section-head__title">Powered by an<br/>open‑source village.</h2>
-    <p class="section-head__lede">No single sponsor, no single chain‑of‑command.
-    A web of local builders, grant programs and orange‑pilled humans keeping
-    the wheels turning.</p>
-  </div>
-
-  <ul class="partners__grid">
-    <li class="partner">
-      <div class="partner__plate"><img src="assets/partners/bitkwa.png" alt="BitKwa logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">BitKwa</div>
-      <div class="partner__role">Bitcoin Kwara community</div>
-    </li>
-    <li class="partner">
-      <div class="partner__plate"><img src="assets/partners/cba.png" alt="Conférence Bitcoin Afrique logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">Conférence Bitcoin Afrique</div>
-      <div class="partner__role">Pan‑African conference</div>
-    </li>
-    <li class="partner">
-      <div class="partner__plate"><img src="assets/partners/bitcoin-pidgin.png" alt="Bitcoin Pidgin logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">Bitcoin Pidgin</div>
-      <div class="partner__role">Education &amp; media</div>
-    </li>
-    <li class="partner">
-      <div class="partner__plate"><img src="assets/partners/trezor-academy.png" alt="Trezor Academy logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">Trezor Academy</div>
-      <div class="partner__role">Self‑custody education</div>
-    </li>
-    <li class="partner">
-      <div class="partner__plate"><img src="assets/partners/citrusrate.png" alt="Citrusrate logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">Citrusrate</div>
-      <div class="partner__role">Merchant rates</div>
-    </li>
-    <li class="partner">
-      <div class="partner__plate"><img src="assets/partners/vexl.png" alt="Vexl logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">Vexl</div>
-      <div class="partner__role">Peer‑to‑peer trading</div>
-    </li>
-    <li class="partner">
-      <div class="partner__plate partner__plate--zoom"><img src="assets/partners/tether.png" alt="Tether logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">Tether</div>
-      <div class="partner__role">Supporting sponsor</div>
-    </li>
-    <li class="partner">
-      <div class="partner__plate partner__plate--dark"><img src="assets/partners/planb-network.png" alt="PlanB Network logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">PlanB Network</div>
-      <div class="partner__role">Open education</div>
-    </li>
-    <li class="partner">
-      <div class="partner__plate"><img src="assets/partners/bitcoin-benin.png" alt="Bitcoin Benin logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">Bitcoin Benin</div>
-      <div class="partner__role">Local community</div>
-    </li>
-    <li class="partner">
-      <div class="partner__plate"><img src="assets/partners/bitcoin-burkina.png" alt="Bitcoin Burkina Faso logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">Bitcoin Burkina Faso</div>
-      <div class="partner__role">Local community</div>
-    </li>
-    <li class="partner">
-      <div class="partner__plate"><img src="assets/partners/bitcoin-mastermind.png" alt="Bitcoin Mastermind logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">Bitcoin Mastermind</div>
-      <div class="partner__role">Community</div>
-    </li>
-    <li class="partner">
-      <div class="partner__plate partner__plate--dark"><img src="assets/partners/flash.jpeg" alt="Flash logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">Flash</div>
-      <div class="partner__role">Lightning payments</div>
-    </li>
-    <li class="partner">
-      <div class="partner__plate"><img src="assets/partners/hope-with-bitcoin.png" alt="Hope With Bitcoin logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">Hope With Bitcoin</div>
-      <div class="partner__role">Nonprofit</div>
-    </li>
-    <li class="partner">
-      <div class="partner__plate partner__plate--dark"><img src="assets/partners/togo-bitcoin.png" alt="Togo Bitcoin Community logo" loading="lazy" decoding="async" /></div>
-      <div class="partner__name">Togo Bitcoin Community</div>
-      <div class="partner__role">Local community</div>
-    </li>
-  </ul>
-  <div class="see-all-wrap">
-    <button class="see-all" type="button" data-fold="partners" aria-expanded="false"
-            data-more="See all 14 partners" data-less="Show fewer">See all 14 partners</button>
-  </div>
-
-  <p class="partners__foot">…and 240+ local merchants, mechanics, hostel owners and
-  fellow travellers we've shared chai, fuel and a sats invoice with along the way.</p>
-</section>
-
-
-<!-- ╔══════════════════════════════════════════════════════════╗
-     ║  CTA / SUPPORT                                             ║
-     ╚══════════════════════════════════════════════════════════╝ -->
-<section id="support" class="cta" data-screen-label="08 CTA">
-  <div class="cta__inner">
-    <div class="cta__copy">
-      <div class="section-head__num section-head__num--light">07 / Keep us moving</div>
-      <h2 class="cta__title">Three more countries.<br/>5,200 km to go.</h2>
-      <p class="cta__lede">
-        Diesel, ferries, border papers, and a lot of wallet stickers. Every
-        sat you send pays for the next merchant we orange‑pill.
-      </p>
-
-      <!-- Live fundraiser total from Geyser. Hidden until geyser.js confirms the
-           project is approved and public (see /api/raised). -->
-      <div class="geyser" id="geyserRaised" hidden>
-        <div class="geyser__big"><span id="grSats">—</span> <span class="geyser__unit">sats raised</span></div>
-        <div class="geyser__sub"><span id="grUsd">—</span> · <span id="grFunders">—</span></div>
-      </div>
-      <a class="btn btn--primary geyser__cta" id="geyserCta" data-geyser-cta
-         href="https://geyser.fund/project/satsontheroadafrica"
-         target="_blank" rel="noopener" hidden>⚡ Fuel the truck on Geyser →</a>
-
-      <div class="cta__split">
-        <div class="cta__col">
-          <div class="cta__col-eyebrow">⚡ Lightning</div>
-          <div class="cta__addr">
-            <code>bitkwa@blink.sv</code>
-            <button class="copy" data-copy="bitkwa@blink.sv" aria-label="Copy Lightning address">Copy</button>
-          </div>
-        </div>
-        <div class="cta__col">
-          <div class="cta__col-eyebrow">₿ On‑chain</div>
-          <div class="cta__addr">
-            <code>bc1qlv474nsseuleds8n6j0vzv4re5y743hmyd2dar</code>
-            <button class="copy" data-copy="bc1qlv474nsseuleds8n6j0vzv4re5y743hmyd2dar" aria-label="Copy on-chain address">Copy</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cta__qr" aria-hidden="true">
-      <div class="qr">
-        <img src="assets/sotr-qr.jpg" alt="Bitcoin QR code: scan to send sats to BitKwa over Lightning or on-chain." loading="lazy" decoding="async" />
-      </div>
-      <div class="qr__cap">Scan to send sats · bitkwa@blink.sv</div>
-    </div>
-  </div>
-
-  <div class="converter" id="converter">
-    <div class="converter__top">
-      <span class="converter__eyebrow">⚡ Sats converter</span>
-      <span class="converter__rate" id="convRate" aria-live="polite"></span>
-    </div>
-    <div class="converter__grid">
-      <label class="converter__field">
-        <span class="converter__lbl">Your money</span>
-        <span class="converter__control">
-          <input id="convFiat" type="text" inputmode="decimal" value="1000" autocomplete="off" spellcheck="false" aria-label="Amount in your currency" />
-          <select id="convCur" aria-label="Currency">
-            <option value="ngn">NGN</option>
-            <option value="ghs">GHS</option>
-            <option value="xof">XOF</option>
-            <option value="lrd">LRD</option>
-            <option value="sle">SLE</option>
-            <option value="gnf">GNF</option>
-            <option value="gmd">GMD</option>
-            <option value="zar">ZAR</option>
-            <option value="kes">KES</option>
-            <option value="egp">EGP</option>
-            <option value="ugx">UGX</option>
-            <option value="tzs">TZS</option>
-            <option value="usd">USD</option>
-          </select>
-        </span>
-      </label>
-      <span class="converter__eq" aria-hidden="true">=</span>
-      <label class="converter__field">
-        <span class="converter__lbl">Sats</span>
-        <span class="converter__control">
-          <input id="convSats" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" aria-label="Amount in sats" />
-          <span class="converter__unit">sats</span>
-        </span>
-      </label>
-    </div>
-    <button class="converter__dl" id="convDownload" type="button">Download image ↓</button>
-    <canvas id="convCanvas" width="1200" height="630" aria-hidden="true" style="display:none"></canvas>
-  </div>
-
-  <div class="fueled" id="fueled">
-    <div class="fueled__top">
-      <span class="fueled__eyebrow">🎉 Fueled the truck?</span>
-      <span class="fueled__hint">Make a card, bring a friend along</span>
-    </div>
-    <div class="fueled__row">
-      <input id="fuelName" type="text" maxlength="28" placeholder="Your name (optional)" autocomplete="off" spellcheck="false" aria-label="Your name for the share card" />
-      <button class="fueled__dl" id="fuelDownload" type="button">Download card ↓</button>
-    </div>
-    <div class="fueled__share">
-      <button class="fueled__chip" id="fuelShare" type="button" hidden>Share ⚡</button>
-      <a class="fueled__chip" id="fuelX" target="_blank" rel="noopener">Post on X</a>
-      <a class="fueled__chip" id="fuelWa" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
-    <canvas id="fuelCanvas" width="1200" height="630" aria-hidden="true" style="display:none"></canvas>
-  </div>
-</section>
-
-
-<!-- ╔══════════════════════════════════════════════════════════╗
-     ║  CONTACT                                                   ║
-     ╚══════════════════════════════════════════════════════════╝ -->
-<section id="contact" class="contact" data-screen-label="09 Contact">
-  <div class="contact__inner">
-    <div class="contact__left">
-      <div class="section-head__num">08 / Say hello</div>
-      <h2 class="contact__title">Get in touch.</h2>
-      <p class="contact__lede">Partnerships, press, volunteering, or an invite to bring
-      the truck to your city. Reach us on any channel below, or send a note straight
-      from here.</p>
-
-      <ul class="channels">
-        <li class="channel">
-          <a href="mailto:bitkwaofficial@gmail.com">
-            <span class="channel__ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            </span>
-            <span class="channel__body">
-              <span class="channel__label">Email</span>
-              <span class="channel__val">bitkwaofficial@gmail.com</span>
-            </span>
-          </a>
-        </li>
-        <li class="channel">
-          <a href="tel:+2349163533000">
-            <span class="channel__ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5c0 8.3 6.7 15 15 15a2 2 0 0 0 2-2v-2.5a1 1 0 0 0-.8-1l-3.4-.7a1 1 0 0 0-1 .4l-.9 1.2a12 12 0 0 1-5-5l1.2-.9a1 1 0 0 0 .4-1L11.5 4.8a1 1 0 0 0-1-.8H6a2 2 0 0 0-2 2Z"/></svg>
-            </span>
-            <span class="channel__body">
-              <span class="channel__label">Call</span>
-              <span class="channel__val">+234 916 353 3000</span>
-            </span>
-          </a>
-        </li>
-        <li class="channel">
-          <a href="https://x.com/bitkwaofficial" target="_blank" rel="noopener">
-            <span class="channel__ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-6.8l-5.3-6.9L5.1 22H2l8.1-9.3L1.5 2h7l4.8 6.3L18.9 2Zm-1.2 18h1.9L7 3.9H5L17.7 20Z"/></svg>
-            </span>
-            <span class="channel__body">
-              <span class="channel__label">X (Twitter)</span>
-              <span class="channel__val">@bitkwaofficial</span>
-            </span>
-          </a>
-        </li>
-        <li class="channel">
-          <a href="https://instagram.com/bitkwaofficial" target="_blank" rel="noopener">
-            <span class="channel__ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>
-            </span>
-            <span class="channel__body">
-              <span class="channel__label">Instagram</span>
-              <span class="channel__val">@bitkwaofficial</span>
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <form class="contact__form" id="contactForm" action="https://formspree.io/f/xjgqdokd" method="POST">
-      <input type="hidden" name="_subject" value="New message from satsontheroad.africa" />
-      <div class="field">
-        <label for="cf-name">Name</label>
-        <input type="text" id="cf-name" name="name" placeholder="Your name" required />
-      </div>
-      <div class="field">
-        <label for="cf-email">Email</label>
-        <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
-      </div>
-      <div class="field">
-        <label for="cf-topic">Topic</label>
-        <select id="cf-topic" name="topic">
-          <option>General enquiry</option>
-          <option>Partnership &amp; sponsorship</option>
-          <option>Press &amp; media</option>
-          <option>Volunteer / join the crew</option>
-          <option>Invite the truck to my city</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="cf-message">Message</label>
-        <textarea id="cf-message" name="message" rows="5" placeholder="Tell us a little about it…" required></textarea>
-      </div>
-      <button type="submit" class="btn btn--primary contact__submit">Send message →</button>
-      <p class="contact__note">Sends straight to the Sats On The Road inbox.</p>
-    </form>
-  </div>
-</section>
-
-
-<!-- ╔══════════════════════════════════════════════════════════╗
-     ║  FOOTER                                                    ║
-     ╚══════════════════════════════════════════════════════════╝ -->
 <footer class="foot" data-screen-label="Footer">
   <button class="to-top" id="toTop" type="button" aria-label="Back to top">
     <span aria-hidden="true">↑</span>
@@ -788,7 +291,7 @@
     </div>
     <ul class="foot__links">
       <li><a href="/wall">Wall of support</a></li>
-      <li><a href="/volunteer" class="foot__volunteer" data-topic="Volunteer / join the crew">Volunteer with us →</a></li>
+      <li><a href="/contact" class="foot__volunteer" data-topic="Volunteer / join the crew">Volunteer with us →</a></li>
     </ul>
   </div>
   <div class="foot__bottom">
@@ -797,9 +300,6 @@
   </div>
 </footer>
 
-<!-- ╔══════════════════════════════════════════════════════════╗
-     ║  SOUNDTRACK: floating Audiomack player                    ║
-     ╚══════════════════════════════════════════════════════════╝ -->
 <aside class="soundbar" id="soundbar" data-state="min" aria-label="Sats On The Road soundtrack">
   <button class="soundbar__pill" id="soundbarPill" type="button" aria-expanded="false" aria-controls="soundbarBody">
     <span class="soundbar__eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
@@ -807,14 +307,14 @@
   </button>
   <div class="soundbar__card">
     <div class="soundbar__head">
-      <span class="soundbar__label">♪ Soundtrack: <em>Owo Satoshi · Remix</em></span>
+      <span class="soundbar__label">♪ Soundtrack: <em>Sats On The Road Vol 1</em></span>
       <button class="soundbar__min" id="soundbarMin" type="button" aria-label="Minimise player">–</button>
     </div>
     <div class="soundbar__body" id="soundbarBody">
       <iframe class="soundbar__frame"
-        title="OWO SATOSHI (SATOSHI MONEY) Remix, Bitkwa Music on Audiomack"
-        data-src="https://audiomack.com/embed/bitkwamusic/song/owo-satoshi-satoshi-money-remix"
-        height="240" frameborder="0" scrolling="no" loading="lazy"
+        title="Sats On The Road Vol 1, Bitkwa Music on Audiomack — full album, tap any track"
+        data-src="https://audiomack.com/embed/bitkwamusic/album/sats-on-the-road-vol-1"
+        height="420" frameborder="0" scrolling="no" loading="lazy"
         allow="autoplay; encrypted-media; clipboard-write"></iframe>
     </div>
   </div>

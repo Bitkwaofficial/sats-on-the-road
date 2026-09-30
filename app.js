@@ -292,45 +292,9 @@ document.querySelectorAll(".copy").forEach((btn) => {
   });
 })();
 
-/* Clean URLs: /fuelthetruck, /mission, etc. map to on-page sections.
-   Intercept clicks (smooth-scroll + tidy URL) and scroll on direct load. */
-(function cleanRoutes() {
-  const routes = {
-    "/mission": "mission",
-    "/journey": "journey",
-    "/impact": "numbers",
-    "/stories": "stories",
-    "/gallery": "gallery",
-    "/partners": "partners",
-    "/contact": "contact",
-    "/fuelthetruck": "support",
-    "/volunteer": "contact",
-  };
-  function goto(id, smooth) {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
-  }
-  document.querySelectorAll('a[href^="/"]').forEach((a) => {
-    const path = a.getAttribute("href");
-    if (!(path in routes)) return;
-    a.addEventListener("click", (e) => {
-      e.preventDefault();
-      if (location.pathname !== path) history.pushState({}, "", path);
-      goto(routes[path], true);
-    });
-  });
-  // Direct load / refresh on a clean route -> jump to that section
-  const initial = routes[location.pathname];
-  if (initial) {
-    window.addEventListener("load", () => setTimeout(() => goto(initial, false), 60));
-  }
-  // Back / forward
-  window.addEventListener("popstate", () => {
-    const id = routes[location.pathname];
-    if (id) goto(id, true);
-    else window.scrollTo({ top: 0 });
-  });
-})();
+/* Multi-page site: each path is a real page, so internal links navigate
+   normally (no client-side section-scroll router). Same-page #anchors, if
+   any, keep the browser's native smooth-scroll via CSS scroll-behavior. */
 
 /* Back-to-top arrow in the footer */
 (function backToTop() {

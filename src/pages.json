@@ -1,0 +1,113 @@
+{
+  "linkRewrites": {
+    "/fuelthetruck": "/fuel",
+    "/impact": "/mission",
+    "/volunteer": "/contact"
+  },
+  "pages": [
+    {
+      "id": "home",
+      "out": "index.html",
+      "path": "/",
+      "body": "home.html",
+      "title":   { "en": "Sats On The Road | Driving Bitcoin across the African continent", "fr": "Sats On The Road | Le Bitcoin à travers le continent africain" },
+      "ogtitle": { "en": "Sats On The Road: Driving Bitcoin across the African continent", "fr": "Sats On The Road : le Bitcoin à travers le continent africain" },
+      "desc": {
+        "en": "Sats On The Road is a grassroots Bitcoin road trip across Africa, onboarding people to non-custodial wallets and real merchant payments, village by village.",
+        "fr": "Sats On The Road est un périple Bitcoin de terrain à travers l'Afrique de l'Ouest : portefeuilles auto-hébergés et vrais paiements chez les commerçants, village par village."
+      }
+    },
+    {
+      "id": "mission",
+      "out": "mission.html",
+      "path": "/mission",
+      "nav": "mission",
+      "sections": ["mission", "numbers"],
+      "title":   { "en": "Mission — Sats On The Road", "fr": "Mission — Sats On The Road" },
+      "ogtitle": { "en": "Mission — Sats On The Road", "fr": "Mission — Sats On The Road" },
+      "desc": {
+        "en": "Why we drive: putting Bitcoin self-custody, offline payment rails and orange-pilled merchants on the map across Africa — plus the numbers so far.",
+        "fr": "Pourquoi nous roulons : l'auto-conservation Bitcoin, les paiements hors ligne et les commerçants convertis à travers l'Afrique — et les chiffres à ce jour."
+      }
+    },
+    {
+      "id": "journey",
+      "out": "journey.html",
+      "path": "/journey",
+      "nav": "journey",
+      "sections": ["journey"],
+      "title":   { "en": "The Journey — Sats On The Road", "fr": "Le périple — Sats On The Road" },
+      "ogtitle": { "en": "The Journey — Sats On The Road", "fr": "Le périple — Sats On The Road" },
+      "desc": {
+        "en": "14,820 km of orange road across West Africa: the route, the countries crossed, the current leg and what's next.",
+        "fr": "14 820 km de route orange à travers l'Afrique de l'Ouest : l'itinéraire, les pays traversés, l'étape en cours et la suite."
+      }
+    },
+    {
+      "id": "stories",
+      "out": "stories.html",
+      "path": "/stories",
+      "nav": "stories",
+      "sections": ["stories"],
+      "title":   { "en": "Stories — Sats On The Road", "fr": "Histoires — Sats On The Road" },
+      "ogtitle": { "en": "Stories — Sats On The Road", "fr": "Histoires — Sats On The Road" },
+      "desc": {
+        "en": "Stories from the truck: the people, merchants and moments from the Bitcoin road trip across Africa.",
+        "fr": "Histoires du camion : les gens, les commerçants et les moments du périple Bitcoin à travers l'Afrique."
+      }
+    },
+    {
+      "id": "gallery",
+      "out": "gallery.html",
+      "path": "/gallery",
+      "nav": "gallery",
+      "sections": ["gallery"],
+      "append": ["lightbox"],
+      "title":   { "en": "Gallery — Sats On The Road", "fr": "Galerie — Sats On The Road" },
+      "ogtitle": { "en": "Gallery — Sats On The Road", "fr": "Galerie — Sats On The Road" },
+      "desc": {
+        "en": "Faces, markets and kilometres: photos from the Sats On The Road Bitcoin road trip across Africa.",
+        "fr": "Visages, marchés et kilomètres : photos du périple Bitcoin Sats On The Road à travers l'Afrique."
+      }
+    },
+    {
+      "id": "partners",
+      "out": "partners.html",
+      "path": "/partners",
+      "nav": "partners",
+      "sections": ["partners"],
+      "title":   { "en": "Partners — Sats On The Road", "fr": "Partenaires — Sats On The Road" },
+      "ogtitle": { "en": "Partners — Sats On The Road", "fr": "Partenaires — Sats On The Road" },
+      "desc": {
+        "en": "The partners powering Sats On The Road — and how to sponsor a leg of the Bitcoin road trip across Africa.",
+        "fr": "Les partenaires qui soutiennent Sats On The Road — et comment parrainer une étape du périple Bitcoin à travers l'Afrique."
+      }
+    },
+    {
+      "id": "fuel",
+      "out": "fuel.html",
+      "path": "/fuel",
+      "nav": "fuel",
+      "sections": ["support"],
+      "title":   { "en": "Fuel the Truck — Sats On The Road", "fr": "Financez le camion — Sats On The Road" },
+      "ogtitle": { "en": "Fuel the Truck — Sats On The Road", "fr": "Financez le camion — Sats On The Road" },
+      "desc": {
+        "en": "Fuel the next leg: donate over Lightning or on-chain, convert your money to sats, and power Bitcoin adoption across Africa.",
+        "fr": "Financez la prochaine étape : faites un don en Lightning ou on-chain, convertissez votre argent en sats et soutenez l'adoption du Bitcoin en Afrique."
+      }
+    },
+    {
+      "id": "contact",
+      "out": "contact.html",
+      "path": "/contact",
+      "nav": "contact",
+      "sections": ["contact"],
+      "title":   { "en": "Contact — Sats On The Road", "fr": "Contact — Sats On The Road" },
+      "ogtitle": { "en": "Contact — Sats On The Road", "fr": "Contact — Sats On The Road" },
+      "desc": {
+        "en": "Get in touch with Sats On The Road: invite the truck to your city, partner with us, or join the crew.",
+        "fr": "Contactez Sats On The Road : invitez le camion dans votre ville, devenez partenaire ou rejoignez l'équipe."
+      }
+    }
+  ]
+}

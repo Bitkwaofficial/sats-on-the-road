@@ -1,0 +1,103 @@
+<section id="support" class="cta" data-screen-label="08 CTA">
+  <div class="cta__inner">
+    <div class="cta__copy">
+      <div class="section-head__num section-head__num--light">07 / Keep us moving</div>
+      <h2 class="cta__title">Three more countries.<br/>5,200 km to go.</h2>
+      <p class="cta__lede">
+        Diesel, ferries, border papers, and a lot of wallet stickers. Every
+        sat you send pays for the next merchant we orange‑pill.
+      </p>
+
+      <!-- Live fundraiser total from Geyser. Hidden until geyser.js confirms the
+           project is approved and public (see /api/raised). -->
+      <div class="geyser" id="geyserRaised" hidden>
+        <div class="geyser__big"><span id="grSats">—</span> <span class="geyser__unit">sats raised</span></div>
+        <div class="geyser__sub"><span id="grUsd">—</span> · <span id="grFunders">—</span></div>
+      </div>
+      <a class="btn btn--primary geyser__cta" id="geyserCta" data-geyser-cta
+         href="https://geyser.fund/project/satsontheroadafrica"
+         target="_blank" rel="noopener" hidden>⚡ Fuel the truck on Geyser →</a>
+
+      <div class="cta__split">
+        <div class="cta__col">
+          <div class="cta__col-eyebrow">⚡ Lightning</div>
+          <div class="cta__addr">
+            <code>bitkwa@blink.sv</code>
+            <button class="copy" data-copy="bitkwa@blink.sv" aria-label="Copy Lightning address">Copy</button>
+          </div>
+        </div>
+        <div class="cta__col">
+          <div class="cta__col-eyebrow">₿ On‑chain</div>
+          <div class="cta__addr">
+            <code>bc1qlv474nsseuleds8n6j0vzv4re5y743hmyd2dar</code>
+            <button class="copy" data-copy="bc1qlv474nsseuleds8n6j0vzv4re5y743hmyd2dar" aria-label="Copy on-chain address">Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta__qr" aria-hidden="true">
+      <div class="qr">
+        <img src="assets/sotr-qr.jpg" alt="Bitcoin QR code: scan to send sats to BitKwa over Lightning or on-chain." loading="lazy" decoding="async" />
+      </div>
+      <div class="qr__cap">Scan to send sats · bitkwa@blink.sv</div>
+    </div>
+  </div>
+
+  <div class="converter" id="converter">
+    <div class="converter__top">
+      <span class="converter__eyebrow">⚡ Sats converter</span>
+      <span class="converter__rate" id="convRate" aria-live="polite"></span>
+    </div>
+    <div class="converter__grid">
+      <label class="converter__field">
+        <span class="converter__lbl">Your money</span>
+        <span class="converter__control">
+          <input id="convFiat" type="text" inputmode="decimal" value="1000" autocomplete="off" spellcheck="false" aria-label="Amount in your currency" />
+          <select id="convCur" aria-label="Currency">
+            <option value="ngn">NGN</option>
+            <option value="ghs">GHS</option>
+            <option value="xof">XOF</option>
+            <option value="lrd">LRD</option>
+            <option value="sle">SLE</option>
+            <option value="gnf">GNF</option>
+            <option value="gmd">GMD</option>
+            <option value="zar">ZAR</option>
+            <option value="kes">KES</option>
+            <option value="egp">EGP</option>
+            <option value="ugx">UGX</option>
+            <option value="tzs">TZS</option>
+            <option value="usd">USD</option>
+          </select>
+        </span>
+      </label>
+      <span class="converter__eq" aria-hidden="true">=</span>
+      <label class="converter__field">
+        <span class="converter__lbl">Sats</span>
+        <span class="converter__control">
+          <input id="convSats" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" aria-label="Amount in sats" />
+          <span class="converter__unit">sats</span>
+        </span>
+      </label>
+    </div>
+    <button class="converter__dl" id="convDownload" type="button">Download image ↓</button>
+    <canvas id="convCanvas" width="1200" height="630" aria-hidden="true" style="display:none"></canvas>
+  </div>
+
+  <div class="fueled" id="fueled">
+    <div class="fueled__top">
+      <span class="fueled__eyebrow">🎉 Fueled the truck?</span>
+      <span class="fueled__hint">Make a card, bring a friend along</span>
+    </div>
+    <div class="fueled__row">
+      <input id="fuelName" type="text" maxlength="28" placeholder="Your name (optional)" autocomplete="off" spellcheck="false" aria-label="Your name for the share card" />
+      <button class="fueled__dl" id="fuelDownload" type="button">Download card ↓</button>
+    </div>
+    <div class="fueled__share">
+      <button class="fueled__chip" id="fuelShare" type="button" hidden>Share ⚡</button>
+      <a class="fueled__chip" id="fuelX" target="_blank" rel="noopener">Post on X</a>
+      <a class="fueled__chip" id="fuelWa" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <canvas id="fuelCanvas" width="1200" height="630" aria-hidden="true" style="display:none"></canvas>
+  </div>
+</section>
