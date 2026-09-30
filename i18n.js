@@ -177,6 +177,12 @@
     "Invite the truck, partner with us, or join the crew on the road.":
       "Invitez le camion, devenez partenaire ou rejoignez l'équipage sur la route.",
     "Get in touch": "Contactez-nous",
+    // Wall voices (Stories page)
+    "From the wall": "Depuis le mur",
+    "Voices from the road.": "Les voix de la route.",
+    "A few of the messages people have left on the Wall of Support — the crew, the merchants and the supporters cheering the truck on.":
+      "Quelques-uns des messages laissés sur le Mur de soutien — l'équipage, les commerçants et les soutiens qui encouragent le camion.",
+    "Read the full wall →": "Voir tout le mur →",
     // Page headers
     "The Mission": "La mission",
     "Why we drive.": "Pourquoi nous roulons.",

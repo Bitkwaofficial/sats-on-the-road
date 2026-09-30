@@ -48,7 +48,8 @@
       "out": "stories.html",
       "path": "/stories",
       "nav": "stories",
-      "sections": ["stories"],
+      "sections": ["stories", "wall-quotes"],
+      "scripts": ["wall-stories.js"],
       "title":   { "en": "Stories — Sats On The Road", "fr": "Histoires — Sats On The Road" },
       "ogtitle": { "en": "Stories — Sats On The Road", "fr": "Histoires — Sats On The Road" },
       "desc": {

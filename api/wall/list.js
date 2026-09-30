@@ -11,7 +11,10 @@ async function kv(args) {
     headers: { Authorization: "Bearer " + KV_TOKEN, "Content-Type": "application/json" },
     body: JSON.stringify(args),
   });
-  const j = await r.json();
+  const text = await r.text();
+  if (!r.ok) throw new Error("HTTP " + r.status + " " + text.slice(0, 100));
+  let j = null;
+  try { j = JSON.parse(text); } catch (e) { throw new Error("bad JSON: " + text.slice(0, 80)); }
   if (j && j.error) throw new Error(j.error);
   return j ? j.result : null;
 }
@@ -28,6 +31,8 @@ module.exports = async function handler(req, res) {
       .map((m) => ({ name: m.name, place: m.place, msg: m.msg, date: m.date || "" }));
     return res.status(200).send(JSON.stringify({ items, configured: true }));
   } catch (e) {
-    return res.status(200).send(JSON.stringify({ items: [], configured: true, error: true }));
+    // `diag` is a temporary, token-free diagnostic to surface why the KV read
+    // fails (HTTP status / Upstash error). Safe to remove once resolved.
+    return res.status(200).send(JSON.stringify({ items: [], configured: true, error: true, diag: String(e && e.message || e).slice(0, 160) }));
   }
 };

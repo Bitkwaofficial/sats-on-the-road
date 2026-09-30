@@ -151,7 +151,7 @@ function buildPage(p) {
     .replace("{{BODY}}", assembled[1])
     .replace("{{FOOTER}}", assembled[2])
     .replace("{{SOUNDBAR}}", SOUNDBAR)
-    .replace("{{SCRIPTS}}", SCRIPTS);
+    .replace("{{SCRIPTS}}", [SCRIPTS, ...(p.scripts || []).map((s) => `<script src="${s}"></script>`)].join("\n"));
 
   fs.writeFileSync(path.join(ROOT, p.out), out, "utf8");
   console.log("built " + p.out + "  (" + p.path + ")  " + out.length + " bytes");
