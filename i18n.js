@@ -145,8 +145,8 @@
     "Send message →": "Envoyer le message →",
     "Sends straight to the Sats On The Road inbox.": "Envoyé directement à la boîte de réception de Sats On The Road.",
     // Footer
-    "Grassroots Bitcoin education & financial inclusion across Africa":
-      "Éducation Bitcoin de terrain et inclusion financière à travers l'Afrique",
+    "Driving Bitcoin across the African continent.":
+      "Le Bitcoin à travers le continent africain.",
     "Volunteer with us →": "Devenez bénévole →",
     "Keep your seed. Drive Africa. Stack sats.": "Gardez votre seed. Roulez l'Afrique. Empilez des sats.",
     // Soundbar
@@ -185,8 +185,8 @@
 
   const META = {
     title: {
-      en: "Sats On The Road | Bitcoin Adoption Road Trip Across Africa",
-      fr: "Sats On The Road | Le Bitcoin sur les routes d'Afrique",
+      en: "Sats On The Road | Driving Bitcoin across the African continent",
+      fr: "Sats On The Road | Le Bitcoin à travers le continent africain",
     },
     desc: {
       en: "Sats On The Road is a grassroots Bitcoin road trip across Africa, onboarding people to non-custodial wallets and real merchant payments, village by village.",
