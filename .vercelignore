@@ -3,3 +3,4 @@ src/
 build.js
 scaffold.js
 node_modules/
+google-apps-script/

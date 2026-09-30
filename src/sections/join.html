@@ -1,0 +1,155 @@
+<section id="join" class="join" data-screen-label="Join">
+  <div class="join__inner">
+    <div class="join__left">
+      <div class="section-head__num">Join the movement</div>
+      <h2 class="join__title">Get on the list.</h2>
+      <p class="join__lede">Be first when Bitcoin payments go live in your city. Merchants and users — sign up in 20 seconds and we'll reach out before launch.</p>
+
+      <div class="join__roles" role="tablist" aria-label="I am a">
+        <button type="button" class="join__role is-active" data-role="merchant" role="tab" aria-selected="true">I'm a Merchant</button>
+        <button type="button" class="join__role" data-role="user" role="tab" aria-selected="false">I'm a User</button>
+      </div>
+
+      <form id="waitlistForm" class="join__form" novalidate>
+        <img class="join__form-logo" src="assets/sotr-app-logo.png" alt="SOTR — Sats On The Road" width="720" height="480" />
+        <!-- honeypot: hidden from humans, bots fill it -->
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <input type="hidden" name="role" id="wl-role" value="merchant" />
+
+        <div class="field">
+          <label for="wl-name">Full name</label>
+          <input type="text" id="wl-name" name="name" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="field field--merchant">
+          <label for="wl-business">Business name</label>
+          <input type="text" id="wl-business" name="business" placeholder="e.g. Akara Cafe" />
+        </div>
+
+        <div class="field field--merchant">
+          <label for="wl-category">Business type</label>
+          <select id="wl-category" name="category">
+            <option value="">Select…</option>
+            <option>Restaurant / Café</option>
+            <option>Retail / Supermarket</option>
+            <option>Hotel / Guest house</option>
+            <option>Fuel station</option>
+            <option>Transport</option>
+            <option>Travel / Tour operator</option>
+            <option>Pharmacy / Clinic</option>
+            <option>Tech hub / Co-working</option>
+            <option>E-commerce</option>
+            <option>Services / Freelancer</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="wl-country">Country</label>
+          <select id="wl-country" name="country" required>
+            <option value="">Select your country…</option>
+            <optgroup label="On the route">
+              <option>Nigeria</option>
+              <option>Benin</option>
+              <option>Togo</option>
+              <option>Ghana</option>
+              <option>Côte d'Ivoire</option>
+              <option>Liberia</option>
+              <option>Sierra Leone</option>
+              <option>Guinea</option>
+              <option>Guinea-Bissau</option>
+              <option>Gambia</option>
+              <option>Senegal</option>
+              <option>Burkina Faso</option>
+            </optgroup>
+            <optgroup label="Rest of Africa">
+              <option>Algeria</option>
+              <option>Angola</option>
+              <option>Botswana</option>
+              <option>Burundi</option>
+              <option>Cabo Verde</option>
+              <option>Cameroon</option>
+              <option>Central African Republic</option>
+              <option>Chad</option>
+              <option>Comoros</option>
+              <option>Congo (Brazzaville)</option>
+              <option>Congo (DRC)</option>
+              <option>Djibouti</option>
+              <option>Egypt</option>
+              <option>Equatorial Guinea</option>
+              <option>Eritrea</option>
+              <option>Eswatini</option>
+              <option>Ethiopia</option>
+              <option>Gabon</option>
+              <option>Kenya</option>
+              <option>Lesotho</option>
+              <option>Libya</option>
+              <option>Madagascar</option>
+              <option>Malawi</option>
+              <option>Mali</option>
+              <option>Mauritania</option>
+              <option>Mauritius</option>
+              <option>Morocco</option>
+              <option>Mozambique</option>
+              <option>Namibia</option>
+              <option>Niger</option>
+              <option>Rwanda</option>
+              <option>São Tomé and Príncipe</option>
+              <option>Seychelles</option>
+              <option>Somalia</option>
+              <option>South Africa</option>
+              <option>South Sudan</option>
+              <option>Sudan</option>
+              <option>Tanzania</option>
+              <option>Tunisia</option>
+              <option>Uganda</option>
+              <option>Zambia</option>
+              <option>Zimbabwe</option>
+            </optgroup>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="wl-city">City / town</label>
+          <input type="text" id="wl-city" name="city" placeholder="e.g. Lagos" required />
+        </div>
+
+        <div class="field">
+          <label for="wl-phone">WhatsApp / phone</label>
+          <input type="tel" id="wl-phone" name="phone" placeholder="+234 801 234 5678" required />
+        </div>
+
+        <div class="field">
+          <label for="wl-email">Email <span class="field__opt">(optional)</span></label>
+          <input type="email" id="wl-email" name="email" placeholder="your.email@example.com" />
+        </div>
+
+        <button type="submit" class="btn btn--primary join__submit">Join the waitlist →</button>
+        <p class="join__note">No spam — we'll only reach out about SOTR going live near you.</p>
+      </form>
+
+      <div class="join__done" id="waitlistDone" hidden>
+        <div class="join__done-ico" aria-hidden="true">⚡</div>
+        <h3>You're on the list.</h3>
+        <p>Thanks for joining Sats On The Road. We'll be in touch before launch in your city.</p>
+        <div class="join__share">
+          <a class="btn btn--ghost" id="wlShareX" target="_blank" rel="noopener">Share on X</a>
+          <a class="btn btn--ghost" id="wlShareWa" target="_blank" rel="noopener">Share on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <aside class="join__side" aria-label="The SOTR app">
+      <figure class="join__phone-wrap">
+        <img class="join__phone" src="assets/sotr-app-phone.jpg" alt="The SOTR app: find Bitcoin merchants and pay anywhere in Africa" width="660" height="990" loading="lazy" decoding="async" />
+        <figcaption class="join__phone-cap">The app you're joining — pay anywhere in Africa with Bitcoin.</figcaption>
+      </figure>
+      <div class="join__qr-card">
+        <img src="assets/join-qr.png" alt="QR code that opens satsontheroad.africa/join" width="220" height="220" decoding="async" />
+        <div class="join__qr-cap">Scan to join</div>
+        <div class="join__qr-url">satsontheroad.africa/join</div>
+      </div>
+    </aside>
+  </div>
+</section>

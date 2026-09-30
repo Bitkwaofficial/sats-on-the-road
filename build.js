@@ -31,6 +31,7 @@ const PAGE_HERO = {
   partners: { label: "Partners",  h1: "Partners",             sub: "The people powering the trip." },
   fuel:     { label: "Fuel the truck", h1: "Fuel the truck",  sub: "Power the next leg." },
   contact:  { label: "Contact",   h1: "Get in touch",         sub: "Bring the truck to your city." },
+  join:     { label: "Join",      h1: "Join the waitlist",    sub: "Be first when SOTR goes live in your city." },
 };
 
 function pageHero(id) {

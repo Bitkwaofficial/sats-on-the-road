@@ -183,6 +183,37 @@
     "A few of the messages people have left on the Wall of Support — the crew, the merchants and the supporters cheering the truck on.":
       "Quelques-uns des messages laissés sur le Mur de soutien — l'équipage, les commerçants et les soutiens qui encouragent le camion.",
     "Read the full wall →": "Voir tout le mur →",
+    // Join / waitlist page
+    "Join": "Rejoindre",
+    "Join the waitlist →": "Rejoindre la liste d'attente →",
+    "Join the waitlist": "Rejoindre la liste d'attente",
+    "Be first when SOTR goes live in your city.": "Soyez les premiers quand SOTR arrive dans votre ville.",
+    "Join the movement": "Rejoignez le mouvement",
+    "Get on the list.": "Inscrivez-vous.",
+    "Be first when Bitcoin payments go live in your city. Merchants and users — sign up in 20 seconds and we'll reach out before launch.":
+      "Soyez les premiers quand les paiements Bitcoin arrivent dans votre ville. Commerçants et utilisateurs — inscrivez-vous en 20 secondes et nous vous contacterons avant le lancement.",
+    "I'm a Merchant": "Je suis commerçant",
+    "I'm a User": "Je suis utilisateur",
+    "The app you're joining — pay anywhere in Africa with Bitcoin.":
+      "L'application que vous rejoignez — payez partout en Afrique avec Bitcoin.",
+    "Full name": "Nom complet",
+    "Business name": "Nom de l'entreprise",
+    "Business type": "Type d'activité",
+    "Country": "Pays",
+    "City / town": "Ville",
+    "WhatsApp / phone": "WhatsApp / téléphone",
+    "Email": "E-mail",
+    "(optional)": "(optionnel)",
+    "No spam — we'll only reach out about SOTR going live near you.":
+      "Pas de spam — nous vous écrirons uniquement au sujet du lancement de SOTR près de chez vous.",
+    "You're on the list.": "Vous êtes sur la liste.",
+    "Thanks for joining Sats On The Road. We'll be in touch before launch in your city.":
+      "Merci d'avoir rejoint Sats On The Road. Nous vous contacterons avant le lancement dans votre ville.",
+    "Share on X": "Partager sur X",
+    "Share on WhatsApp": "Partager sur WhatsApp",
+    "Scan to join": "Scannez pour rejoindre",
+    "On the road? Show this code — anyone can scan it to sign up on the spot.":
+      "Sur la route ? Montrez ce code — n'importe qui peut le scanner pour s'inscrire sur place.",
     // Page headers
     "The Mission": "La mission",
     "Why we drive.": "Pourquoi nous roulons.",

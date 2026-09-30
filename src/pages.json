@@ -109,6 +109,20 @@
         "en": "Get in touch with Sats On The Road: invite the truck to your city, partner with us, or join the crew.",
         "fr": "Contactez Sats On The Road : invitez le camion dans votre ville, devenez partenaire ou rejoignez l'équipe."
       }
+    },
+    {
+      "id": "join",
+      "out": "join.html",
+      "path": "/join",
+      "nav": "join",
+      "sections": ["join"],
+      "scripts": ["waitlist.js"],
+      "title":   { "en": "Join the Waitlist — Sats On The Road", "fr": "Rejoindre la liste d'attente — Sats On The Road" },
+      "ogtitle": { "en": "Join the Waitlist — Sats On The Road", "fr": "Rejoindre la liste d'attente — Sats On The Road" },
+      "desc": {
+        "en": "Merchants and users — join the Sats On The Road waitlist and be first when Bitcoin payments go live in your city across Africa.",
+        "fr": "Commerçants et utilisateurs — rejoignez la liste d'attente Sats On The Road et soyez les premiers quand les paiements Bitcoin arrivent dans votre ville."
+      }
     }
   ]
 }

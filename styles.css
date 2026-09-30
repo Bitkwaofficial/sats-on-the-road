@@ -1496,3 +1496,76 @@ section[id] { scroll-margin-top: 108px; }
 .hometease__eyebrow { font-family: "JetBrains Mono", monospace; font-size: 12px; text-transform: uppercase; letter-spacing: .14em; color: var(--orange-deep); }
 .hometease__title { margin: 0; font-size: clamp(30px, 4.5vw, 56px); line-height: 1.0; letter-spacing: -0.03em; font-weight: 800; }
 .hometease__lede { margin: 0 0 8px; color: var(--ink-3); font-size: 19px; }
+
+/* Nav + footer join links */
+.nav__join { color: var(--orange-deep) !important; font-weight: 600; }
+.foot__join { font-weight: 600; color: var(--orange-deep); }
+.foot__join:hover { color: var(--ink); }
+
+/* Join / waitlist page */
+.join { padding: 96px 32px; border-top: 1px solid var(--rule); }
+.join__inner {
+  max-width: var(--measure); margin: 0 auto;
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: start;
+}
+.join__inner, .join__form, .join__inner > * { min-width: 0; }
+@media (max-width: 900px) { .join__inner { grid-template-columns: 1fr; gap: 40px; } }
+.join__title { font-size: clamp(38px, 5vw, 60px); line-height: .98; letter-spacing: -.02em; margin: 0 0 14px; }
+.join__lede { color: var(--ink-3); font-size: 17px; line-height: 1.55; max-width: 46ch; margin: 0 0 24px; }
+
+/* Role toggle */
+.join__roles { display: inline-flex; gap: 6px; padding: 5px; background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 999px; margin-bottom: 22px; }
+.join__role {
+  appearance: none; border: 0; cursor: pointer;
+  padding: 10px 20px; border-radius: 999px;
+  font: inherit; font-weight: 600; font-size: 15px; color: var(--ink-3);
+  background: transparent; transition: background .18s, color .18s;
+}
+.join__role.is-active { background: var(--orange); color: var(--ink); }
+
+/* Dark card, orange labels, white inputs (per brief mockups); bg matches the SOTR logo plate */
+.join__form { background: #101820; color: var(--paper); border: 1px solid rgba(246,239,227,.08); border-radius: var(--r); padding: 32px; display: flex; flex-direction: column; gap: 18px; }
+.join__form-logo { display: block; width: 210px; max-width: 62%; height: auto; margin: -6px auto 6px; }
+.join__form .field label { color: var(--orange); font-size: 15px; font-weight: 600; letter-spacing: -.01em; text-transform: none; }
+.join__form .field input,
+.join__form .field select {
+  background: #fff; color: var(--ink);
+  border: 1px solid transparent; border-radius: 12px;
+  padding: 15px 16px; font-size: 16px;
+  transition: box-shadow .15s ease, border-color .15s ease;
+}
+.join__form .field input::placeholder { color: #9aa0a6; }
+.join__form .field input:focus,
+.join__form .field select:focus {
+  outline: none; border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(247,147,26,.28);
+}
+.join__form .field select option { background: #fff; color: var(--ink); }
+.join__form .field select optgroup { color: var(--ink-3); }
+.field__opt { color: rgba(247,147,26,.55); font-weight: 400; }
+.hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.join__submit { width: 100%; justify-content: center; margin-top: 6px; padding: 16px; font-size: 16px; font-weight: 700; }
+.join__note { margin: 0; font-size: 13px; color: rgba(246,239,227,.55); text-align: center; }
+
+/* Success state */
+.join__done { text-align: center; padding: 40px 24px; background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: var(--r); }
+.join__done-ico { font-size: 40px; line-height: 1; margin-bottom: 8px; }
+.join__done h3 { margin: 0 0 8px; font-size: 28px; letter-spacing: -.02em; }
+.join__done p { margin: 0 auto 20px; color: var(--ink-3); max-width: 42ch; }
+.join__share { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+/* Side panel: app mockup + QR */
+.join__side { position: sticky; top: 100px; display: flex; flex-direction: column; align-items: center; gap: 24px; }
+@media (max-width: 900px) { .join__side { position: static; } }
+.join__phone-wrap { margin: 0; text-align: center; }
+.join__phone { width: 100%; max-width: 280px; height: auto; border-radius: 26px; box-shadow: 0 24px 60px rgba(13,13,13,.22); display: block; margin: 0 auto; }
+.join__phone-cap { margin: 14px auto 0; max-width: 30ch; font-size: 14px; line-height: 1.5; color: var(--ink-3); text-align: center; }
+.join__qr-card {
+  background: #fff; border: 1px solid var(--paper-line); border-radius: var(--r);
+  padding: 24px; text-align: center; box-shadow: 0 14px 40px rgba(13,13,13,.08);
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.join__qr-card img { width: 220px; height: 220px; display: block; }
+.join__qr-cap { font-weight: 700; font-size: 18px; letter-spacing: -.01em; }
+.join__qr-url { font-family: "JetBrains Mono", monospace; font-size: 13px; color: var(--orange-deep); }
+.join__qr-hint { color: var(--ink-3); font-size: 14px; text-align: center; max-width: 30ch; margin: 0; }
