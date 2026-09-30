@@ -31,8 +31,6 @@ module.exports = async function handler(req, res) {
       .map((m) => ({ name: m.name, place: m.place, msg: m.msg, date: m.date || "" }));
     return res.status(200).send(JSON.stringify({ items, configured: true }));
   } catch (e) {
-    // `diag` is a temporary, token-free diagnostic to surface why the KV read
-    // fails (HTTP status / Upstash error). Safe to remove once resolved.
-    return res.status(200).send(JSON.stringify({ items: [], configured: true, error: true, diag: String(e && e.message || e).slice(0, 160) }));
+    return res.status(200).send(JSON.stringify({ items: [], configured: true, error: true }));
   }
 };
