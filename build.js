@@ -156,13 +156,13 @@ function buildPage(p) {
 
   fs.writeFileSync(path.join(ROOT, p.out), out, "utf8");
   console.log("built " + p.out + "  (" + p.path + ")  " + out.length + " bytes");
-  return { path: p.path, out: p.out };
+  return { path: p.path, out: p.out, sitemap: p.sitemap !== false };
 }
 
 const built = cfg.pages.map(buildPage);
 
 // sitemap.xml (all pages + /wall)
-const urls = built.map((b) => (b.path === "/" ? "/" : b.path)).concat(["/wall"]);
+const urls = built.filter((b) => b.sitemap).map((b) => (b.path === "/" ? "/" : b.path)).concat(["/wall"]);
 const today = new Date().toISOString().slice(0, 10);
 const sitemap =
   `<?xml version="1.0" encoding="UTF-8"?>\n` +

@@ -214,6 +214,12 @@
     "Scan to join": "Scannez pour rejoindre",
     "On the road? Show this code, anyone can scan it to sign up on the spot.":
       "Sur la route ? Montrez ce code, n'importe qui peut le scanner pour s'inscrire sur place.",
+    // 404
+    "This road doesn't exist yet.": "Cette route n'existe pas encore.",
+    "The page you're looking for moved, or was never on the map. Let's get you back on the route.":
+      "La page que vous cherchez a été déplacée, ou n'a jamais existé. Reprenons la route.",
+    "Back home": "Retour à l'accueil",
+    "The journey": "Le périple",
     // Page headers
     "The Mission": "La mission",
     "Why we drive.": "Pourquoi nous roulons.",

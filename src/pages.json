@@ -123,6 +123,19 @@
         "en": "Merchants and users, join the Sats On The Road waitlist and be first when Bitcoin payments go live in your city across Africa.",
         "fr": "Commerçants et utilisateurs, rejoignez la liste d'attente Sats On The Road et soyez les premiers quand les paiements Bitcoin arrivent dans votre ville."
       }
+    },
+    {
+      "id": "notfound",
+      "out": "404.html",
+      "path": "/404",
+      "body": "404.html",
+      "sitemap": false,
+      "title":   { "en": "Page not found — Sats On The Road", "fr": "Page introuvable — Sats On The Road" },
+      "ogtitle": { "en": "Page not found — Sats On The Road", "fr": "Page introuvable — Sats On The Road" },
+      "desc": {
+        "en": "This page doesn't exist. Head back to Sats On The Road.",
+        "fr": "Cette page n'existe pas. Retournez sur Sats On The Road."
+      }
     }
   ]
 }
