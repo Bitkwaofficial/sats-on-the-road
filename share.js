@@ -15,8 +15,8 @@
   const isFr = () => document.documentElement.lang === "fr";
   const shareText = () =>
     isFr()
-      ? "Je soutiens le Bitcoin à travers l'Afrique avec Sats On The Road ⚡ Rejoignez-moi :"
-      : "I'm fueling Bitcoin across Africa with Sats On The Road ⚡ Join me:";
+      ? "Je soutiens le Bitcoin à travers l'Afrique avec Sats On The Road. Rejoignez-moi :"
+      : "I'm fueling Bitcoin across Africa with Sats On The Road. Join me:";
 
   function updateLinks() {
     const t = shareText();
@@ -73,7 +73,7 @@
     ctx.font = `800 ${px}px ${SANS}`;
     ctx.fillText(title, 64, 300);
     ctx.fillStyle = "#F7931A"; ctx.font = `800 108px ${SANS}`;
-    ctx.fillText("⚡", 64, 430);
+    
 
     // sub
     ctx.fillStyle = "rgba(246,239,227,0.75)"; ctx.font = `500 30px ${SANS}`;

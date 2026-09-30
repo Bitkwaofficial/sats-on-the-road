@@ -1,7 +1,7 @@
 // Stories page: show up to 5 Wall of Support messages.
 // The page ships with a curated static set (good for SEO / no-JS). If the live
 // wall has approved messages, replace them with the 5 most recent. If the API
-// is empty or errors, the static set stays — so the section is never blank.
+// is empty or errors, the static set stays, so the section is never blank.
 (function wallStories() {
   const box = document.getElementById("wallStories");
   if (!box) return;

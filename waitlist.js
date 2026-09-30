@@ -67,8 +67,8 @@
     if (doneBox) {
       doneBox.hidden = false;
       var msg = S(
-        "I just joined the Sats On The Road waitlist ⚡ Bitcoin payments coming to Africa — join me:",
-        "Je viens de rejoindre la liste d'attente Sats On The Road ⚡ Les paiements Bitcoin arrivent en Afrique — rejoignez-moi :"
+        "I just joined the Sats On The Road waitlist. Bitcoin payments coming to Africa, join me:",
+        "Je viens de rejoindre la liste d'attente Sats On The Road. Les paiements Bitcoin arrivent en Afrique, rejoignez-moi :"
       );
       var url = "https://satsontheroad.africa/join";
       var x = document.getElementById("wlShareX");
@@ -82,7 +82,7 @@
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Honeypot — silently succeed, store nothing.
+    // Honeypot, silently succeed, store nothing.
     if (form.website && form.website.value) { showDone({}); return; }
 
     var role = roleInput.value;

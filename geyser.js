@@ -20,7 +20,7 @@
         // Fresh campaign, no donations yet: encourage rather than show zeros.
         block.innerHTML =
           '<div class="geyser__zero">' +
-          (isFr() ? "Soyez le premier à ravitailler le camion ⚡" : "Be the first to fuel the truck ⚡") +
+          (isFr() ? "Soyez le premier à ravitailler le camion" : "Be the first to fuel the truck") +
           "</div>";
       } else {
         const sats = document.getElementById("grSats");

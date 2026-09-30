@@ -63,7 +63,7 @@
       "« C'est le premier argent qui m'appartient sans l'autorisation d'une banque. »",
     "Aïcha runs a roadside fabric stall in Cotonou. We set her up with a Lightning wallet on a five-year-old Android, paid for two metres of wax print in sats, and watched her show three of her neighbours how to do the same before we'd finished our coffee.":
       "Aïcha tient un étal de tissus au bord de la route à Cotonou. Nous lui avons installé un portefeuille Lightning sur un Android de cinq ans, payé deux mètres de wax en sats, et l'avons vue montrer à trois de ses voisines comment faire pareil avant même que nous ayons fini notre café.",
-    "📍 11 merchants onboarded": "📍 11 commerçants intégrés",
+    "11 merchants onboarded": "11 commerçants intégrés",
     "🛞 312 km from previous stop": "🛞 312 km depuis l'étape précédente",
     "Lomé, Togo · Day 24": "Lomé, Togo · Jour 24",
     "A classroom on the back of a flatbed.": "Une salle de classe sur un plateau de camion.",
@@ -113,14 +113,14 @@
       "Du diesel, des ferries, des papiers de douane et beaucoup d'autocollants de portefeuille. Chaque sat que vous envoyez finance le prochain commerçant que nous convertissons au Bitcoin.",
     "Scan to send sats · bitkwa@blink.sv": "Scannez pour envoyer des sats · bitkwa@blink.sv",
     "Copy": "Copier",
-    "⚡ Sats converter": "⚡ Convertisseur de sats",
+    "Sats converter": "Convertisseur de sats",
     "Your money": "Votre argent",
     "Download image ↓": "Télécharger l'image ↓",
-    "🎉 Fueled the truck?": "🎉 Vous avez ravitaillé le camion ?",
+    "Fueled the truck?": "Vous avez ravitaillé le camion ?",
     "Make a card, bring a friend along": "Créez une carte, invitez un ami",
     "Download card ↓": "Télécharger la carte ↓",
     "Post on X": "Publier sur X",
-    "Share ⚡": "Partager ⚡",
+    "Share": "Partager",
     "✍️ Wall of support": "✍️ Mur des soutiens",
     "Messages from the movement.": "Messages du mouvement.",
     "Notes from merchants, learners and supporters we've met along the road. Add yours.":
@@ -152,19 +152,19 @@
     // Multi-page (v2): home hub, CTA bands, page headers
     "Explore": "Explorer",
     "Follow the whole movement.": "Suivez tout le mouvement.",
-    "Every part of Sats On The Road, one tap away — the mission behind the wheel, the route so far, the people we meet and the photos from the road.":
-      "Chaque facette de Sats On The Road, à portée de clic — la mission derrière le volant, l'itinéraire parcouru, les gens rencontrés et les photos de la route.",
+    "Every part of Sats On The Road, one tap away, the mission behind the wheel, the route so far, the people we meet and the photos from the road.":
+      "Chaque facette de Sats On The Road, à portée de clic, la mission derrière le volant, l'itinéraire parcouru, les gens rencontrés et les photos de la route.",
     "The Journey": "Le périple",
-    "Why we drive — a bitcoin standard for everyday Africa, delivered by road.":
-      "Pourquoi nous roulons — un standard bitcoin pour l'Afrique du quotidien, livré par la route.",
+    "Why we drive, a bitcoin standard for everyday Africa, delivered by road.":
+      "Pourquoi nous roulons, un standard bitcoin pour l'Afrique du quotidien, livré par la route.",
     "14,820 km of orange road, country by country, port to market to border.":
       "14 820 km de route orange, pays par pays, du port au marché à la frontière.",
     "The people and merchants we meet, in their own words, from the truck.":
       "Les gens et les commerçants que nous rencontrons, dans leurs propres mots, depuis le camion.",
-    "Faces, markets and kilometres — the road trip in photographs.":
-      "Visages, marchés et kilomètres — le périple en photos.",
-    "The people powering the trip — and how to sponsor the next leg.":
-      "Ceux qui soutiennent le périple — et comment parrainer la prochaine étape.",
+    "Faces, markets and kilometres, the road trip in photographs.":
+      "Visages, marchés et kilomètres, le périple en photos.",
+    "The people powering the trip, and how to sponsor the next leg.":
+      "Ceux qui soutiennent le périple, et comment parrainer la prochaine étape.",
     "Fuel the truck": "Financez le camion",
     "Power the next leg over Lightning or on-chain, or turn your money into sats.":
       "Financez la prochaine étape en Lightning ou on-chain, ou convertissez votre argent en sats.",
@@ -180,8 +180,8 @@
     // Wall voices (Stories page)
     "From the wall": "Depuis le mur",
     "Voices from the road.": "Les voix de la route.",
-    "A few of the messages people have left on the Wall of Support — the crew, the merchants and the supporters cheering the truck on.":
-      "Quelques-uns des messages laissés sur le Mur de soutien — l'équipage, les commerçants et les soutiens qui encouragent le camion.",
+    "A few of the messages people have left on the Wall of Support, the crew, the merchants and the supporters cheering the truck on.":
+      "Quelques-uns des messages laissés sur le Mur de soutien, l'équipage, les commerçants et les soutiens qui encouragent le camion.",
     "Read the full wall →": "Voir tout le mur →",
     // Join / waitlist page
     "Join": "Rejoindre",
@@ -190,12 +190,12 @@
     "Be first when SOTR goes live in your city.": "Soyez les premiers quand SOTR arrive dans votre ville.",
     "Join the movement": "Rejoignez le mouvement",
     "Get on the list.": "Inscrivez-vous.",
-    "Be first when Bitcoin payments go live in your city. Merchants and users — sign up in 20 seconds and we'll reach out before launch.":
-      "Soyez les premiers quand les paiements Bitcoin arrivent dans votre ville. Commerçants et utilisateurs — inscrivez-vous en 20 secondes et nous vous contacterons avant le lancement.",
+    "Be first when Bitcoin payments go live in your city. Merchants and users, sign up in 20 seconds and we'll reach out before launch.":
+      "Soyez les premiers quand les paiements Bitcoin arrivent dans votre ville. Commerçants et utilisateurs, inscrivez-vous en 20 secondes et nous vous contacterons avant le lancement.",
     "I'm a Merchant": "Je suis commerçant",
     "I'm a User": "Je suis utilisateur",
-    "The app you're joining — pay anywhere in Africa with Bitcoin.":
-      "L'application que vous rejoignez — payez partout en Afrique avec Bitcoin.",
+    "The app you're joining, pay anywhere in Africa with Bitcoin.":
+      "L'application que vous rejoignez, payez partout en Afrique avec Bitcoin.",
     "Full name": "Nom complet",
     "Business name": "Nom de l'entreprise",
     "Business type": "Type d'activité",
@@ -204,16 +204,16 @@
     "WhatsApp / phone": "WhatsApp / téléphone",
     "Email": "E-mail",
     "(optional)": "(optionnel)",
-    "No spam — we'll only reach out about SOTR going live near you.":
-      "Pas de spam — nous vous écrirons uniquement au sujet du lancement de SOTR près de chez vous.",
+    "No spam, we'll only reach out about SOTR going live near you.":
+      "Pas de spam, nous vous écrirons uniquement au sujet du lancement de SOTR près de chez vous.",
     "You're on the list.": "Vous êtes sur la liste.",
     "Thanks for joining Sats On The Road. We'll be in touch before launch in your city.":
       "Merci d'avoir rejoint Sats On The Road. Nous vous contacterons avant le lancement dans votre ville.",
     "Share on X": "Partager sur X",
     "Share on WhatsApp": "Partager sur WhatsApp",
     "Scan to join": "Scannez pour rejoindre",
-    "On the road? Show this code — anyone can scan it to sign up on the spot.":
-      "Sur la route ? Montrez ce code — n'importe qui peut le scanner pour s'inscrire sur place.",
+    "On the road? Show this code, anyone can scan it to sign up on the spot.":
+      "Sur la route ? Montrez ce code, n'importe qui peut le scanner pour s'inscrire sur place.",
     // Page headers
     "The Mission": "La mission",
     "Why we drive.": "Pourquoi nous roulons.",
@@ -273,7 +273,7 @@
     return s
       .replace(/\s+/g, " ")
       .trim()
-      .replace(/[‐‑‒–—]/g, "-")
+      .replace(/[‐‑‒–-]/g, "-")
       .replace(/[‘’′]/g, "'")
       .replace(/[“”]/g, '"');
   }
