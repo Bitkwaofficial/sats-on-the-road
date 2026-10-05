@@ -2,7 +2,10 @@
   "linkRewrites": {
     "/fuelthetruck": "/fuel",
     "/impact": "/mission",
-    "/volunteer": "/contact"
+    "/volunteer": "/contact",
+    "/stories": "/movement#stories",
+    "/gallery": "/movement#gallery",
+    "/partners": "/movement#partners"
   },
   "pages": [
     {
@@ -44,44 +47,18 @@
       }
     },
     {
-      "id": "stories",
-      "out": "stories.html",
-      "path": "/stories",
-      "nav": "stories",
-      "sections": ["stories", "wall-quotes"],
-      "scripts": ["wall-stories.js"],
-      "title":   { "en": "Stories, Sats On The Road", "fr": "Histoires, Sats On The Road" },
-      "ogtitle": { "en": "Stories, Sats On The Road", "fr": "Histoires, Sats On The Road" },
-      "desc": {
-        "en": "Stories from the truck: the people, merchants and moments from the Bitcoin road trip across Africa.",
-        "fr": "Histoires du camion : les gens, les commerçants et les moments du périple Bitcoin à travers l'Afrique."
-      }
-    },
-    {
-      "id": "gallery",
-      "out": "gallery.html",
-      "path": "/gallery",
-      "nav": "gallery",
-      "sections": ["gallery"],
+      "id": "movement",
+      "out": "movement.html",
+      "path": "/movement",
+      "nav": "movement",
+      "sections": ["stories", "wall-quotes", "gallery", "partners"],
       "append": ["lightbox"],
-      "title":   { "en": "Gallery, Sats On The Road", "fr": "Galerie, Sats On The Road" },
-      "ogtitle": { "en": "Gallery, Sats On The Road", "fr": "Galerie, Sats On The Road" },
+      "scripts": ["wall-stories.js"],
+      "title":   { "en": "The Movement, Sats On The Road", "fr": "Le mouvement, Sats On The Road" },
+      "ogtitle": { "en": "The Movement, Sats On The Road", "fr": "Le mouvement, Sats On The Road" },
       "desc": {
-        "en": "Faces, markets and kilometres: photos from the Sats On The Road Bitcoin road trip across Africa.",
-        "fr": "Visages, marchés et kilomètres : photos du périple Bitcoin Sats On The Road à travers l'Afrique."
-      }
-    },
-    {
-      "id": "partners",
-      "out": "partners.html",
-      "path": "/partners",
-      "nav": "partners",
-      "sections": ["partners"],
-      "title":   { "en": "Partners, Sats On The Road", "fr": "Partenaires, Sats On The Road" },
-      "ogtitle": { "en": "Partners, Sats On The Road", "fr": "Partenaires, Sats On The Road" },
-      "desc": {
-        "en": "The partners powering Sats On The Road, and how to sponsor a leg of the Bitcoin road trip across Africa.",
-        "fr": "Les partenaires qui soutiennent Sats On The Road, et comment parrainer une étape du périple Bitcoin à travers l'Afrique."
+        "en": "The people, photos and partners behind Sats On The Road: stories from the truck, a gallery from the road, and the coalition powering Bitcoin adoption across Africa.",
+        "fr": "Les gens, les photos et les partenaires derrière Sats On The Road : histoires du camion, galerie de la route et la coalition qui soutient l'adoption du Bitcoin en Afrique."
       }
     },
     {

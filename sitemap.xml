@@ -16,19 +16,9 @@
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="fr" href="https://satsontheroad.africa/journey?lang=fr"/>
   </url>
   <url>
-    <loc>https://satsontheroad.africa/stories</loc>
+    <loc>https://satsontheroad.africa/movement</loc>
     <lastmod>2026-10-05</lastmod>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="fr" href="https://satsontheroad.africa/stories?lang=fr"/>
-  </url>
-  <url>
-    <loc>https://satsontheroad.africa/gallery</loc>
-    <lastmod>2026-10-05</lastmod>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="fr" href="https://satsontheroad.africa/gallery?lang=fr"/>
-  </url>
-  <url>
-    <loc>https://satsontheroad.africa/partners</loc>
-    <lastmod>2026-10-05</lastmod>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="fr" href="https://satsontheroad.africa/partners?lang=fr"/>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="fr" href="https://satsontheroad.africa/movement?lang=fr"/>
   </url>
   <url>
     <loc>https://satsontheroad.africa/fuel</loc>

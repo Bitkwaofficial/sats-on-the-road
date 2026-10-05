@@ -23,6 +23,9 @@
   "redirects": [
     { "source": "/fuelthetruck", "destination": "/fuel", "permanent": true },
     { "source": "/impact", "destination": "/mission", "permanent": true },
-    { "source": "/volunteer", "destination": "/contact", "permanent": true }
+    { "source": "/volunteer", "destination": "/contact", "permanent": true },
+    { "source": "/stories", "destination": "/movement", "permanent": true },
+    { "source": "/gallery", "destination": "/movement", "permanent": true },
+    { "source": "/partners", "destination": "/movement", "permanent": true }
   ]
 }

@@ -27,9 +27,7 @@ const SCRIPTS = partial("scripts");
 const PAGE_HERO = {
   mission:  { label: "Mission",   h1: "The Mission",          sub: "Why we drive." },
   journey:  { label: "Journey",   h1: "The Journey",          sub: "Every kilometre of the route." },
-  stories:  { label: "Stories",   h1: "Stories from the road", sub: "The people behind the sats." },
-  gallery:  { label: "Gallery",   h1: "Gallery",              sub: "Faces, markets and kilometres." },
-  partners: { label: "Partners",  h1: "Partners",             sub: "The people powering the trip." },
+  movement: { label: "The Movement", h1: "The Movement",      sub: "The people, photos and partners behind the trip." },
   fuel:     { label: "Fuel the truck", h1: "Fuel the truck",  sub: "Power the next leg." },
   contact:  { label: "Contact",   h1: "Get in touch",         sub: "Bring the truck to your city." },
   join:     { label: "Join",      h1: "Join the waitlist",    sub: "Be first when SOTR goes live in your city." },
