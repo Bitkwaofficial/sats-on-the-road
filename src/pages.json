@@ -125,13 +125,37 @@
       }
     },
     {
+      "id": "privacy",
+      "out": "privacy.html",
+      "path": "/privacy",
+      "sections": ["privacy"],
+      "title":   { "en": "Privacy Policy, Sats On The Road", "fr": "Politique de confidentialité, Sats On The Road" },
+      "ogtitle": { "en": "Privacy Policy, Sats On The Road", "fr": "Politique de confidentialité, Sats On The Road" },
+      "desc": {
+        "en": "How Sats On The Road collects, uses and protects your data: waitlist sign-ups, contact messages, cookieless analytics and your choices.",
+        "fr": "Comment Sats On The Road collecte, utilise et protège vos données : inscriptions, messages de contact, analyses sans cookies et vos choix."
+      }
+    },
+    {
+      "id": "terms",
+      "out": "terms.html",
+      "path": "/terms",
+      "sections": ["terms"],
+      "title":   { "en": "Terms and Conditions, Sats On The Road", "fr": "Conditions d'utilisation, Sats On The Road" },
+      "ogtitle": { "en": "Terms and Conditions, Sats On The Road", "fr": "Conditions d'utilisation, Sats On The Road" },
+      "desc": {
+        "en": "The terms for using satsontheroad.africa: the waitlist, donations, not financial advice, content and liability.",
+        "fr": "Les conditions d'utilisation de satsontheroad.africa : liste d'attente, dons, absence de conseil financier, contenu et responsabilité."
+      }
+    },
+    {
       "id": "notfound",
       "out": "404.html",
       "path": "/404",
       "body": "404.html",
       "sitemap": false,
-      "title":   { "en": "Page not found — Sats On The Road", "fr": "Page introuvable — Sats On The Road" },
-      "ogtitle": { "en": "Page not found — Sats On The Road", "fr": "Page introuvable — Sats On The Road" },
+      "title":   { "en": "Page not found, Sats On The Road", "fr": "Page introuvable, Sats On The Road" },
+      "ogtitle": { "en": "Page not found, Sats On The Road", "fr": "Page introuvable, Sats On The Road" },
       "desc": {
         "en": "This page doesn't exist. Head back to Sats On The Road.",
         "fr": "Cette page n'existe pas. Retournez sur Sats On The Road."

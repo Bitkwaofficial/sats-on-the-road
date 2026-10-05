@@ -81,9 +81,35 @@
 <footer class="foot">
   <div class="foot__bottom">
     <div>© 2026 Sats On The Road.</div>
+    <ul class="foot__legal">
+      <li><a href="/privacy">Privacy</a></li>
+      <li><a href="/terms">Terms</a></li>
+    </ul>
     <div class="foot__motto">Keep your seed. Drive Africa. Stack sats.</div>
   </div>
 </footer>
+
+<div class="consent" id="consent" role="dialog" aria-live="polite" aria-label="Privacy notice" hidden>
+  <p class="consent__text">We use privacy-friendly, cookieless analytics and your browser's local storage for
+  basic features. No tracking or advertising cookies. <a href="/privacy">Privacy Policy</a>.</p>
+  <button type="button" class="consent__btn" id="consentOk">Got it</button>
+</div>
+<script>
+(function () {
+  try {
+    var K = "sotr-consent";
+    var el = document.getElementById("consent");
+    if (!el) return;
+    try { if (localStorage.getItem(K) === "1") return; } catch (e) {}
+    el.hidden = false;
+    var ok = document.getElementById("consentOk");
+    if (ok) ok.addEventListener("click", function () {
+      try { localStorage.setItem(K, "1"); } catch (e) {}
+      el.hidden = true;
+    });
+  } catch (e) {}
+})();
+</script>
 
 <script src="i18n.js"></script>
 <script src="wall.js"></script>

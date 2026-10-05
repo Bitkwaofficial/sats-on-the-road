@@ -20,6 +20,7 @@ const TICKER = partial("ticker");
 const HEADER = partial("header");
 const FOOTER = partial("footer");
 const SOUNDBAR = partial("soundbar");
+const CONSENT = partial("consent");
 const SCRIPTS = partial("scripts");
 
 // Compact per-page header (guarantees one <h1> per subpage).
@@ -32,6 +33,8 @@ const PAGE_HERO = {
   fuel:     { label: "Fuel the truck", h1: "Fuel the truck",  sub: "Power the next leg." },
   contact:  { label: "Contact",   h1: "Get in touch",         sub: "Bring the truck to your city." },
   join:     { label: "Join",      h1: "Join the waitlist",    sub: "Be first when SOTR goes live in your city." },
+  privacy:  { label: "Privacy",   h1: "Privacy Policy",       sub: "What we collect, why, and your choices." },
+  terms:    { label: "Terms",     h1: "Terms and Conditions", sub: "The rules for using this site." },
 };
 
 function pageHero(id) {
@@ -152,6 +155,7 @@ function buildPage(p) {
     .replace("{{BODY}}", assembled[1])
     .replace("{{FOOTER}}", assembled[2])
     .replace("{{SOUNDBAR}}", SOUNDBAR)
+    .replace("{{CONSENT}}", CONSENT)
     .replace("{{SCRIPTS}}", [SCRIPTS, ...(p.scripts || []).map((s) => `<script src="${s}"></script>`)].join("\n"));
 
   fs.writeFileSync(path.join(ROOT, p.out), out, "utf8");

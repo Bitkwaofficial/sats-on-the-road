@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Page not found — Sats On The Road</title>
+<title>Page not found, Sats On The Road</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -31,7 +31,7 @@
 <meta property="og:locale" content="en_US" />
 <meta property="og:site_name" content="Sats On The Road" />
 <meta property="og:url" content="https://satsontheroad.africa/404" />
-<meta property="og:title" content="Page not found — Sats On The Road" />
+<meta property="og:title" content="Page not found, Sats On The Road" />
 <meta property="og:description" content="This page doesn't exist. Head back to Sats On The Road." />
 <meta property="og:image" content="https://satsontheroad.africa/assets/og-image.jpg" />
 <meta property="og:image:secure_url" content="https://satsontheroad.africa/assets/og-image.jpg" />
@@ -42,7 +42,7 @@
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Page not found — Sats On The Road" />
+<meta name="twitter:title" content="Page not found, Sats On The Road" />
 <meta name="twitter:description" content="This page doesn't exist. Head back to Sats On The Road." />
 <meta name="twitter:image" content="https://satsontheroad.africa/assets/og-image.jpg" />
 
@@ -81,7 +81,7 @@
       "@type": "WebPage",
       "@id": "https://satsontheroad.africa/404#webpage",
       "url": "https://satsontheroad.africa/404",
-      "name": "Page not found — Sats On The Road",
+      "name": "Page not found, Sats On The Road",
       "description": "This page doesn't exist. Head back to Sats On The Road.",
       "isPartOf": {
         "@id": "https://satsontheroad.africa/#website"
@@ -113,7 +113,7 @@
   ]
 }
 </script>
-<script>window.SOTR_META = {"title":{"en":"Page not found — Sats On The Road","fr":"Page introuvable — Sats On The Road"},"desc":{"en":"This page doesn't exist. Head back to Sats On The Road.","fr":"Cette page n'existe pas. Retournez sur Sats On The Road."}};</script>
+<script>window.SOTR_META = {"title":{"en":"Page not found, Sats On The Road","fr":"Page introuvable, Sats On The Road"},"desc":{"en":"This page doesn't exist. Head back to Sats On The Road.","fr":"Cette page n'existe pas. Retournez sur Sats On The Road."}};</script>
 </head>
 <body data-page="notfound">
 
@@ -181,6 +181,10 @@
   </div>
   <div class="foot__bottom">
     <div>© 2026 Sats On The Road.</div>
+    <ul class="foot__legal">
+      <li><a href="/privacy">Privacy</a></li>
+      <li><a href="/terms">Terms</a></li>
+    </ul>
     <div class="foot__motto">Keep your seed. Drive Africa. Stack sats.</div>
   </div>
 </footer>
@@ -204,6 +208,28 @@
     </div>
   </div>
 </aside>
+
+<div class="consent" id="consent" role="dialog" aria-live="polite" aria-label="Privacy notice" hidden>
+  <p class="consent__text">We use privacy-friendly, cookieless analytics and your browser's local storage for
+  basic features. No tracking or advertising cookies. <a href="/privacy">Privacy Policy</a>.</p>
+  <button type="button" class="consent__btn" id="consentOk">Got it</button>
+</div>
+<script>
+(function () {
+  try {
+    var K = "sotr-consent";
+    var el = document.getElementById("consent");
+    if (!el) return;
+    try { if (localStorage.getItem(K) === "1") return; } catch (e) {}
+    el.hidden = false;
+    var ok = document.getElementById("consentOk");
+    if (ok) ok.addEventListener("click", function () {
+      try { localStorage.setItem(K, "1"); } catch (e) {}
+      el.hidden = true;
+    });
+  } catch (e) {}
+})();
+</script>
 
 <script src="i18n.js"></script>
 <script src="app.js"></script>
