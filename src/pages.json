@@ -38,7 +38,7 @@
       "out": "journey.html",
       "path": "/journey",
       "nav": "journey",
-      "sections": ["journey"],
+      "sections": ["journey", "approach"],
       "title":   { "en": "The Journey, Sats On The Road", "fr": "Le périple, Sats On The Road" },
       "ogtitle": { "en": "The Journey, Sats On The Road", "fr": "Le périple, Sats On The Road" },
       "desc": {

@@ -1650,3 +1650,16 @@ section[id] { scroll-margin-top: 108px; }
 @media (max-width: 560px) {
   .consent { left: 10px; right: 10px; bottom: 10px; max-width: none; }
 }
+
+/* Approach / why we fly (journey page) */
+.approach { background: var(--paper); padding: 72px 32px; max-width: var(--measure); margin: 0 auto; }
+.approach__lessons { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; padding: 0; margin: 30px 0 0; }
+.approach .lesson { background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 14px; padding: 20px 22px; }
+.approach .lesson h3 { font-size: 19px; font-weight: 700; letter-spacing: -.01em; margin: 0 0 6px; }
+.approach .lesson h3::before { content: ""; display: inline-block; width: 10px; height: 10px; background: var(--orange); border-radius: 2px; margin-right: 9px; vertical-align: middle; }
+.approach .lesson p { margin: 0; color: var(--ink-3); font-size: 15.5px; line-height: 1.5; }
+.approach__new { margin-top: 26px; background: var(--ink); color: var(--paper); border-radius: 18px; padding: 34px 34px; }
+.approach__new-eyebrow { font-family: "JetBrains Mono", monospace; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); }
+.approach__new-title { font-size: 30px; font-weight: 800; letter-spacing: -.02em; margin: 8px 0 14px; }
+.approach__new p { margin: 0; max-width: 70ch; font-size: 17px; line-height: 1.6; color: rgba(246,239,227,.9); }
+@media (max-width: 600px) { .approach { padding: 56px 20px; } .approach__new { padding: 26px 22px; } .approach__new-title { font-size: 25px; } }
