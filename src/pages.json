@@ -47,6 +47,25 @@
       }
     },
     {
+      "id": "nigeria",
+      "out": "countries/nigeria.html",
+      "path": "/countries/nigeria",
+      "nav": "nigeria",
+      "body": "nigeria.html",
+      "title": {
+        "en": "Sats On The Road Nigeria | Bitcoin education & community",
+        "fr": "Sats On The Road Nigeria | Éducation Bitcoin et communauté"
+      },
+      "ogtitle": {
+        "en": "Sats On The Road Nigeria",
+        "fr": "Sats On The Road Nigeria"
+      },
+      "desc": {
+        "en": "Explore the Nigeria country project: practical Bitcoin education, merchant onboarding, local communities and ways to get involved with Sats On The Road Africa.",
+        "fr": "Découvrez le projet Nigeria : éducation pratique au Bitcoin, accompagnement des commerçants, communautés locales et participation à Sats On The Road Africa."
+      }
+    },
+    {
       "id": "movement",
       "out": "movement.html",
       "path": "/movement",

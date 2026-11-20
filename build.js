@@ -106,7 +106,7 @@ function jsonld(p, url) {
     },
   ];
   if (p.path !== "/") {
-    const label = (PAGE_HERO[p.id] && PAGE_HERO[p.id].label) || p.id;
+    const label = (PAGE_HERO[p.id] && PAGE_HERO[p.id].label) || (p.id === "nigeria" ? "Nigeria" : p.id);
     graph.push({
       "@type": "BreadcrumbList",
       "@id": url + "#breadcrumb",
@@ -156,6 +156,12 @@ function buildPage(p) {
     .replace("{{CONSENT}}", CONSENT)
     .replace("{{SCRIPTS}}", [SCRIPTS, ...(p.scripts || []).map((s) => `<script src="${s}"></script>`)].join("\n"));
 
+  // Nested country pages must load the same root assets as top-level pages.
+  if (p.path.split('/').filter(Boolean).length > 1) {
+    out = out.replace(/(src|href)="([^"{}]+)"/gi, (match, attr, value) =>
+      value.startsWith('/') || value.startsWith('#') || value.includes(':') ? match : `${attr}="/${value}"`);
+  }
+  fs.mkdirSync(path.dirname(path.join(ROOT, p.out)), { recursive: true });
   fs.writeFileSync(path.join(ROOT, p.out), out, "utf8");
   console.log("built " + p.out + "  (" + p.path + ")  " + out.length + " bytes");
   return { path: p.path, out: p.out, sitemap: p.sitemap !== false };

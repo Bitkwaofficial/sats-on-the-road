@@ -329,3 +329,21 @@ document.querySelectorAll(".copy").forEach((btn) => {
     if (topic) setTimeout(() => { sel.value = topic; }, 50);
   });
 })();
+
+/* Countries disclosure: native keyboard/touch support, with dismissal. */
+(function countriesNavigation() {
+  const menu = document.getElementById('countriesMenu');
+  if (!menu) return;
+  document.addEventListener('click', (event) => {
+    if (!menu.contains(event.target)) menu.open = false;
+  });
+  menu.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      menu.open = false;
+      menu.querySelector('summary').focus();
+    }
+  });
+  menu.addEventListener('focusout', (event) => {
+    if (!menu.contains(event.relatedTarget)) menu.open = false;
+  });
+})();

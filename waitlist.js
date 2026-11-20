@@ -11,6 +11,12 @@
   var fr = function () { return document.documentElement.lang === "fr"; };
   var S = function (en, frTxt) { return fr() ? frTxt : en; };
 
+  var requestedCountry = new URLSearchParams(location.search).get("country");
+  var countryInput = document.getElementById("wl-country");
+  if (countryInput && Array.from(countryInput.options).some(function (option) { return option.value === requestedCountry; })) {
+    countryInput.value = requestedCountry;
+  }
+
   var roleInput = document.getElementById("wl-role");
   var roleBtns = form.parentElement.querySelectorAll(".join__role");
   var merchantFields = form.querySelectorAll(".field--merchant");
