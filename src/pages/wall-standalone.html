@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-i18n-meta="off">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Wall of Support | Sats On The Road</title>
+<meta name="description" content="Messages of support from the Sats On The Road movement across Africa. Sign the wall and add your voice." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#0D0D0D" />
+<link rel="canonical" href="https://satsontheroad.africa/wall" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Sats On The Road" />
+<meta property="og:url" content="https://satsontheroad.africa/wall" />
+<meta property="og:title" content="Wall of Support | Sats On The Road" />
+<meta property="og:description" content="Messages of support from the Sats On The Road movement across Africa. Sign the wall and add your voice." />
+<meta property="og:image" content="https://satsontheroad.africa/assets/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Wall of Support | Sats On The Road" />
+<meta name="twitter:description" content="Messages of support from the Sats On The Road movement across Africa. Sign the wall and add your voice." />
+<meta name="twitter:image" content="https://satsontheroad.africa/assets/og-image.jpg" />
+</head>
+<body>
+
+<header class="nav" style="top:0" data-screen-label="Nav">
+  <a href="/" class="nav__brand" aria-label="Sats On The Road home">
+    <img src="assets/sotr-logo.png" alt="" />
+    <span class="nav__brand-text">
+      <span class="nav__brand-line">Sats On The Road</span>
+      <span class="nav__brand-sub">Africa · 2026</span>
+    </span>
+  </a>
+  <a href="/" class="wall__back">← Back to site</a>
+  <button class="nav__lang" id="langToggle" type="button" aria-label="Switch to French">FR</button>
+  <a href="/fuel" class="nav__cta">Fuel the truck →</a>
+</header>
+
+<section class="wall" data-screen-label="Wall of Support">
+  <div class="wall__bg" aria-hidden="true">
+    <span class="splash s1"></span>
+    <span class="splash s2"></span>
+    <span class="splash s3"></span>
+    <span class="splash s4"></span>
+    <span class="splash s5"></span>
+  </div>
+
+  <div class="wall__inner">
+    <div class="section-head">
+      <div class="section-head__num">✍️ Wall of support</div>
+      <h2 class="section-head__title">Messages from the movement.</h2>
+      <p class="section-head__lede">Notes from merchants, learners and supporters we've met along the road. Add yours.</p>
+    </div>
+
+    <form class="wall-form" id="wallForm" action="https://formspree.io/f/xjgqdokd" method="POST">
+      <input type="hidden" name="_subject" value="New Wall of Support signature" />
+      <input type="hidden" name="type" value="wall-signature" />
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <div class="wall-form__row">
+        <input type="text" name="name" placeholder="Your name" maxlength="40" autocomplete="name" aria-label="Your name" required />
+        <input type="text" name="place" placeholder="City, country (optional)" maxlength="60" autocomplete="off" aria-label="City, country (optional)" />
+      </div>
+      <textarea name="message" placeholder="Leave a message of support…" maxlength="240" rows="3" aria-label="Your message of support" required></textarea>
+      <div class="wall-form__foot">
+        <button type="submit" class="btn btn--primary">Sign the wall →</button>
+        <span class="wall-form__status" id="wallStatus" aria-live="polite"></span>
+      </div>
+    </form>
+
+    <div class="wall-grid" id="wallGrid" aria-live="polite"></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot__bottom">
+    <div>© 2026 Sats On The Road.</div>
+    <ul class="foot__legal">
+      <li><a href="/privacy">Privacy</a></li>
+      <li><a href="/terms">Terms</a></li>
+    </ul>
+    <div class="foot__motto">Keep your seed. Drive Africa. Stack sats.</div>
+  </div>
+</footer>
+
+<div class="consent" id="consent" role="dialog" aria-live="polite" aria-label="Privacy notice" hidden>
+  <p class="consent__text">We use privacy-friendly, cookieless analytics and your browser's local storage for
+  basic features. No tracking or advertising cookies. <a href="/privacy">Privacy Policy</a>.</p>
+  <button type="button" class="consent__btn" id="consentOk">Got it</button>
+</div>
+<script>
+(function () {
+  try {
+    var K = "sotr-consent";
+    var el = document.getElementById("consent");
+    if (!el) return;
+    try { if (localStorage.getItem(K) === "1") return; } catch (e) {}
+    el.hidden = false;
+    var ok = document.getElementById("consentOk");
+    if (ok) ok.addEventListener("click", function () {
+      try { localStorage.setItem(K, "1"); } catch (e) {}
+      el.hidden = true;
+    });
+  } catch (e) {}
+})();
+</script>
+
+<script src="i18n.js"></script>
+<script src="wall.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "lightningcss": "1.33.0",
+    "sharp": "0.35.5",
+    "terser": "5.51.2"
+  },
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "optimize:images": "node scripts/optimize-images.js",
+    "test": "node --test tests/*.test.js"
+  }
+}

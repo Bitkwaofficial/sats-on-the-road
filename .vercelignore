@@ -4,3 +4,8 @@ build.js
 scaffold.js
 node_modules/
 google-apps-script/
+scripts/
+tests/
+docs/
+.claude/
+brag-output-*/

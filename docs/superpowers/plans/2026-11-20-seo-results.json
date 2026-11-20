@@ -1,0 +1,63 @@
+{
+  "images": {
+    "before": 5187383,
+    "after": 3968782
+  },
+  "pages": {
+    "home": {
+      "javascriptBefore": 63019,
+      "javascriptAfter": 37823,
+      "cssAfter": 54553
+    },
+    "mission": {
+      "javascriptBefore": 63019,
+      "javascriptAfter": 37823,
+      "cssAfter": 54553
+    },
+    "journey": {
+      "javascriptBefore": 63019,
+      "javascriptAfter": 37823,
+      "cssAfter": 54553
+    },
+    "nigeria": {
+      "javascriptBefore": 68080,
+      "javascriptAfter": 41559,
+      "cssAfter": 63045
+    },
+    "movement": {
+      "javascriptBefore": 64502,
+      "javascriptAfter": 38610,
+      "cssAfter": 54553
+    },
+    "fuel": {
+      "javascriptBefore": 63019,
+      "javascriptAfter": 46215,
+      "cssAfter": 54553
+    },
+    "contact": {
+      "javascriptBefore": 63019,
+      "javascriptAfter": 37823,
+      "cssAfter": 54553
+    },
+    "join": {
+      "javascriptBefore": 68129,
+      "javascriptAfter": 40701,
+      "cssAfter": 54553
+    },
+    "privacy": {
+      "javascriptBefore": 63019,
+      "javascriptAfter": 37823,
+      "cssAfter": 54553
+    },
+    "terms": {
+      "javascriptBefore": 63019,
+      "javascriptAfter": 37823,
+      "cssAfter": 54553
+    },
+    "notfound": {
+      "javascriptBefore": 63019,
+      "javascriptAfter": 37823,
+      "cssAfter": 54553
+    }
+  }
+}

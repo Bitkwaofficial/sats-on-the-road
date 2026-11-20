@@ -128,6 +128,10 @@
     "Part of Sats On The Road Africa.": "Un projet de Sats On The Road Africa.",
     "a connection.": "une rencontre.",
     "who show up.": "qui s’engagent.",
+    "Country focus · Nigeria": "Projet national · Nigéria",
+    "Bitcoin education in your city.": "L’éducation Bitcoin dans votre ville.",
+    "Six geopolitical zones. Explore the Nigeria project and invite the truck to your community.": "Six zones géopolitiques. Découvrez le projet Nigeria et invitez le camion dans votre communauté.",
+    "Explore Sats On The Road Nigeria →": "Découvrir Sats On The Road Nigeria →",
     // Nav
     "Journey": "Le trajet",
     "Stories": "Récits",
@@ -475,6 +479,9 @@
   }
 
   function detect() {
+    // Explicit language links must win over a previous browser preference.
+    const requested = new URLSearchParams(location.search).get("lang");
+    if (requested === "fr" || requested === "en") return requested;
     try {
       const s = localStorage.getItem("sotr-lang");
       if (s === "fr" || s === "en") return s;

@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-20",
+  "files": {
+    "styles.css": 70068,
+    "i18n.js": 33003,
+    "app.js": 11951,
+    "price-ticker.js": 3551,
+    "converter.js": 7421,
+    "share.js": 4900,
+    "geyser.js": 2193,
+    "nigeria.js": 5061,
+    "nigeria.css": 8607
+  },
+  "pages": {
+    "home": {
+      "html": 17400,
+      "javascript": 63019
+    },
+    "mission": {
+      "html": 15751,
+      "javascript": 63019
+    },
+    "journey": {
+      "html": 20346,
+      "javascript": 63019
+    },
+    "nigeria": {
+      "html": 21549,
+      "javascript": 68080
+    },
+    "movement": {
+      "html": 24685,
+      "javascript": 64502
+    },
+    "fuel": {
+      "html": 16502,
+      "javascript": 63019
+    },
+    "contact": {
+      "html": 15849,
+      "javascript": 63019
+    },
+    "join": {
+      "html": 18607,
+      "javascript": 68129
+    },
+    "privacy": {
+      "html": 15517,
+      "javascript": 63019
+    },
+    "terms": {
+      "html": 14598,
+      "javascript": 63019
+    },
+    "notfound": {
+      "html": 11276,
+      "javascript": 63019
+    }
+  }
+}

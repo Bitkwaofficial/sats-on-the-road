@@ -2,7 +2,7 @@
 
 // 1) Reveal on scroll
 const revealEls = document.querySelectorAll(
-  ".section-head, .card, .bignum, .story, .partner, .hero__photo, .journey__map, .journey__legs, .cta__inner > *"
+  ".section-head, .card, .bignum, .story, .partner, .journey__map, .journey__legs, .cta__inner > *"
 );
 revealEls.forEach((el) => el.setAttribute("data-reveal", ""));
 

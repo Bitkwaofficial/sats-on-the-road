@@ -1,0 +1,422 @@
+{
+  "assets/apple-touch-icon.png": {
+    "src": "/assets/apple-touch-icon.png",
+    "width": 180,
+    "height": 180,
+    "originalBytes": 37534,
+    "bytes": 37534
+  },
+  "assets/favicon-192.png": {
+    "src": "/assets/favicon-192.png",
+    "width": 192,
+    "height": 192,
+    "originalBytes": 42427,
+    "bytes": 42427
+  },
+  "assets/favicon-32.png": {
+    "src": "/assets/favicon-32.png",
+    "width": 32,
+    "height": 32,
+    "originalBytes": 1917,
+    "bytes": 1917
+  },
+  "assets/favicon-512.png": {
+    "src": "/assets/favicon-512.png",
+    "width": 512,
+    "height": 512,
+    "originalBytes": 60735,
+    "bytes": 60735
+  },
+  "assets/gallery/p01-thumb.jpg": {
+    "src": "/assets/optimized/p01-thumb.752c2bd52169.webp",
+    "width": 500,
+    "height": 281,
+    "originalBytes": 21734,
+    "bytes": 21348
+  },
+  "assets/gallery/p01.jpg": {
+    "src": "/assets/optimized/p01.18d8ba2ddcc3.webp",
+    "width": 1600,
+    "height": 900,
+    "originalBytes": 220068,
+    "bytes": 172534
+  },
+  "assets/gallery/p02-thumb.jpg": {
+    "src": "/assets/gallery/p02-thumb.jpg",
+    "width": 500,
+    "height": 282,
+    "originalBytes": 36133,
+    "bytes": 36133
+  },
+  "assets/gallery/p02.jpg": {
+    "src": "/assets/optimized/p02.193410214a46.webp",
+    "width": 1600,
+    "height": 901,
+    "originalBytes": 310536,
+    "bytes": 245878
+  },
+  "assets/gallery/p03-thumb.jpg": {
+    "src": "/assets/optimized/p03-thumb.3670eeb48725.webp",
+    "width": 282,
+    "height": 500,
+    "originalBytes": 18085,
+    "bytes": 15532
+  },
+  "assets/gallery/p03.jpg": {
+    "src": "/assets/optimized/p03.cf13364eb40d.webp",
+    "width": 901,
+    "height": 1600,
+    "originalBytes": 179283,
+    "bytes": 130696
+  },
+  "assets/gallery/p04-thumb.jpg": {
+    "src": "/assets/optimized/p04-thumb.01ab95f7b25c.webp",
+    "width": 500,
+    "height": 281,
+    "originalBytes": 19131,
+    "bytes": 17670
+  },
+  "assets/gallery/p04.jpg": {
+    "src": "/assets/optimized/p04.2cf4a94f9d18.webp",
+    "width": 1600,
+    "height": 900,
+    "originalBytes": 213628,
+    "bytes": 163910
+  },
+  "assets/gallery/p05-thumb.jpg": {
+    "src": "/assets/optimized/p05-thumb.1fa50281d30b.webp",
+    "width": 500,
+    "height": 281,
+    "originalBytes": 19703,
+    "bytes": 18578
+  },
+  "assets/gallery/p05.jpg": {
+    "src": "/assets/optimized/p05.51635dd25adb.webp",
+    "width": 1600,
+    "height": 900,
+    "originalBytes": 230090,
+    "bytes": 183484
+  },
+  "assets/gallery/p06-thumb.jpg": {
+    "src": "/assets/optimized/p06-thumb.c0b3195a7571.webp",
+    "width": 281,
+    "height": 500,
+    "originalBytes": 16289,
+    "bytes": 13550
+  },
+  "assets/gallery/p06.jpg": {
+    "src": "/assets/optimized/p06.f1e091033b21.webp",
+    "width": 900,
+    "height": 1600,
+    "originalBytes": 136822,
+    "bytes": 79826
+  },
+  "assets/gallery/p07-thumb.jpg": {
+    "src": "/assets/optimized/p07-thumb.7e5e44bb6e0f.webp",
+    "width": 500,
+    "height": 281,
+    "originalBytes": 25360,
+    "bytes": 24722
+  },
+  "assets/gallery/p07.jpg": {
+    "src": "/assets/optimized/p07.100848fc99b6.webp",
+    "width": 1600,
+    "height": 900,
+    "originalBytes": 198096,
+    "bytes": 130904
+  },
+  "assets/gallery/p08-thumb.jpg": {
+    "src": "/assets/optimized/p08-thumb.f392313140e6.webp",
+    "width": 282,
+    "height": 500,
+    "originalBytes": 21071,
+    "bytes": 18654
+  },
+  "assets/gallery/p08.jpg": {
+    "src": "/assets/optimized/p08.f55dd6a328f1.webp",
+    "width": 901,
+    "height": 1600,
+    "originalBytes": 207131,
+    "bytes": 153240
+  },
+  "assets/gallery/p09-thumb.jpg": {
+    "src": "/assets/optimized/p09-thumb.6db94f52c137.webp",
+    "width": 282,
+    "height": 500,
+    "originalBytes": 22613,
+    "bytes": 20690
+  },
+  "assets/gallery/p09.jpg": {
+    "src": "/assets/optimized/p09.11d86ee79eca.webp",
+    "width": 901,
+    "height": 1600,
+    "originalBytes": 236412,
+    "bytes": 176752
+  },
+  "assets/gallery/p10-thumb.jpg": {
+    "src": "/assets/gallery/p10-thumb.jpg",
+    "width": 500,
+    "height": 282,
+    "originalBytes": 28790,
+    "bytes": 28790
+  },
+  "assets/gallery/p10.jpg": {
+    "src": "/assets/optimized/p10.63bd9540e61a.webp",
+    "width": 1600,
+    "height": 901,
+    "originalBytes": 228611,
+    "bytes": 159134
+  },
+  "assets/gallery/p11-thumb.jpg": {
+    "src": "/assets/optimized/p11-thumb.b9b7edfe3b5b.webp",
+    "width": 282,
+    "height": 500,
+    "originalBytes": 14812,
+    "bytes": 11414
+  },
+  "assets/gallery/p11.jpg": {
+    "src": "/assets/optimized/p11.30c9b5484985.webp",
+    "width": 901,
+    "height": 1600,
+    "originalBytes": 126225,
+    "bytes": 77212
+  },
+  "assets/gallery/p12-thumb.jpg": {
+    "src": "/assets/optimized/p12-thumb.c62b3c420f5f.webp",
+    "width": 282,
+    "height": 500,
+    "originalBytes": 23419,
+    "bytes": 22982
+  },
+  "assets/gallery/p12.jpg": {
+    "src": "/assets/optimized/p12.2b60bec629ec.webp",
+    "width": 901,
+    "height": 1600,
+    "originalBytes": 239941,
+    "bytes": 194832
+  },
+  "assets/gallery/p13-thumb.jpg": {
+    "src": "/assets/optimized/p13-thumb.f491568f1152.webp",
+    "width": 500,
+    "height": 281,
+    "originalBytes": 24907,
+    "bytes": 24462
+  },
+  "assets/gallery/p13.jpg": {
+    "src": "/assets/optimized/p13.4ef5e15a0ace.webp",
+    "width": 1600,
+    "height": 900,
+    "originalBytes": 225257,
+    "bytes": 167228
+  },
+  "assets/gallery/p14-thumb.jpg": {
+    "src": "/assets/optimized/p14-thumb.da9546206caa.webp",
+    "width": 500,
+    "height": 333,
+    "originalBytes": 29740,
+    "bytes": 28464
+  },
+  "assets/gallery/p14.jpg": {
+    "src": "/assets/optimized/p14.919d6312fb5c.webp",
+    "width": 1600,
+    "height": 1066,
+    "originalBytes": 254017,
+    "bytes": 184866
+  },
+  "assets/gallery/p15-thumb.jpg": {
+    "src": "/assets/optimized/p15-thumb.4871cd2dc866.webp",
+    "width": 500,
+    "height": 333,
+    "originalBytes": 21767,
+    "bytes": 19158
+  },
+  "assets/gallery/p15.jpg": {
+    "src": "/assets/optimized/p15.8a85b6fb4b86.webp",
+    "width": 1600,
+    "height": 1066,
+    "originalBytes": 180937,
+    "bytes": 107594
+  },
+  "assets/gallery/p16-thumb.jpg": {
+    "src": "/assets/optimized/p16-thumb.83f74a349913.webp",
+    "width": 500,
+    "height": 333,
+    "originalBytes": 22744,
+    "bytes": 20084
+  },
+  "assets/gallery/p16.jpg": {
+    "src": "/assets/optimized/p16.7b2541d1b310.webp",
+    "width": 1600,
+    "height": 1066,
+    "originalBytes": 218627,
+    "bytes": 152700
+  },
+  "assets/geyser-square.jpg": {
+    "src": "/assets/optimized/geyser-square.9f59ee7b579e.webp",
+    "width": 1080,
+    "height": 1080,
+    "originalBytes": 21787,
+    "bytes": 12590
+  },
+  "assets/join-qr.png": {
+    "src": "/assets/join-qr.png",
+    "width": 600,
+    "height": 600,
+    "originalBytes": 4084,
+    "bytes": 4084
+  },
+  "assets/og-image.jpg": {
+    "src": "/assets/og-image.jpg",
+    "width": 1200,
+    "height": 630,
+    "originalBytes": 122545,
+    "bytes": 122545
+  },
+  "assets/partners/bitcoin-benin.png": {
+    "src": "/assets/optimized/bitcoin-benin.693bcf5d7e49.webp",
+    "width": 788,
+    "height": 258,
+    "originalBytes": 9796,
+    "bytes": 8558
+  },
+  "assets/partners/bitcoin-burkina.png": {
+    "src": "/assets/optimized/bitcoin-burkina.1b8ca00f9962.webp",
+    "width": 1014,
+    "height": 400,
+    "originalBytes": 37062,
+    "bytes": 31320
+  },
+  "assets/partners/bitcoin-mastermind.png": {
+    "src": "/assets/optimized/bitcoin-mastermind.78baed22d28b.webp",
+    "width": 375,
+    "height": 151,
+    "originalBytes": 25264,
+    "bytes": 23314
+  },
+  "assets/partners/bitcoin-pidgin.png": {
+    "src": "/assets/optimized/bitcoin-pidgin.14b12382397d.webp",
+    "width": 211,
+    "height": 153,
+    "originalBytes": 2400,
+    "bytes": 2060
+  },
+  "assets/partners/bitkwa.png": {
+    "src": "/assets/optimized/bitkwa.2b7f1ec3abc5.webp",
+    "width": 1280,
+    "height": 524,
+    "originalBytes": 15183,
+    "bytes": 12528
+  },
+  "assets/partners/cba.png": {
+    "src": "/assets/optimized/cba.f3a341e3fe62.webp",
+    "width": 545,
+    "height": 658,
+    "originalBytes": 31822,
+    "bytes": 27618
+  },
+  "assets/partners/citrusrate.png": {
+    "src": "/assets/optimized/citrusrate.fb7fb0075ae4.webp",
+    "width": 439,
+    "height": 455,
+    "originalBytes": 16481,
+    "bytes": 14106
+  },
+  "assets/partners/flash.jpeg": {
+    "src": "/assets/optimized/flash.a1753b4db5bb.webp",
+    "width": 718,
+    "height": 718,
+    "originalBytes": 12581,
+    "bytes": 6922
+  },
+  "assets/partners/hope-with-bitcoin.png": {
+    "src": "/assets/optimized/hope-with-bitcoin.220b1cf53555.webp",
+    "width": 512,
+    "height": 276,
+    "originalBytes": 32529,
+    "bytes": 29888
+  },
+  "assets/partners/planb-network.png": {
+    "src": "/assets/optimized/planb-network.74e2f78877eb.webp",
+    "width": 316,
+    "height": 186,
+    "originalBytes": 4747,
+    "bytes": 3972
+  },
+  "assets/partners/togo-bitcoin.png": {
+    "src": "/assets/optimized/togo-bitcoin.540a2b2bf6a7.webp",
+    "width": 1069,
+    "height": 582,
+    "originalBytes": 67909,
+    "bytes": 62710
+  },
+  "assets/partners/trezor-academy.png": {
+    "src": "/assets/optimized/trezor-academy.beebd1d00d3a.webp",
+    "width": 1937,
+    "height": 871,
+    "originalBytes": 28032,
+    "bytes": 21314
+  },
+  "assets/partners/vexl.png": {
+    "src": "/assets/optimized/vexl.a2177c9c72a9.webp",
+    "width": 1394,
+    "height": 507,
+    "originalBytes": 7073,
+    "bytes": 5620
+  },
+  "assets/sotr-app-logo.png": {
+    "src": "/assets/optimized/sotr-app-logo.8bbd85db9bca.webp",
+    "width": 720,
+    "height": 480,
+    "originalBytes": 36337,
+    "bytes": 30344
+  },
+  "assets/sotr-app-phone.jpg": {
+    "src": "/assets/optimized/sotr-app-phone.9b9b3370e9c2.webp",
+    "width": 660,
+    "height": 990,
+    "originalBytes": 64094,
+    "bytes": 39358
+  },
+  "assets/sotr-benin.jpg": {
+    "src": "/assets/optimized/sotr-benin.fa8ab03fc72f.webp",
+    "width": 938,
+    "height": 1100,
+    "originalBytes": 177632,
+    "bytes": 127620
+  },
+  "assets/sotr-car-700.jpg": {
+    "src": "/assets/optimized/sotr-car-700.b402c4d59b3e.webp",
+    "width": 700,
+    "height": 569,
+    "originalBytes": 68178,
+    "bytes": 49900
+  },
+  "assets/sotr-car.jpg": {
+    "src": "/assets/optimized/sotr-car.5d77cd142416.webp",
+    "width": 1400,
+    "height": 1138,
+    "originalBytes": 203618,
+    "bytes": 133810
+  },
+  "assets/sotr-logo.png": {
+    "src": "/assets/optimized/sotr-logo.5c1fd786d89a.webp",
+    "width": 240,
+    "height": 160,
+    "originalBytes": 6657,
+    "bytes": 6118
+  },
+  "assets/sotr-qr.jpg": {
+    "src": "/assets/sotr-qr.jpg",
+    "width": 937,
+    "height": 947,
+    "originalBytes": 90323,
+    "bytes": 90323
+  },
+  "assets/sotr-togo.jpg": {
+    "src": "/assets/optimized/sotr-togo.36615ca0e422.webp",
+    "width": 938,
+    "height": 1100,
+    "originalBytes": 186657,
+    "bytes": 136526
+  }
+}

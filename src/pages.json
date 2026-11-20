@@ -13,7 +13,7 @@
       "out": "index.html",
       "path": "/",
       "body": "home.html",
-      "title":   { "en": "Sats On The Road | Driving Bitcoin across the African continent", "fr": "Sats On The Road | Le Bitcoin à travers le continent africain" },
+      "title":   { "en": "Bitcoin Education Across Africa | Sats On The Road", "fr": "Sats On The Road | Le Bitcoin à travers le continent africain" },
       "ogtitle": { "en": "Sats On The Road: Driving Bitcoin across the African continent", "fr": "Sats On The Road : le Bitcoin à travers le continent africain" },
       "desc": {
         "en": "Sats On The Road is a grassroots Bitcoin road trip across Africa, onboarding people to non-custodial wallets and real merchant payments, village by village.",
@@ -26,8 +26,8 @@
       "path": "/mission",
       "nav": "mission",
       "sections": ["mission", "numbers"],
-      "title":   { "en": "Mission, Sats On The Road", "fr": "Mission, Sats On The Road" },
-      "ogtitle": { "en": "Mission, Sats On The Road", "fr": "Mission, Sats On The Road" },
+      "title":   { "en": "Our Bitcoin Education Mission | Sats On The Road", "fr": "Mission, Sats On The Road" },
+      "ogtitle": { "en": "Our Bitcoin Education Mission | Sats On The Road", "fr": "Mission, Sats On The Road" },
       "desc": {
         "en": "Why we drive: putting Bitcoin self-custody, offline payment rails and orange-pilled merchants on the map across Africa, plus the numbers so far.",
         "fr": "Pourquoi nous roulons : l'auto-conservation Bitcoin, les paiements hors ligne et les commerçants convertis à travers l'Afrique, et les chiffres à ce jour."
@@ -39,8 +39,8 @@
       "path": "/journey",
       "nav": "journey",
       "sections": ["journey", "approach"],
-      "title":   { "en": "The Journey, Sats On The Road", "fr": "Le périple, Sats On The Road" },
-      "ogtitle": { "en": "The Journey, Sats On The Road", "fr": "Le périple, Sats On The Road" },
+      "title":   { "en": "West Africa Bitcoin Road Trip | Sats On The Road", "fr": "Le périple, Sats On The Road" },
+      "ogtitle": { "en": "West Africa Bitcoin Road Trip | Sats On The Road", "fr": "Le périple, Sats On The Road" },
       "desc": {
         "en": "14,820 km of orange road across West Africa: the route, the countries crossed, the current leg and what's next.",
         "fr": "14 820 km de route orange à travers l'Afrique de l'Ouest : l'itinéraire, les pays traversés, l'étape en cours et la suite."
@@ -54,7 +54,7 @@
       "body": "nigeria.html",
       "scripts": ["/nigeria.js"],
       "title": {
-        "en": "Sats On The Road Nigeria | Bitcoin education & community",
+        "en": "Bitcoin Education in Nigeria | Sats On The Road",
         "fr": "Sats On The Road Nigeria | Éducation Bitcoin et communauté"
       },
       "ogtitle": {
@@ -62,7 +62,7 @@
         "fr": "Sats On The Road Nigeria"
       },
       "desc": {
-        "en": "Explore the Nigeria country project: practical Bitcoin education, merchant onboarding, local communities and ways to get involved with Sats On The Road Africa.",
+        "en": "Explore Bitcoin education across Nigeria’s six geopolitical zones. Learn about wallets and merchant payments, and request a Sats On The Road visit to your city.",
         "fr": "Découvrez le projet Nigeria : éducation pratique au Bitcoin, accompagnement des commerçants, communautés locales et participation à Sats On The Road Africa."
       }
     },
@@ -74,8 +74,8 @@
       "sections": ["stories", "wall-quotes", "gallery", "partners"],
       "append": ["lightbox"],
       "scripts": ["wall-stories.js"],
-      "title":   { "en": "The Movement, Sats On The Road", "fr": "Le mouvement, Sats On The Road" },
-      "ogtitle": { "en": "The Movement, Sats On The Road", "fr": "Le mouvement, Sats On The Road" },
+      "title":   { "en": "Bitcoin Community Stories & Partners | Sats On The Road", "fr": "Le mouvement, Sats On The Road" },
+      "ogtitle": { "en": "Bitcoin Community Stories & Partners | Sats On The Road", "fr": "Le mouvement, Sats On The Road" },
       "desc": {
         "en": "The people, photos and partners behind Sats On The Road: stories from the truck, a gallery from the road, and the coalition powering Bitcoin adoption across Africa.",
         "fr": "Les gens, les photos et les partenaires derrière Sats On The Road : histoires du camion, galerie de la route et la coalition qui soutient l'adoption du Bitcoin en Afrique."
@@ -86,6 +86,7 @@
       "out": "fuel.html",
       "path": "/fuel",
       "nav": "fuel",
+      "scripts": ["converter.js", "share.js", "geyser.js"],
       "sections": ["support"],
       "title":   { "en": "Fuel the Truck, Sats On The Road", "fr": "Financez le camion, Sats On The Road" },
       "ogtitle": { "en": "Fuel the Truck, Sats On The Road", "fr": "Financez le camion, Sats On The Road" },

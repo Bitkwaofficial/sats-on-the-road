@@ -22,6 +22,32 @@ const FOOTER = partial("footer");
 const SOUNDBAR = partial("soundbar");
 const CONSENT = partial("consent");
 const SCRIPTS = partial("scripts");
+const imageManifest = JSON.parse(read(path.join(SRC, "image-manifest.json")));
+let assetMap = {};
+
+function optimizeResources(html) {
+  html = html.replace(/<img\b[^>]*>/g, (tag) => {
+    const source = tag.match(/\ssrc="([^"]+)"/);
+    if (!source) return tag;
+    const image = imageManifest[source[1].replace(/^\//, "")];
+    if (image) {
+      if (!/\swidth=/.test(tag)) tag = tag.replace(/\s*\/?>$/, ` width="${image.width}" height="${image.height}" />`);
+      if (!/\sdecoding=/.test(tag)) tag = tag.replace(/\s*\/?>$/, ' decoding="async" />');
+    }
+    return tag.replace(/\s(src|data-full)="([^"]+)"/g, (match, attr, url) => {
+      const optimized = imageManifest[url.replace(/^\//, "")];
+      return optimized ? ` ${attr}="${optimized.src}"` : match;
+    }).replace(/srcset="([^"]+)"/g, (_, sources) => 'srcset="' + sources.split(',').map(source => {
+      const [url, size] = source.trim().split(/\s+/);
+      return (imageManifest[url.replace(/^\//, "")]?.src || url) + (size ? ' ' + size : '');
+    }).join(', ') + '"');
+  });
+  return html.replace(/\b(src|href)="([^"]+)"/g, (match, attr, url) => {
+    const optimized = assetMap[url.replace(/^\//, "")];
+    if (optimized) return `${attr}="${optimized}"`;
+    return url.startsWith('/') || url.startsWith('#') || url.includes(':') ? match : `${attr}="/${url}"`;
+  });
+}
 
 // Compact per-page header (guarantees one <h1> per subpage).
 const PAGE_HERO = {
@@ -83,6 +109,7 @@ function jsonld(p, url) {
       description: "A grassroots Bitcoin education and financial-inclusion road trip across Africa.",
       slogan: "Driving Bitcoin across the African continent.",
       foundingLocation: "Africa",
+      email: "info@bitkwa.org",
       sameAs: ["https://x.com/bitkwaofficial", "https://instagram.com/bitkwaofficial", "https://audiomack.com/bitkwamusic"],
     },
     {
@@ -130,7 +157,6 @@ function applyLinkRewrites(html) {
 
 function buildPage(p) {
   const url = ORIGIN + (p.path === "/" ? "/" : p.path);
-  const canonicalFr = url + (url.includes("?") ? "&" : "?") + "lang=fr";
   const meta = { title: { en: p.title.en, fr: p.title.fr }, desc: { en: p.desc.en, fr: p.desc.fr } };
 
   let body = buildBody(p);
@@ -141,11 +167,11 @@ function buildPage(p) {
   let out = base
     .replace("{{PAGE_STYLES}}", p.id === "nigeria" ? '\n<link rel="stylesheet" href="/nigeria.css" />' : "")
     .replace("{{TITLE}}", esc(p.title.en))
+    .replace("{{ROBOTS}}", p.sitemap === false ? "noindex, follow" : "index, follow, max-image-preview:large")
     .replace("{{DESC}}", esc(p.desc.en))
     .replace(/\{\{OGTITLE\}\}/g, esc(p.ogtitle.en))
     .replace(/\{\{OGDESC\}\}/g, esc(p.desc.en))
     .replace(/\{\{CANONICAL\}\}/g, url)
-    .replace(/\{\{CANONICAL_FR\}\}/g, canonicalFr)
     .replace("{{PAGE}}", p.id)
     .replace("{{JSONLD}}", jsonld(p, url))
     .replace("{{META_JSON}}", JSON.stringify(meta))
@@ -155,33 +181,40 @@ function buildPage(p) {
     .replace("{{FOOTER}}", assembled[2])
     .replace("{{SOUNDBAR}}", SOUNDBAR)
     .replace("{{CONSENT}}", CONSENT)
-    .replace("{{SCRIPTS}}", [SCRIPTS, ...(p.scripts || []).map((s) => `<script src="${s}"></script>`)].join("\n"));
+    .replace("{{SCRIPTS}}", [SCRIPTS, ...(p.scripts || []).map((s) => `<script defer src="${s}"></script>`)].join("\n"));
 
   // Nested country pages must load the same root assets as top-level pages.
   if (p.path.split('/').filter(Boolean).length > 1) {
     out = out.replace(/(src|href)="([^"{}]+)"/gi, (match, attr, value) =>
       value.startsWith('/') || value.startsWith('#') || value.includes(':') ? match : `${attr}="/${value}"`);
   }
+  out = optimizeResources(out);
   fs.mkdirSync(path.dirname(path.join(ROOT, p.out)), { recursive: true });
   fs.writeFileSync(path.join(ROOT, p.out), out, "utf8");
   console.log("built " + p.out + "  (" + p.path + ")  " + out.length + " bytes");
   return { path: p.path, out: p.out, sitemap: p.sitemap !== false };
 }
 
+async function main() {
+assetMap = await require("./scripts/build-assets")(ROOT);
 const built = cfg.pages.map(buildPage);
+// The Wall keeps its standalone layout while sharing compressed resources.
+const wall = read(path.join(SRC, "pages", "wall-standalone.html"))
+  .replace(/<script src=/g, '<script defer src=');
+fs.writeFileSync(path.join(ROOT, "wall.html"), optimizeResources(wall));
 
 // sitemap.xml (all pages + /wall)
 const urls = built.filter((b) => b.sitemap).map((b) => (b.path === "/" ? "/" : b.path)).concat(["/wall"]);
-const today = new Date().toISOString().slice(0, 10);
 const sitemap =
   `<?xml version="1.0" encoding="UTF-8"?>\n` +
   `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
   urls.map((u) =>
-    `  <url>\n    <loc>${ORIGIN}${u === "/" ? "/" : u}</loc>\n    <lastmod>${today}</lastmod>\n` +
-    `    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="fr" href="${ORIGIN}${u}${u.includes("?") ? "&" : "?"}lang=fr"/>\n  </url>`
+    `  <url>\n    <loc>${ORIGIN}${u === "/" ? "/" : u}</loc>\n  </url>`
   ).join("\n") +
   `\n</urlset>\n`;
 fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap, "utf8");
 console.log("built sitemap.xml (" + urls.length + " urls)");
 
 console.log("\nDone.");
+}
+main().catch(error => { console.error(error); process.exitCode = 1; });
