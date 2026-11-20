@@ -5,7 +5,7 @@
 If you find a security problem in this repository or on satsontheroad.africa,
 please report it privately. Do not open a public issue for it.
 
-- Email: **bitkwaofficial@gmail.com** with "SECURITY" in the subject.
+- Email: **info@bitkwa.org** with "SECURITY" in the subject.
 
 We will acknowledge within a few days and keep you updated while we fix it.
 

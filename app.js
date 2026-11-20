@@ -217,8 +217,8 @@ document.querySelectorAll(".copy").forEach((btn) => {
       btn.textContent = defBtn();
       btn.disabled = false;
       note.textContent = S(
-        "Something went wrong. Email us at bitkwaofficial@gmail.com.",
-        "Une erreur est survenue. Écrivez-nous à bitkwaofficial@gmail.com."
+        "Something went wrong. Email us at info@bitkwa.org.",
+        "Une erreur est survenue. Écrivez-nous à info@bitkwa.org."
       );
       note.classList.add("contact__note--err");
     }
