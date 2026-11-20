@@ -60,7 +60,7 @@
     "Need support": "Besoin d’aide",
     "Your idea / preferred dates (optional)": "Votre idée / dates souhaitées (facultatif)",
     "Your details go to the Sats On The Road team to coordinate your request.": "Vos coordonnées sont transmises à l’équipe Sats On The Road pour organiser votre demande.",
-    "Prefer email? bitkwaofficial@gmail.com": "Par e-mail : bitkwaofficial@gmail.com",
+    "Prefer email? partnership@bitkwa.org": "Par e-mail : partnership@bitkwa.org",
     // Countries and Nigeria
     "Countries": "Pays",
     "Nigeria": "Nigéria",

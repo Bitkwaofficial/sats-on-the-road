@@ -54,7 +54,7 @@
     status.textContent = submissionState === 'success'
       ? S('Request sent. Our team will contact you to discuss your city. A request is not a confirmed visit.','Demande envoyée. Notre équipe vous contactera pour discuter de votre ville. La visite reste à confirmer.')
       : submissionState === 'error'
-        ? S('Your request could not be confirmed. Your answers are still here. Retry or email bitkwaofficial@gmail.com.','Votre demande n’a pas pu être confirmée. Vos réponses sont conservées. Réessayez ou écrivez à bitkwaofficial@gmail.com.') : '';
+        ? S('Your request could not be confirmed. Your answers are still here. Retry or email partnership@bitkwa.org.','Votre demande n’a pas pu être confirmée. Vos réponses sont conservées. Réessayez ou écrivez à partnership@bitkwa.org.') : '';
     status.dataset.status = submissionState;
   }
   form.addEventListener('submit', async event => {
