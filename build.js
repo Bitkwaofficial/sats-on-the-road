@@ -139,6 +139,7 @@ function buildPage(p) {
   const assembled = [header, body, FOOTER].map(applyLinkRewrites);
 
   let out = base
+    .replace("{{PAGE_STYLES}}", p.id === "nigeria" ? '\n<link rel="stylesheet" href="/nigeria.css" />' : "")
     .replace("{{TITLE}}", esc(p.title.en))
     .replace("{{DESC}}", esc(p.desc.en))
     .replace(/\{\{OGTITLE\}\}/g, esc(p.ogtitle.en))

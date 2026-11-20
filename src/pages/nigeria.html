@@ -1,40 +1,51 @@
-<main class="country-page">
-  <section class="country-hero">
-    <nav class="page-hero__crumb" aria-label="Breadcrumb"><a href="/">Africa</a><span aria-hidden="true"> / </span><span>Nigeria</span></nav>
-    <div class="country-hero__grid">
-      <div>
-        <p class="country-label"><span class="country-flag" aria-hidden="true"></span> Sats On The Road Nigeria</p>
-        <h1>Bringing <em>Bitcoin</em><br>to everyday <span>Nigeria.</span></h1>
-        <p class="country-lede">Practical Bitcoin education, merchant onboarding and community connections. One city, one market, one conversation at a time.</p>
-        <div class="hero__ctas"><a class="btn btn--primary" href="/join?country=Nigeria">Join the Nigeria project</a><a class="btn btn--ghost" href="/contact">Bring us to your city →</a></div>
-      </div>
-      <figure class="country-photo"><img src="/assets/sotr-car.jpg" alt="The Sats On The Road vehicle" width="1400" height="1138" fetchpriority="high"><figcaption><span class="country-flag" aria-hidden="true"></span><span>One African movement. A deeper focus on Nigeria.</span></figcaption></figure>
+<main class="country-page nigeria-visual">
+  <section class="ng-intro">
+    <nav class="page-hero__crumb" aria-label="Breadcrumb"><a href="/">Africa</a> / <span>Nigeria</span></nav>
+    <div class="ng-intro__row"><div><p class="country-label"><span class="country-flag" aria-hidden="true"></span> Sats On The Road Nigeria</p><h1>Six zones.<br><em>One movement.</em></h1><p>Bitcoin education. Local merchants. Your city next.</p><a class="btn btn--primary" href="#request-visit">Bring us to your city →</a></div>
+      <div class="ng-numbers" aria-label="Nigeria coverage"><div><strong>6</strong><span>Geopolitical zones</span></div><div><strong>36</strong><span>States</span></div><div><strong>+1</strong><span>Federal Capital Territory</span></div></div>
     </div>
   </section>
-  <nav class="country-sections" aria-label="Nigeria page sections"><a href="#mission">Our mission</a><a href="#projects">Get involved</a><a href="#route">Our route</a><a href="#updates">Local updates</a><a href="#community">People &amp; partners</a></nav>
-  <section class="country-section country-intro" id="mission">
-    <div><p class="country-label">The country project</p><h2>African ambition.<br><em>Local roots.</em></h2></div>
-    <div><p class="country-lede">Nigeria is our first deep country focus: a place to connect education, everyday payments and the people who keep the movement going.</p><p>Our goal is to help people understand Bitcoin, practise self-custody and explore real merchant payments. We want local educators, businesses and community hosts to help shape what happens next.</p><a class="country-link" href="/mission">Explore the wider African mission →</a></div>
-  </section>
-  <section class="country-section" id="projects">
-    <p class="country-label">Get involved</p><h2>Find your place<br>on the <em>road.</em></h2>
-    <div class="country-cards">
-      <article><span class="country-card__tag">For curious minds</span><h3>Learn Bitcoin.</h3><p>Explore wallets, self-custody and Lightning payments through practical learning. Register your interest in activities in Nigeria.</p><a class="country-link" href="/join?country=Nigeria">Join the waitlist →</a></article>
-      <article><span class="country-card__tag">For local businesses</span><h3>Accept Bitcoin.</h3><p>Interested in accepting Bitcoin at your business? Tell us where you operate and join the merchant waitlist.</p><a class="country-link" href="/join?country=Nigeria">Register your business →</a></article>
-      <article><span class="country-card__tag">For community builders</span><h3>Host the truck.</h3><p>Bring together a community, suggest a workshop venue or volunteer your time. Help us plan a meaningful stop in your city.</p><a class="country-link" href="/contact">Talk to the team →</a></article>
+  <section class="ng-explorer" id="zones" aria-labelledby="zonesTitle">
+    <div class="ng-section-heading"><div><p class="country-label">Explore Nigeria</p><h2 id="zonesTitle">Find your <em>zone.</em></h2></div><p>Tap a zone. See its states. Request a visit.</p></div>
+    <div class="ng-explorer__grid">
+      <div class="ng-map-wrap"><div class="ng-map" role="group" aria-label="Six geopolitical zones">
+        <svg class="ng-map__roads" viewBox="0 0 600 530" aria-hidden="true"><path d="M160 100 430 100 300 260 115 390 380 390 275 490"/><circle cx="300" cy="260" r="15"/></svg>
+        <button type="button" class="ng-zone ng-zone--nw" style="--zone-color:#a86a31" data-zone="nw" aria-pressed="false" aria-controls="zoneDetail"><span>NW</span><strong>North West</strong><small>7 <span>states</span></small></button>
+<button type="button" class="ng-zone ng-zone--ne" style="--zone-color:#567c94" data-zone="ne" aria-pressed="false" aria-controls="zoneDetail"><span>NE</span><strong>North East</strong><small>6 <span>states</span></small></button>
+<button type="button" class="ng-zone ng-zone--nc" style="--zone-color:#6a6893" data-zone="nc" aria-pressed="false" aria-controls="zoneDetail"><span>NC</span><strong>North Central</strong><small>6 <span>states</span> + FCT</small></button>
+<button type="button" class="ng-zone ng-zone--sw" style="--zone-color:#008751" data-zone="sw" aria-pressed="true" aria-controls="zoneDetail"><span>SW</span><strong>South West</strong><small>6 <span>states</span></small></button>
+<button type="button" class="ng-zone ng-zone--se" style="--zone-color:#b05052" data-zone="se" aria-pressed="false" aria-controls="zoneDetail"><span>SE</span><strong>South East</strong><small>5 <span>states</span></small></button>
+<button type="button" class="ng-zone ng-zone--ss" style="--zone-color:#248583" data-zone="ss" aria-pressed="false" aria-controls="zoneDetail"><span>SS</span><strong>South South</strong><small>6 <span>states</span></small></button>
+      </div><p class="ng-map-caption">Zone diagram · not to scale</p></div>
+      <aside class="ng-zone-detail" id="zoneDetail" aria-live="polite" aria-atomic="true">
+        <span class="ng-tag">Country focus</span><h3 id="zoneName">South West</h3>
+        <div class="ng-zone-detail__numbers"><div><strong id="zoneCount">6</strong><span>States / FCT</span></div><div><strong id="zoneHub">Lagos</strong><span>Proposed hub</span></div></div>
+        <div class="ng-state-chips" id="zoneStates"><span>Ekiti</span><span>Lagos</span><span>Ogun</span><span>Ondo</span><span>Osun</span><span>Oyo</span></div>
+        <p class="ng-status"><span aria-hidden="true">●</span> <span>Open for city requests</span></p>
+        <a href="#request-visit" class="btn btn--primary" id="requestSelectedZone">Request a city visit →</a><small>Hubs are proposed. Visit dates follow confirmation.</small>
+      </aside>
     </div>
+    <noscript><p>The interactive explorer needs JavaScript. All states are available in the request form below.</p></noscript>
   </section>
-  <section class="country-section country-route" id="route">
-    <div><p class="country-label">The road through Nigeria</p><h2>It starts with<br><em>a connection.</em></h2><p>Lagos is the starting point of the published West African route. Follow the continental journey and help shape future stops within Nigeria.</p><a class="btn btn--ghost" href="/journey">Follow the African route →</a></div>
-    <div class="country-route__stop"><span class="country-card__tag">On the African route</span><h3>Lagos</h3><p>The journey connects Lagos with Cotonou and the wider West African route.</p><hr><h4>Where should we go next?</h4><p>Tell us about your city, community or business. Nigeria visit dates will be shared when confirmed.</p><a class="country-link" href="/contact">Suggest a stop →</a></div>
+  <section class="ng-activities" aria-label="What we bring">
+    <div><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 13h19l5 5 5-5h19v36H37l-5 5-5-5H8zM32 18v36M15 25h10M15 33h10M39 25h10M39 33h10"/></svg><h3>Learn.</h3><p>Wallets &amp; self-custody</p></div>
+    <div><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 27h44v28H10zM7 27l6-17h38l6 17M22 55V39h20v16M20 10l-3 17M32 10v17M44 10l3 17"/></svg><h3>Accept.</h3><p>Real merchant payments</p></div>
+    <div><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="17" r="7"/><circle cx="12" cy="27" r="5"/><circle cx="52" cy="27" r="5"/><path d="M20 51V39a12 12 0 0 1 24 0v12M3 51V42a9 9 0 0 1 17-4M61 51V42a9 9 0 0 0-17-4"/></svg><h3>Connect.</h3><p>Local people. Lasting communities.</p></div>
   </section>
-  <section class="country-section" id="updates">
-    <p class="country-label">Local updates</p><h2>The people.<br>The progress. <em>The next stop.</em></h2>
-    <div class="country-cards">
-      <article><h3>Events &amp; workshops</h3><p>Confirmed Nigeria dates and venues will appear here as they are announced. Join the waitlist and select your city to express interest.</p><a class="country-link" href="/join?country=Nigeria">Register your interest →</a></article>
-      <article><h3>Merchants &amp; stories</h3><p>Run a business, teach Bitcoin or have a story from your community? Help us document the people building adoption in Nigeria.</p><a class="country-link" href="/contact">Share your story →</a></article>
-      <article><h3>Impact on the ground</h3><p>Nigeria-specific reports will be shared here as activities are documented. Explore stories and photographs from the wider African journey.</p><a class="country-link" href="/movement">Explore the movement →</a></article>
+  <section class="ng-request" id="request-visit" aria-labelledby="requestTitle">
+    <div class="ng-request__intro"><p class="country-label">Your city could be next</p><h2 id="requestTitle">Bring Sats On The Road<br><em>to Your City.</em></h2>
+      <svg class="ng-truck" viewBox="0 0 320 150" aria-hidden="true"><path class="ng-truck__road" d="M5 138h310"/><path class="ng-truck__body" d="M25 47h166v65H25zM191 66h47l41 29v17h-88z"/><path d="M206 76h29l25 19h-54z"/><circle cx="76" cy="116" r="19"/><circle cx="243" cy="116" r="19"/><circle cx="76" cy="116" r="6"/><circle cx="243" cy="116" r="6"/><text x="100" y="91">₿</text><path d="M6 64h10M1 80h15M7 96h9"/></svg>
+      <ol class="ng-steps"><li><b>01</b><span>Tell us about your city</span></li><li><b>02</b><span>Meet the local host team</span></li><li><b>03</b><span>Confirm a date together</span></li></ol><p class="ng-fine">Requests are invitations, not confirmed bookings.</p>
     </div>
+    <form id="cityVisitForm" class="ng-form" action="https://formspree.io/f/xjgqdokd" method="POST">
+      <input type="hidden" name="_subject" value="Nigeria city visit request — Sats On The Road"><input type="hidden" name="country" value="Nigeria"><input type="hidden" name="zone" value=""><input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="ng-form__row"><div class="field"><label for="visitName">Your name *</label><input id="visitName" name="name" autocomplete="name" maxlength="100" required></div><div class="field"><label for="visitEmail">Email *</label><input id="visitEmail" type="email" name="email" autocomplete="email" maxlength="200" required></div></div>
+      <div class="ng-form__row"><div class="field"><label for="visitState">State / FCT *</label><select id="visitState" name="state" required><option value="">Choose your state</option><option value="Abia">Abia</option><option value="Adamawa">Adamawa</option><option value="Akwa Ibom">Akwa Ibom</option><option value="Anambra">Anambra</option><option value="Bauchi">Bauchi</option><option value="Bayelsa">Bayelsa</option><option value="Benue">Benue</option><option value="Borno">Borno</option><option value="Cross River">Cross River</option><option value="Delta">Delta</option><option value="Ebonyi">Ebonyi</option><option value="Edo">Edo</option><option value="Ekiti">Ekiti</option><option value="Enugu">Enugu</option><option value="FCT Abuja">FCT Abuja</option><option value="Gombe">Gombe</option><option value="Imo">Imo</option><option value="Jigawa">Jigawa</option><option value="Kaduna">Kaduna</option><option value="Kano">Kano</option><option value="Katsina">Katsina</option><option value="Kebbi">Kebbi</option><option value="Kogi">Kogi</option><option value="Kwara">Kwara</option><option value="Lagos">Lagos</option><option value="Nasarawa">Nasarawa</option><option value="Niger">Niger</option><option value="Ogun">Ogun</option><option value="Ondo">Ondo</option><option value="Osun">Osun</option><option value="Oyo">Oyo</option><option value="Plateau">Plateau</option><option value="Rivers">Rivers</option><option value="Sokoto">Sokoto</option><option value="Taraba">Taraba</option><option value="Yobe">Yobe</option><option value="Zamfara">Zamfara</option></select></div><div class="field"><label for="visitCity">City / town *</label><input id="visitCity" name="city" autocomplete="address-level2" maxlength="100" required></div></div>
+      <div class="ng-form__zone"><span>Zone</span><strong id="visitZone">Choose your state</strong></div>
+      <div class="ng-form__row"><div class="field"><label for="visitPhone">Phone / WhatsApp (optional)</label><input id="visitPhone" type="tel" name="phone" autocomplete="tel" maxlength="40"></div><div class="field"><label for="visitOrg">Community / organisation (optional)</label><input id="visitOrg" name="organisation" autocomplete="organization" maxlength="150"></div></div>
+      <div class="ng-form__row"><div class="field"><label for="visitAudience">Expected participants *</label><select id="visitAudience" name="participants" required><option value="">Choose a range</option><option value="1-20">1–20</option><option value="21-50">21–50</option><option value="51-100">51–100</option><option value="100+">100+</option><option value="Not sure yet">Not sure yet</option></select></div><div class="field"><label for="visitVenue">Can you help with a venue? *</label><select id="visitVenue" name="venue" required><option value="">Choose an option</option><option value="Yes">Yes</option><option value="Need support">Need support</option><option value="Not sure yet">Not sure yet</option></select></div></div>
+      <div class="field"><label for="visitNotes">Your idea / preferred dates (optional)</label><textarea id="visitNotes" name="message" rows="3" maxlength="2000"></textarea></div>
+      <p class="ng-fine">Your details go to the Sats On The Road team to coordinate your request. <a href="/privacy">Privacy Policy</a>.</p><button class="btn btn--primary" id="visitSubmit" type="submit">Request a city visit →</button><p id="visitStatus" role="status" aria-live="polite" tabindex="-1"></p><a class="ng-email" href="mailto:bitkwaofficial@gmail.com">Prefer email? bitkwaofficial@gmail.com</a>
+    </form>
   </section>
-  <section class="country-section country-community" id="community"><p class="country-label">People &amp; partners</p><h2>Built with people<br><em>who show up.</em></h2><p class="country-lede">Educators, merchants, volunteers and local organisations: help build the Nigeria project with us.</p><div class="hero__ctas"><a class="btn btn--primary" href="/contact">Partner with us in Nigeria</a><a class="btn btn--ghost" href="/join?country=Nigeria">Join the Nigeria project</a></div><p class="country-community__note">Part of Sats On The Road Africa.</p></section>
 </main>

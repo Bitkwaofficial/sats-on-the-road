@@ -52,6 +52,7 @@
       "path": "/countries/nigeria",
       "nav": "nigeria",
       "body": "nigeria.html",
+      "scripts": ["/nigeria.js"],
       "title": {
         "en": "Sats On The Road Nigeria | Bitcoin education & community",
         "fr": "Sats On The Road Nigeria | Éducation Bitcoin et communauté"
